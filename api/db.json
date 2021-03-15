@@ -1,4 +1,8 @@
 {
+    "gardens":[],
+    "users":[],
+    "gardenTypes":[],
+    "savedPlants":[],
     "plants": [
      {
        "id": 1,
