@@ -16,6 +16,9 @@ export const GardenForm = () => {
         gardenTypeId: 0
     })
 
+    const [type, setType] = useState({
+        type: ""
+    })
     const history = useHistory()
 
     const inputChange = (event) => {
@@ -23,7 +26,12 @@ export const GardenForm = () => {
         newGarden[event.target.id] = event.target.value
         setGarden(newGarden)
     }
-
+    const typeInputChange = (event) => {
+        const newType = {...type}
+        newType[event.target.id] = event.target.value
+        setType(newType)
+        
+    }
     return (
         <>
             <form>
@@ -41,7 +49,7 @@ export const GardenForm = () => {
               </fieldset>
               <fieldset>
                   <label htmlFor="gardenType">Garden Type:</label>
-                  <input type="text" list="typeList" id="gardenType" className="gardenInput"onChange={inputChange}></input>
+                  <input type="text" list="typeList" id="type" className="gardenInput"onChange={typeInputChange}></input>
                       <datalist id="typeList">
                           <option value="Container"></option>
                           <option value="Raised Bed"></option>
