@@ -14,7 +14,7 @@ export const Home = () => {
     }, [])
     
     
-    console.log(users)
+    // console.log(users)
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
     
     useEffect(() => {
