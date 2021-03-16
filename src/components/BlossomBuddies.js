@@ -1,8 +1,11 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom"
+import { Login } from "./auth/Login"
+import { Register } from "./auth/Register"
+import { userStorageKey } from "./auth/authSettings"
 import './BlossomBuddies.css';
-import { ApplicationViews } from "./components/ApplicationViews";
-import { NavBar } from "./components/nav/NavBar";
+import { ApplicationViews } from "./ApplicationViews";
+import { NavBar } from "./nav/NavBar";
 
 export const BlossomBuddies = () => (
   <>
@@ -10,10 +13,8 @@ export const BlossomBuddies = () => (
           if (sessionStorage.getItem(userStorageKey)) {
             return (
               <>
-                <Route>
-                  <NavBar />
-                  <ApplicationViews />
-                </Route>
+                <NavBar />
+                <ApplicationViews />
               </>
             )
           } else {

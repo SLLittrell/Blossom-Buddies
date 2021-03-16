@@ -45,7 +45,7 @@ export const Login = () => {
             </dialog>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Nutshell</h1>
+                    <h1>BLossom Buddies</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
@@ -64,8 +64,9 @@ export const Login = () => {
                     </fieldset>
                 </form>
             </section>
+            <div>New to Blossom Buddies?</div>
             <section className="link--register">
-                <Link to="/register">Register for an account</Link>
+                <Link to="/register">Register Now</Link>
             </section>
         </main>
     )

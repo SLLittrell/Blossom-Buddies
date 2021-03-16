@@ -5,16 +5,19 @@ import "./NavBar.css"
 //return renders when function is called
 export const NavBar = (props) => {
     return (
-        <ul className="navbar">
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="/">Home</Link>
-            </li>
-            <li className="navbar__item">
-                <Link className="navbar__link" to="/gardens">My Gardens</Link>
-            </li>
-            <li className="navbar__item">
-                <Link className="navbar__link" to="/plants">Plant List</Link>
-            </li>
-        </ul>
+        <>
+            <header>Blossom Buddies</header>
+            <ul className="navbar">
+                <li className="navbar__item active">
+                    <Link className="navbar__link" to="/">Home</Link>
+                </li>
+                <li className="navbar__item">
+                    <Link className="navbar__link" to="/gardens">My Gardens</Link>
+                </li>
+                <li className="navbar__item">
+                    <Link className="navbar__link" to="/plants">Plant List</Link>
+                </li>
+            </ul>
+        </>
     )
 }
