@@ -6,9 +6,27 @@ import { NavBar } from "./components/nav/NavBar";
 
 export const BlossomBuddies = () => (
   <>
-    <Route>
-      <NavBar />
-      <ApplicationViews />
-    </Route>
+        <Route render={() => {
+          if (sessionStorage.getItem(userStorageKey)) {
+            return (
+              <>
+                <Route>
+                  <NavBar />
+                  <ApplicationViews />
+                </Route>
+              </>
+            )
+          } else {
+            return <Redirect to="/login" />;
+          }
+      }} />
+
+      <Route path="/login">
+        <Login />
+      </Route>
+      <Route path="/register">
+        <Register />
+      </Route>
+    
   </>
 )
