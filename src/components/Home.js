@@ -5,10 +5,14 @@ import { UserContext } from "./users/UserProvider";
 //Component runs on initial reder and will present welcome text when navigating to home
 export const Home = () => {
     const {users, getUsers} =useContext(UserContext)
-    const [user, setUser] = useState()
+    const [user, setUser] = useState({
+        name: ""
+    })
+    
     useEffect(() => {
         getUsers()
     }, [])
+    
     
     console.log(users)
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
@@ -16,7 +20,7 @@ export const Home = () => {
     useEffect(() => {
         const currentUser = users.find(user => parseInt(user.id) === currentUserId)
         if (currentUser) setUser(currentUser)
-    }, [])
+    }, [users])
    
    //returns rendered text about the application and a welcome to the current user 
    return (
