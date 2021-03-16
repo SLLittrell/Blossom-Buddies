@@ -13,10 +13,8 @@ export const BlossomBuddies = () => (
           if (sessionStorage.getItem(userStorageKey)) {
             return (
               <>
-                <Route>
-                  <NavBar />
-                  <ApplicationViews />
-                </Route>
+                <NavBar />
+                <ApplicationViews />
               </>
             )
           } else {
