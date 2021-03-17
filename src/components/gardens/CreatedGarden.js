@@ -6,12 +6,24 @@ export const CreatedGarden = () => {
     const { getGardenById, getGardenType, gardenType } = useContext(GardenContext)
 
     const[garden, setGarden] = useState({})
+    const[types, setTypes] = useState({
+        type:""
+    })
     
    
 
     const {gardenId} = useParams()
     const history = useHistory()
     
+    useEffect(() =>{
+        getGardenType()
+    }, [])
+
+    useEffect(() => {
+        const typeName = gardenType.find(type => parseInt(type.id) === parseInt(garden.gardenTypeId))
+        if(typeName) setTypes(typeName)
+    }, [garden])
+    // console.log(typeName)
     
     useEffect(() => {
     getGardenById(gardenId)
@@ -19,6 +31,7 @@ export const CreatedGarden = () => {
             setGarden(response)
         })
     }, [])
+
     // debugger
    return(
         <> 
@@ -26,7 +39,7 @@ export const CreatedGarden = () => {
             <section>
                 <h3 className="created_gardenName">{garden.name}</h3>
                 <div className="created_gardenDate">Start Date: {garden.startDate}</div>
-                <div className="created_gardenType">Garden Type:{garden.gardenTypeId}</div>
+                <div className="created_gardenType">Garden Type: {types.type}</div>
             </section>
         </>
     )

@@ -33,6 +33,7 @@ export const GardenProvider = (props) => {
         .then(res => res.json())
         .then(setGardenType)
         }
+
        
 
     return (
