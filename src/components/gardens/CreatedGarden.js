@@ -40,6 +40,8 @@ export const CreatedGarden = () => {
                 <h3 className="created_gardenName">{garden.name}</h3>
                 <div className="created_gardenDate">Start Date: {garden.startDate}</div>
                 <div className="created_gardenType">Garden Type: {types.type}</div>
+                <button className="btn-findPlants" onClick={()=> history.push("/plants")}>Add Plants</button>
+                <button className="btn-findPlants" onClick={()=> history.push("/gardens/create")}>Edit Garden</button>
             </section>
         </>
     )
