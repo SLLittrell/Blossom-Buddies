@@ -26,7 +26,11 @@ export const GardenForm = () => {
     }
    
     const onSaveClick =() => {
-        addGarden(garden)
+        if(garden.name=== "" || garden.gardenType === 0 ){
+            window.alert("Please fill in all inputs")
+        }
+        else{addGarden(garden)}
+        
     }
     
     useEffect(() => {
