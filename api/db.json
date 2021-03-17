@@ -13,6 +13,13 @@
       "startDate": "2021-03-20",
       "gardenTypeId": "2",
       "id": 2
+    },
+    {
+      "name": "This Scotts Garden",
+      "userId": 2,
+      "startDate": "2021-03-20",
+      "gardenTypeId": "2",
+      "id": 3
     }
   ],
   "users": [
