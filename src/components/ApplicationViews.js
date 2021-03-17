@@ -14,13 +14,13 @@ export const ApplicationViews = () => {
                 <Home />
             </Route>
             <GardenProvider>
-            <Route exact path="/gardens">
-                <MyGardens />
-            </Route>
+                <Route exact path="/gardens">
+                    <MyGardens />
+                </Route>
                 <Route exact path="/gardens/create">
                     <GardenForm/>
                 </Route>
-                <Route exact path="/gardens/:gardenId (\d+)">
+                <Route exact path="/gardens/:gardenId(\d+)">
                     <CreatedGarden/>
                 </Route>
             </GardenProvider>
