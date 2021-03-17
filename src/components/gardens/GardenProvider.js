@@ -28,22 +28,11 @@ export const GardenProvider = (props) => {
         .then(res => res.json())
         .then(setGardenType)
         }
-
-    const addGardenType = gardenTypeObj => {
-        return fetch("http://localhost:8088/gardens", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(gardenTypeObj)
-        })
-        .then(getGardenType)
-    }
        
 
     return (
         <GardenContext.Provider value={{
-            getGardens, gardens, addGarden, addGardenType, getGardenType
+            getGardens, gardens, addGarden, getGardenType, gardenType
         }}>
             {props.children}
         </GardenContext.Provider>

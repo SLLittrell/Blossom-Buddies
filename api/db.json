@@ -1,5 +1,13 @@
 {
-  "gardens": [],
+  "gardens": [
+    {
+      "name": "Garden",
+      "userId": 1,
+      "startDate": "2021-03-21",
+      "gardenTypeId": "2",
+      "id": 1
+    }
+  ],
   "users": [
     {
       "email": "stacey.littrell@gmail.com",
@@ -12,7 +20,20 @@
       "id": 2
     }
   ],
-  "gardenTypes": [],
+  "gardenTypes": [
+    {
+      "type": "Container",
+      "id": 1
+    },
+    {
+      "type": "Raised Bed",
+      "id": 2
+    },
+    {
+      "type": "Ground Plot",
+      "id": 3
+    }
+  ],
   "savedPlants": [],
   "plants": [
     {
