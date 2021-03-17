@@ -1,5 +1,41 @@
 {
-  "gardens": [],
+  "gardens": [
+    {
+      "name": "Stacey's Spring Garden",
+      "userId": 2,
+      "startDate": "2021-04-26",
+      "gardenTypeId": 0,
+      "id": 1
+    },
+    {
+      "name": "Stacey's ",
+      "userId": 1,
+      "startDate": "",
+      "gardenTypeId": "1",
+      "id": 2
+    },
+    {
+      "name": "Stacey's Fall Garden",
+      "userId": 1,
+      "startDate": "2021-08-15",
+      "gardenTypeId": "3",
+      "id": 3
+    },
+    {
+      "name": "Front Garden",
+      "userId": 1,
+      "startDate": "2021-08-12",
+      "gardenTypeId": "1",
+      "id": 4
+    },
+    {
+      "name": "Front Garden",
+      "userId": 1,
+      "startDate": "2021-08-12",
+      "gardenTypeId": "1",
+      "id": 5
+    }
+  ],
   "users": [
     {
       "email": "stacey.littrell@gmail.com",
@@ -12,7 +48,20 @@
       "id": 2
     }
   ],
-  "gardenTypes": [],
+  "gardenTypes": [
+    {
+      "type": "Container",
+      "id": 1
+    },
+    {
+      "type": "Raised Bed",
+      "id": 2
+    },
+    {
+      "type": "Ground Plot",
+      "id": 3
+    }
+  ],
   "savedPlants": [],
   "plants": [
     {

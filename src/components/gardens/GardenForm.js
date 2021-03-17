@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { GardenContext } from "./GardenProvider"
 import { userStorageKey } from "../auth/authSettings";
 import { useHistory } from "react-router";
@@ -6,8 +6,9 @@ import { useHistory } from "react-router";
 
 
 export const GardenForm = () => {
-    // const {gardens, getGardens, addGarden, addGardenType, getGardenType} = useContext(GardenContext)
+    const { addGarden, getGardenType, gardenType} = useContext(GardenContext)
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
+    
     
     const [garden, setGarden] = useState({
         name:"",
@@ -16,9 +17,6 @@ export const GardenForm = () => {
         gardenTypeId: 0
     })
 
-    const [type, setType] = useState({
-        type: ""
-    })
     const history = useHistory()
 
     const inputChange = (event) => {
@@ -26,12 +24,15 @@ export const GardenForm = () => {
         newGarden[event.target.id] = event.target.value
         setGarden(newGarden)
     }
-    const typeInputChange = (event) => {
-        const newType = {...type}
-        newType[event.target.id] = event.target.value
-        setType(newType)
-        
+   
+    const onSaveClick =() => {
+        addGarden(garden)
     }
+    
+    useEffect(() => {
+        getGardenType()
+    }, [])
+
     return (
         <>
             <form>
@@ -48,13 +49,19 @@ export const GardenForm = () => {
                   <input type="date" id="startDate" className="gardenInput" onChange={inputChange}></input>
               </fieldset>
               <fieldset>
-                  <label htmlFor="gardenType">Garden Type:</label>
-                  <input type="text" list="typeList" id="type" className="gardenInput"onChange={typeInputChange}></input>
-                      <datalist id="typeList">
-                          <option value="Container"></option>
-                          <option value="Raised Bed"></option>
-                      </datalist>
+                <label htmlFor="gardenType">Garden Type:</label>
+                <select id="gardenTypeId" onChange={inputChange}>
+                    <option value= "0">Select a garden type</option>
+                    {gardenType.map(types => (
+                    <option key={types.id} value={types.id}>{types.type}</option>
+                    ))}         
+                </select>
               </fieldset>
+              <button className="btn btn-saveGarden"
+                onClick={event => { event.preventDefault() 
+                onSaveClick()}}>
+                Save Garden
+            </button>
             </form>
         </>
     )

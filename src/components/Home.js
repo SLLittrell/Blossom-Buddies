@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { userStorageKey } from "./auth/authSettings";
 import { UserContext } from "./users/UserProvider";
 
-//Component runs on initial reder and will present welcome text when navigating to home
+//Component runs on initial render and will present welcome text when navigating to home
 export const Home = () => {
     const {users, getUsers} =useContext(UserContext)
     const [user, setUser] = useState({
