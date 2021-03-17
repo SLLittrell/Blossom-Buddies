@@ -1,5 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { CreatedGarden } from "./gardens/CreatedGarden"
 import { GardenForm } from "./gardens/GardenForm"
 import { MyGardens } from "./gardens/GardenHome"
 import { GardenProvider } from "./gardens/GardenProvider"
@@ -12,12 +13,15 @@ export const ApplicationViews = () => {
             <Route exact path="/">
                 <Home />
             </Route>
+            <GardenProvider>
             <Route exact path="/gardens">
                 <MyGardens />
             </Route>
-            <GardenProvider>
                 <Route exact path="/gardens/create">
                     <GardenForm/>
+                </Route>
+                <Route exact path="/gardens/:gardenId (\d+)">
+                    <CreatedGarden/>
                 </Route>
             </GardenProvider>
         </UserProvider>

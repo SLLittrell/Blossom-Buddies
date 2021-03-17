@@ -22,6 +22,11 @@ export const GardenProvider = (props) => {
         })
         .then(getGardens)
     }
+    
+    const getGardenById = (id) => {
+        return fetch(`http://localhost:8088/gardens/${id}`)
+            .then(res => res.json())
+    }
 
     const getGardenType = () => {
         return fetch(`http://localhost:8088/gardenTypes`)
@@ -32,7 +37,7 @@ export const GardenProvider = (props) => {
 
     return (
         <GardenContext.Provider value={{
-            getGardens, gardens, addGarden, getGardenType, gardenType
+            getGardens, gardens, addGarden, getGardenType, gardenType, getGardenById
         }}>
             {props.children}
         </GardenContext.Provider>
