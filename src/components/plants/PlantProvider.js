@@ -11,9 +11,11 @@ export const PlantProvider = (props) => {
     .then(setPlants)
 }
 
+    const [ searchTerms, setSearchTerms ] = useState("")
+    
     return (
         <PlantContext.Provider value={{
-            plants, getPlants
+            plants, getPlants, searchTerms, setSearchTerms  
         }}>
             {props.children}
         </PlantContext.Provider>

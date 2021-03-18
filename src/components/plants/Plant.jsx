@@ -13,24 +13,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const ListDividers = () => {
+export const ListDividers = ({plantObj}) => {
   const classes = useStyles();
 
   return (
     <List component="nav" className={classes.root} aria-label="mailbox folders">
       <ListItem button>
-        <ListItemText primary="Inbox" />
-      </ListItem>
-      <Divider />
-      <ListItem button divider>
-        <ListItemText primary="Drafts" />
-      </ListItem>
-      <ListItem button>
-        <ListItemText primary="Trash" />
-      </ListItem>
-      <Divider light />
-      <ListItem button>
-        <ListItemText primary="Spam" />
+        <ListItemText primary={plantObj.commonName} to={`/plants/${plantObj.id}`}/>
       </ListItem>
     </List>
   );
