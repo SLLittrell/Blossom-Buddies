@@ -25,8 +25,8 @@ export const MyGardens = () => {
                 <h2>My Gardens</h2>
                 <div><button className="btn--createGarden"onClick={() =>{history.push("/gardens/create")}}>Create New Garden</button></div>
             </section>
-            <section className="myGardenList">
-                {usersGarden.map(garden =><div><Link to={`/gardens/${garden.id}`} key={garden.id}>
+            <section className="myGardenList" >
+                {usersGarden.map(garden =><div key={garden.id}><Link to={`/gardens/${garden.id}`} key={garden.id}>
                     {garden.name}
                 </Link></div>)}
             </section>

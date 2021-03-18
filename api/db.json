@@ -20,6 +20,13 @@
       "startDate": "2021-03-20",
       "gardenTypeId": "2",
       "id": 3
+    },
+    {
+      "name": "Scott's Spring Garden",
+      "userId": 2,
+      "startDate": "2021-03-28",
+      "gardenTypeId": "3",
+      "id": 4
     }
   ],
   "users": [
