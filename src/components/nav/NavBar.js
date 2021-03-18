@@ -1,12 +1,14 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "./NavBar.css"
+import {CenteredTabs} from "./nav"
 //NavBar takes props object as paremeter
 //return renders when function is called
 export const NavBar = (props) => {
     return (
         <>
-            <header>Blossom Buddies</header>
+            <CenteredTabs />
+            {/* <header>Blossom Buddies</header>
             <ul className="navbar">
                 <li className="navbar__item active">
                     <Link className="navbar__link" to="/">Home</Link>
@@ -17,7 +19,8 @@ export const NavBar = (props) => {
                 <li className="navbar__item">
                     <Link className="navbar__link" to="/plants">Plant List</Link>
                 </li>
-            </ul>
+            </ul> */}
+            
         </>
     )
 }
