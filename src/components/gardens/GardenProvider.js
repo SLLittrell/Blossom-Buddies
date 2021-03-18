@@ -34,8 +34,7 @@ export const GardenProvider = (props) => {
         .then(setGardenType)
         }
 
-       
-
+   
     return (
         <GardenContext.Provider value={{
             getGardens, gardens, addGarden, getGardenType, gardenType, getGardenById

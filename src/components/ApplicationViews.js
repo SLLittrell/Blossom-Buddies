@@ -33,9 +33,11 @@ export const ApplicationViews = () => {
                     <PlantSearch />
                     <PlantList />
                 </Route>
-                <Route exact path="/plants/details/:plantId(\d+)">
-                    <PlantDetails />
-                </Route>
+                <GardenProvider>
+                    <Route exact path="/plants/details/:plantId(\d+)">
+                        <PlantDetails />
+                    </Route>
+                </GardenProvider>
             </PlantProvider>
         </UserProvider>
     )

@@ -12,7 +12,7 @@ export const PlantProvider = (props) => {
 }
 
 const getPlantById = (id) => {
-    return fetch(`http://localhost:8088/plantd/details/${id}`)
+    return fetch(`http://localhost:8088/plants/${id}`)
         .then(res => res.json())
 }
 
@@ -20,7 +20,7 @@ const getPlantById = (id) => {
     
     return (
         <PlantContext.Provider value={{
-            plants, getPlants, searchTerms, setSearchTerms  
+            plants, getPlants, searchTerms, setSearchTerms, getPlantById  
         }}>
             {props.children}
         </PlantContext.Provider>
