@@ -26,8 +26,7 @@ export const PlantList = () => {
 
     return (
         <>
-            <h3>Hello</h3>
-            {/* <p>{plants.map(plant => plant.commonName).join(":")}</p> */}
+            <h3>Plants</h3>
             <div className="plants">
                 {filteredPlants.map(plant => { 
                     return <ListDividers key={plant.id} plantObj={plant}/>
