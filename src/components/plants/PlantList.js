@@ -17,7 +17,7 @@ export const PlantList = () => {
     return (
         <>
             <h3>Hello</h3>
-            {/* <p>{plants.map(plant => plant.Helps)}</p> */}
+            {/* <p>{plants.map(plant => plant.commonName).join(":")}</p> */}
             <ListDividers />
         </>
     )
