@@ -11,4 +11,12 @@ export const PlantProvider = (props) => {
     .then(setPlants)
 }
 
+    return (
+        <PlantContext.Provider value={{
+            plants, getPlants
+        }}>
+            {props.children}
+        </PlantContext.Provider>
+    )
+
 }
