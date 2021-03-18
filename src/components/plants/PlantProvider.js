@@ -11,6 +11,11 @@ export const PlantProvider = (props) => {
     .then(setPlants)
 }
 
+const getPlantById = (id) => {
+    return fetch(`http://localhost:8088/plantd/details/${id}`)
+        .then(res => res.json())
+}
+
     const [ searchTerms, setSearchTerms ] = useState("")
     
     return (

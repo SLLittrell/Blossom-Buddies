@@ -27,6 +27,13 @@
       "startDate": "2021-03-28",
       "gardenTypeId": "3",
       "id": 4
+    },
+    {
+      "name": "Hopping Frog Garden",
+      "userId": 2,
+      "startDate": "2021-05-15",
+      "gardenTypeId": "3",
+      "id": 5
     }
   ],
   "users": [
@@ -56,501 +63,500 @@
     }
   ],
   "savedPlants": [],
-  
   "plants": [
-      {
-        "id": 1,
-        "commonName": "Alliums",
-        "ScientificName": "Allium",
-        "helps": "Fruit trees, nightshades (tomatoes, capsicum peppers, potatoes), brassicas, carrots",
-        "helpers": "Carrots, tomatoes, carrots and African spider plants (Cleome gynandra) together, marigolds (Tagetes spp.), mints",
-        "attracts": "Thrips",
-        "-repels": {
-          "+distracts": "rabbits, slugs (see Garlic), aphids, carrot fly, cabbage loopers, cabbage maggots, cabbage worms, Japanese beetles"
-        },
-        "avoid": "Beans peas,",
-        "fact": "Alliums are a family of plants which include onions, garlic, leeks, shallots, chives, and others.\n"
+    {
+      "id": 1,
+      "commonName": "Alliums",
+      "ScientificName": "Allium",
+      "helps": "Fruit trees, nightshades (tomatoes, capsicum peppers, potatoes), brassicas, carrots",
+      "helpers": "Carrots, tomatoes, carrots and African spider plants (Cleome gynandra) together, marigolds (Tagetes spp.), mints",
+      "attracts": "Thrips",
+      "-repels": {
+        "+distracts": "rabbits, slugs (see Garlic), aphids, carrot fly, cabbage loopers, cabbage maggots, cabbage worms, Japanese beetles"
+      },
+      "avoid": "Beans peas,",
+      "fact": "Alliums are a family of plants which include onions, garlic, leeks, shallots, chives, and others.\n"
     },
-      {
-        "id": 2,
-        "commonName": "Asparagus",
-        "ScientificName": "Asparagus officinalis",
-        "helps": "Tomatoes, parsley",
-        "helpers": "Aster family flowers, dill, coriander, tomatoes, parsley, basil, comfrey, marigolds, nasturtiumscitation needed",
-        "attracts": "Coupled with basil seems to encourage lady bugs",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "Onion, garlic, potatoes, gladioluscitation needed",
-        "fact": "\n"
+    {
+      "id": 2,
+      "commonName": "Asparagus",
+      "ScientificName": "Asparagus officinalis",
+      "helps": "Tomatoes, parsley",
+      "helpers": "Aster family flowers, dill, coriander, tomatoes, parsley, basil, comfrey, marigolds, nasturtiumscitation needed",
+      "attracts": "Coupled with basil seems to encourage lady bugs",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "Onion, garlic, potatoes, gladioluscitation needed",
+      "fact": "\n"
     },
-      {
-        "id": 3,
-        "commonName": "Beans, bush",
-        "ScientificName": "Phaseolus vulgaris",
-        "helps": "Cucumber, soybeans, strawberries",
-        "helpers": "Celery, strawberries, grains",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "Fennel, soybeans, dry beans, alfalfa",
-        "fact": "\"Lettuce, potato, tomato, other legumes, crucifers, or cucurbits increase sclerotinia\" in the soil and should be avoided before and after snap beans. See the entry for \"Legumes\" for more info\n"
+    {
+      "id": 3,
+      "commonName": "Beans, bush",
+      "ScientificName": "Phaseolus vulgaris",
+      "helps": "Cucumber, soybeans, strawberries",
+      "helpers": "Celery, strawberries, grains",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "Fennel, soybeans, dry beans, alfalfa",
+      "fact": "\"Lettuce, potato, tomato, other legumes, crucifers, or cucurbits increase sclerotinia\" in the soil and should be avoided before and after snap beans. See the entry for \"Legumes\" for more info\n"
     },
-      {
-        "id": 4,
-        "commonName": "Beans, pole",
-        "ScientificName": "Phaseolus vulgaris",
-        "helps": "",
-        "helpers": "Radishes, Corn",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "Sunflowers, beets, brassicas, kohlrabi",
-        "fact": "the stalk of the corn provides a pole for the beans to grow on, which then gives nitrogen to the soil of the corn.circular reference As for the Radishes, see the entry for \"Legumes\" for more info\n"
+    {
+      "id": 4,
+      "commonName": "Beans, pole",
+      "ScientificName": "Phaseolus vulgaris",
+      "helps": "",
+      "helpers": "Radishes, Corn",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "Sunflowers, beets, brassicas, kohlrabi",
+      "fact": "the stalk of the corn provides a pole for the beans to grow on, which then gives nitrogen to the soil of the corn.circular reference As for the Radishes, see the entry for \"Legumes\" for more info\n"
     },
-      {
-        "id": 5,
-        "commonName": "Beans, fava",
-        "ScientificName": "Vicia faba",
-        "helps": "",
-        "helpers": "Strawberries, Celery",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "See the entry for \"Legumes\" for more info\n"
+    {
+      "id": 5,
+      "commonName": "Beans, fava",
+      "ScientificName": "Vicia faba",
+      "helps": "",
+      "helpers": "Strawberries, Celery",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "See the entry for \"Legumes\" for more info\n"
     },
-      {
-        "id": 6,
-        "commonName": "Beets",
-        "ScientificName": "Beta vulgaris",
-        "helps": "Broccoli, bush beans, cabbage, lettuce, kohlrabi, onions, brassicas, passion fruit",
-        "helpers": "Bush beans, onions, kohlrabi, catnip,citation needed garlic, lettuce, most brassicas, mint",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "Runner or pole beans",
-        "fact": "Good for adding minerals to the soil through composting leaves which have up to 25% magnesium. Runner or pole beans and beets stunt each other's growth.\n"
+    {
+      "id": 6,
+      "commonName": "Beets",
+      "ScientificName": "Beta vulgaris",
+      "helps": "Broccoli, bush beans, cabbage, lettuce, kohlrabi, onions, brassicas, passion fruit",
+      "helpers": "Bush beans, onions, kohlrabi, catnip,citation needed garlic, lettuce, most brassicas, mint",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "Runner or pole beans",
+      "fact": "Good for adding minerals to the soil through composting leaves which have up to 25% magnesium. Runner or pole beans and beets stunt each other's growth.\n"
     },
-      {
-        "id": 7,
-        "commonName": "Brassicas",
-        "ScientificName": "Brassica",
-        "helps": "Beets, onions, potatoes, cereals (e.g. corn, wheat)",
-        "helpers": "Beets, spinach, chard, Aromatic plants or plants with many blossoms, such as celery, chamomile, and marigolds. Dill, sage, peas,citation needed peppermint, spearmint,citation needed spurrey,citation needed rosemary, rye-grass,citation needed garlic, onions and potatoes. geraniums, alliums, nasturtium, borage, hyssop, tansy,citation needed tomatoes,citation needed thyme, wormwood, southernwood, beans, clovercitation needed",
-        "attracts": "",
-        "-repels": {
-          "+distracts": "Wireworms"
-        },
-        "avoid": "Mustards, nightshades (tomatoes, peppers, etc.), pole beans, strawberries",
-        "fact": "Brassicas are a family of plants which includes broccoli, Brussels sprouts, cabbage, cauliflower, Chinese cabbage, kohlrabi, radish, and turnip. Thyme, nasturtiums, and onion showed good resistance to cabbage worm, weevil and cabbage looper.\n"
+    {
+      "id": 7,
+      "commonName": "Brassicas",
+      "ScientificName": "Brassica",
+      "helps": "Beets, onions, potatoes, cereals (e.g. corn, wheat)",
+      "helpers": "Beets, spinach, chard, Aromatic plants or plants with many blossoms, such as celery, chamomile, and marigolds. Dill, sage, peas,citation needed peppermint, spearmint,citation needed spurrey,citation needed rosemary, rye-grass,citation needed garlic, onions and potatoes. geraniums, alliums, nasturtium, borage, hyssop, tansy,citation needed tomatoes,citation needed thyme, wormwood, southernwood, beans, clovercitation needed",
+      "attracts": "",
+      "-repels": {
+        "+distracts": "Wireworms"
+      },
+      "avoid": "Mustards, nightshades (tomatoes, peppers, etc.), pole beans, strawberries",
+      "fact": "Brassicas are a family of plants which includes broccoli, Brussels sprouts, cabbage, cauliflower, Chinese cabbage, kohlrabi, radish, and turnip. Thyme, nasturtiums, and onion showed good resistance to cabbage worm, weevil and cabbage looper.\n"
     },
-      {
-        "id": 8,
-        "commonName": "Broccoli",
-        "ScientificName": "Brassica oleracea",
-        "helps": "Lettuce",
-        "helpers": "Mixture of mustard, pac choi, and rape.citation needed  Beets, dill, lettuce, mustard,citation needed onions, tomato, turnip, clover",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "Broccoli as a main crop intercropped with lettuce was shown to be more profitable than either crop alone. Turnip acts as a trap crop. See brassicas entry for more info\n"
+    {
+      "id": 8,
+      "commonName": "Broccoli",
+      "ScientificName": "Brassica oleracea",
+      "helps": "Lettuce",
+      "helpers": "Mixture of mustard, pac choi, and rape.citation needed  Beets, dill, lettuce, mustard,citation needed onions, tomato, turnip, clover",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "Broccoli as a main crop intercropped with lettuce was shown to be more profitable than either crop alone. Turnip acts as a trap crop. See brassicas entry for more info\n"
     },
-      {
-        "id": 9,
-        "commonName": "Brussels sprouts",
-        "ScientificName": "Brassica oleracea",
-        "helps": "",
-        "helpers": "Sage, thyme, clover, malting barleycitation needed",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "\n"
+    {
+      "id": 9,
+      "commonName": "Brussels sprouts",
+      "ScientificName": "Brassica oleracea",
+      "helps": "",
+      "helpers": "Sage, thyme, clover, malting barleycitation needed",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "\n"
     },
-      {
-        "id": 10,
-        "commonName": "Cabbage",
-        "ScientificName": "Brassica oleracea / Brassica chinensis",
-        "helps": "Beans, celery",
-        "helpers": "Beans, clover, calendula/pot marigold, chamomile, larkspur, nasturtiums, dill, coriander, hyssop, onions, beets, marigolds,citation needed mint, rosemary, sage, thyme, tomatoes,citation needed lacy phacelia,citation needed Green onions with Chinese cabbage.citation needed",
-        "attracts": "Snails and slugs",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "Grapes",
-        "fact": "See brassicas entry for more info. If using clover as an intercrop it should be sown after cabbage transplant so as not to affect crop yield. Nasturtiums repel cabbage moths\n"
+    {
+      "id": 10,
+      "commonName": "Cabbage",
+      "ScientificName": "Brassica oleracea / Brassica chinensis",
+      "helps": "Beans, celery",
+      "helpers": "Beans, clover, calendula/pot marigold, chamomile, larkspur, nasturtiums, dill, coriander, hyssop, onions, beets, marigolds,citation needed mint, rosemary, sage, thyme, tomatoes,citation needed lacy phacelia,citation needed Green onions with Chinese cabbage.citation needed",
+      "attracts": "Snails and slugs",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "Grapes",
+      "fact": "See brassicas entry for more info. If using clover as an intercrop it should be sown after cabbage transplant so as not to affect crop yield. Nasturtiums repel cabbage moths\n"
     },
-      {
-        "id": 11,
-        "commonName": "Carrots",
-        "ScientificName": "Daucus carota",
-        "helps": "Tomatoes, alliums, beans, leeks, lettuce, onions, passion fruit",
-        "helpers": "Lettuce, alliums (chives, leeks, onions, shallots, etc.), rosemary, wormwood, sage, beans, flax",
-        "attracts": "Assassin bug, lacewing, parasitic wasp, yellow jacket and other predatory wasps",
-        "-repels": {
-          "+distracts": "Leek moth, onion fly"
-        },
-        "avoid": "Dill, parsnip, radish",
-        "fact": "Tomatoes grow better with carrots, but may stunt the carrots' growth. Beans provide the nitrogen carrots need more than some other vegetables. Aromatic companion plants repel carrot fly. Sage, rosemary, and radishes are recommended by some as companion plants, but listed by others as incompatible. Alliums inter-planted with carrots confuse onion and carrot flies. For the beneficial insect-attracting properties of carrots to work, they need to be allowed to flower; Otherwise, use the wild carrot, Queen Anne's Lace, for the same effect. Flax produces an oil that may protect root vegetables like carrots from some pests.\n"
+    {
+      "id": 11,
+      "commonName": "Carrots",
+      "ScientificName": "Daucus carota",
+      "helps": "Tomatoes, alliums, beans, leeks, lettuce, onions, passion fruit",
+      "helpers": "Lettuce, alliums (chives, leeks, onions, shallots, etc.), rosemary, wormwood, sage, beans, flax",
+      "attracts": "Assassin bug, lacewing, parasitic wasp, yellow jacket and other predatory wasps",
+      "-repels": {
+        "+distracts": "Leek moth, onion fly"
+      },
+      "avoid": "Dill, parsnip, radish",
+      "fact": "Tomatoes grow better with carrots, but may stunt the carrots' growth. Beans provide the nitrogen carrots need more than some other vegetables. Aromatic companion plants repel carrot fly. Sage, rosemary, and radishes are recommended by some as companion plants, but listed by others as incompatible. Alliums inter-planted with carrots confuse onion and carrot flies. For the beneficial insect-attracting properties of carrots to work, they need to be allowed to flower; Otherwise, use the wild carrot, Queen Anne's Lace, for the same effect. Flax produces an oil that may protect root vegetables like carrots from some pests.\n"
     },
-      {
-        "id": 12,
-        "commonName": "Cauliflower",
-        "ScientificName": "Brassica oleracea",
-        "helps": "Beans, celery, spinach, peas",
-        "helpers": "Mixture of Chinese cabbage, marigolds, rape, and sunflower.citation needed  Spinach,citation needed peas",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "One row of spinach alternating at 60 cm from each row of cauliflower proved mutually beneficial.citation needed See brassicas for more info. See peas regarding their mutualism with cauliflower.\n"
+    {
+      "id": 12,
+      "commonName": "Cauliflower",
+      "ScientificName": "Brassica oleracea",
+      "helps": "Beans, celery, spinach, peas",
+      "helpers": "Mixture of Chinese cabbage, marigolds, rape, and sunflower.citation needed  Spinach,citation needed peas",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "One row of spinach alternating at 60 cm from each row of cauliflower proved mutually beneficial.citation needed See brassicas for more info. See peas regarding their mutualism with cauliflower.\n"
     },
-      {
-        "id": 13,
-        "commonName": "Celery",
-        "ScientificName": "Apium graveolens",
-        "helps": "Bush beans, brassicas, cucumber",
-        "helpers": "Cosmos, daisies, snapdragons, leeks, tomatoes, cauliflower, cabbage, bush beans",
-        "attracts": "",
-        "-repels": {
-          "+distracts": "Whiteflies"
-        },
-        "avoid": "Corn, aster flowers",
-        "fact": "Aster flowers, can transmit the aster yellows disease\n"
+    {
+      "id": 13,
+      "commonName": "Celery",
+      "ScientificName": "Apium graveolens",
+      "helps": "Bush beans, brassicas, cucumber",
+      "helpers": "Cosmos, daisies, snapdragons, leeks, tomatoes, cauliflower, cabbage, bush beans",
+      "attracts": "",
+      "-repels": {
+        "+distracts": "Whiteflies"
+      },
+      "avoid": "Corn, aster flowers",
+      "fact": "Aster flowers, can transmit the aster yellows disease\n"
     },
-      {
-        "id": 14,
-        "commonName": "Chard",
-        "ScientificName": "Beta vulgaris ssp. cicla",
-        "helps": "Brassicas, passion fruit",
-        "helpers": "",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "\n"
+    {
+      "id": 14,
+      "commonName": "Chard",
+      "ScientificName": "Beta vulgaris ssp. cicla",
+      "helps": "Brassicas, passion fruit",
+      "helpers": "",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "\n"
     },
-      {
-        "id": 15,
-        "commonName": "Corn / Maize",
-        "ScientificName": "Zea mays",
-        "helps": "Beans, cucurbits, soybeans, tomatoes",
-        "helpers": "Sunflowers, dill, legumes (beans, peas, soybeans etc.), peanuts, cucurbits, clover, amaranth, white geranium, pigweed, lamb's quarters, morning glory, parsley, and potato, field mustard, Sudan grasscitation needed",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "Tomato, celery",
-        "fact": "Provides beans with a trellis, is protected from predators and dryness by cucurbits, in the three sisters technique\n"
+    {
+      "id": 15,
+      "commonName": "Corn / Maize",
+      "ScientificName": "Zea mays",
+      "helps": "Beans, cucurbits, soybeans, tomatoes",
+      "helpers": "Sunflowers, dill, legumes (beans, peas, soybeans etc.), peanuts, cucurbits, clover, amaranth, white geranium, pigweed, lamb's quarters, morning glory, parsley, and potato, field mustard, Sudan grasscitation needed",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "Tomato, celery",
+      "fact": "Provides beans with a trellis, is protected from predators and dryness by cucurbits, in the three sisters technique\n"
     },
-      {
-        "id": 16,
-        "commonName": "Cucumber",
-        "ScientificName": "Cucumis sativus",
-        "helps": "Beans, kohlrabi, lettuce",
-        "helpers": "Kohlrabi, nasturtiums, radishes, marigolds, sunflowers, peas, beans, chamomile, beets, carrots, dill, onions, garlic, amaranth (Amaranthus cruentus), celery, Malabar spinach",
-        "attracts": "Beneficial for ground beetles",
-        "-repels": {
-          "+distracts": "Raccoons, ants"
-        },
-        "avoid": "Potato, aromatic herbs",
-        "fact": "Sow 2 or 3 radish seeds in with cucumbers to repel cucumber beetles. One study showed a 75% reduction in cucumber beetles with the concurrent seeding of amaranth. Various sprays from lettuce, asparagus, Malabar spinach, and celery were found to reduce whiteflies.See cucurbits entry for more info\n"
+    {
+      "id": 16,
+      "commonName": "Cucumber",
+      "ScientificName": "Cucumis sativus",
+      "helps": "Beans, kohlrabi, lettuce",
+      "helpers": "Kohlrabi, nasturtiums, radishes, marigolds, sunflowers, peas, beans, chamomile, beets, carrots, dill, onions, garlic, amaranth (Amaranthus cruentus), celery, Malabar spinach",
+      "attracts": "Beneficial for ground beetles",
+      "-repels": {
+        "+distracts": "Raccoons, ants"
+      },
+      "avoid": "Potato, aromatic herbs",
+      "fact": "Sow 2 or 3 radish seeds in with cucumbers to repel cucumber beetles. One study showed a 75% reduction in cucumber beetles with the concurrent seeding of amaranth. Various sprays from lettuce, asparagus, Malabar spinach, and celery were found to reduce whiteflies.See cucurbits entry for more info\n"
     },
-      {
-        "id": 17,
-        "commonName": "Cucurbits",
-        "ScientificName": "Cucurbitaceae",
-        "helps": "Corn",
-        "helpers": "Corn, grain sorghum",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "Cucurbits are a family of plants that includes melons, cucumbers, gourds, pumpkins, and squash\n"
+    {
+      "id": 17,
+      "commonName": "Cucurbits",
+      "ScientificName": "Cucurbitaceae",
+      "helps": "Corn",
+      "helpers": "Corn, grain sorghum",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "Cucurbits are a family of plants that includes melons, cucumbers, gourds, pumpkins, and squash\n"
     },
-      {
-        "id": 18,
-        "commonName": "Eggplant or Aubergine",
-        "ScientificName": "Solanum melongena",
-        "helps": "Beans, peppers, tomatoes, passion fruit",
-        "helpers": "Marigolds, catnip, dill,citation needed redroot pigweed, green beans, tarragon, mints, thyme",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "Marigolds will deter nematodes.\n"
+    {
+      "id": 18,
+      "commonName": "Eggplant or Aubergine",
+      "ScientificName": "Solanum melongena",
+      "helps": "Beans, peppers, tomatoes, passion fruit",
+      "helpers": "Marigolds, catnip, dill,citation needed redroot pigweed, green beans, tarragon, mints, thyme",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "Marigolds will deter nematodes.\n"
     },
-      {
-        "id": 19,
-        "commonName": "Kohlrabi",
-        "ScientificName": "Brassica oleracea v. gongylodes",
-        "helps": "Onion, beets, aromatic plants, cucumbers",
-        "helpers": "Beets, cucumbers",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "See Brassicas entry for more info\n"
+    {
+      "id": 19,
+      "commonName": "Kohlrabi",
+      "ScientificName": "Brassica oleracea v. gongylodes",
+      "helps": "Onion, beets, aromatic plants, cucumbers",
+      "helpers": "Beets, cucumbers",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "See Brassicas entry for more info\n"
     },
-      {
-        "id": 20,
-        "commonName": "Leek",
-        "ScientificName": "Allium ampeloprasum v. porrum",
-        "helps": "Carrots, celery, onions, tomato, passion fruit",
-        "helpers": "Carrots clover,",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "Swiss chard",
-        "fact": "See Alliums entry for more info\n"
+    {
+      "id": 20,
+      "commonName": "Leek",
+      "ScientificName": "Allium ampeloprasum v. porrum",
+      "helps": "Carrots, celery, onions, tomato, passion fruit",
+      "helpers": "Carrots clover,",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "Swiss chard",
+      "fact": "See Alliums entry for more info\n"
     },
-      {
-        "id": 21,
-        "commonName": "Legumes",
-        "ScientificName": "Phaseolus and Vicia",
-        "helps": "Beets, lettuce, okra, potato, spinach, dill, cabbage, carrots, chards, eggplant, peas, tomatoes, brassicas, corn, cucumbers, grapes",
-        "helpers": "Summer savory, beets, cucumbers, borage, cabbage, carrots, cauliflower, corn, larkspur, lovage, marigolds, mustards, radish, potato, peppermint, rosemary, lettuce, onion,citation needed squash, lacy phacelia",
-        "attracts": "Snails and slugs",
-        "-repels": {
-          "+distracts": "Colorado potato beetle"
-        },
-        "avoid": "Alliums, gladiolas",
-        "fact": "Hosts nitrogen-fixing bacteria, a good fertiliser for some plants, too much for others. Rosemary and peppermint extracts are used in organic sprays for beans. Summer savory and potatoes repel bean beetles.\n"
+    {
+      "id": 21,
+      "commonName": "Legumes",
+      "ScientificName": "Phaseolus and Vicia",
+      "helps": "Beets, lettuce, okra, potato, spinach, dill, cabbage, carrots, chards, eggplant, peas, tomatoes, brassicas, corn, cucumbers, grapes",
+      "helpers": "Summer savory, beets, cucumbers, borage, cabbage, carrots, cauliflower, corn, larkspur, lovage, marigolds, mustards, radish, potato, peppermint, rosemary, lettuce, onion,citation needed squash, lacy phacelia",
+      "attracts": "Snails and slugs",
+      "-repels": {
+        "+distracts": "Colorado potato beetle"
+      },
+      "avoid": "Alliums, gladiolas",
+      "fact": "Hosts nitrogen-fixing bacteria, a good fertiliser for some plants, too much for others. Rosemary and peppermint extracts are used in organic sprays for beans. Summer savory and potatoes repel bean beetles.\n"
     },
-      {
-        "id": 22,
-        "commonName": "Lettuce",
-        "ScientificName": "Lactuca sativa",
-        "helps": "Beets, beans, okra, onions, radish, broccoli, Carrots, passion fruit",
-        "helpers": "Radish, beets, dill, kohlrabi, onions, beans, carrots, cucumbers, strawberries, broccoli thyme, nasturtiums, alyssum, cilantro",
-        "attracts": "Slugs and snails.",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "Celery, cabbage, cress, parsley",
-        "fact": "Mints (including hyssop, sage, and various \"balms\") repel slugs, a bane of lettuce and cabbages.citation needed Broccoli when intercropped with lettuce was shown to be more profitable then either crop alone.\n"
+    {
+      "id": 22,
+      "commonName": "Lettuce",
+      "ScientificName": "Lactuca sativa",
+      "helps": "Beets, beans, okra, onions, radish, broccoli, Carrots, passion fruit",
+      "helpers": "Radish, beets, dill, kohlrabi, onions, beans, carrots, cucumbers, strawberries, broccoli thyme, nasturtiums, alyssum, cilantro",
+      "attracts": "Slugs and snails.",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "Celery, cabbage, cress, parsley",
+      "fact": "Mints (including hyssop, sage, and various \"balms\") repel slugs, a bane of lettuce and cabbages.citation needed Broccoli when intercropped with lettuce was shown to be more profitable then either crop alone.\n"
     },
-      {
-        "id": 23,
-        "commonName": "Mustard",
-        "ScientificName": "Sinapis alba",
-        "helps": "Beans, broccoli, cabbage, cauliflower, fruit trees, grapes, radish, brussels sprouts, turnips",
-        "helpers": "",
-        "attracts": "",
-        "-repels": {
-          "+distracts": "Various pests"
-        },
-        "avoid": "",
-        "fact": "See Brassicas entry for more info. Mustard acts as a trap crop in broccoli.citation needed\n"
+    {
+      "id": 23,
+      "commonName": "Mustard",
+      "ScientificName": "Sinapis alba",
+      "helps": "Beans, broccoli, cabbage, cauliflower, fruit trees, grapes, radish, brussels sprouts, turnips",
+      "helpers": "",
+      "attracts": "",
+      "-repels": {
+        "+distracts": "Various pests"
+      },
+      "avoid": "",
+      "fact": "See Brassicas entry for more info. Mustard acts as a trap crop in broccoli.citation needed\n"
     },
-      {
-        "id": 24,
-        "commonName": "Nightshades",
-        "ScientificName": "Solanaceae",
-        "helps": "",
-        "helpers": "Carrots, alliums, mints (basil, oregano, etc.)",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "Beans, black walnuts, corn, fennel, dill, brassicas",
-        "fact": "Nightshades are a family of plants which include tomatoes, tobacco, chili peppers (including bell peppers), potatoes, eggplant, and others\n"
+    {
+      "id": 24,
+      "commonName": "Nightshades",
+      "ScientificName": "Solanaceae",
+      "helps": "",
+      "helpers": "Carrots, alliums, mints (basil, oregano, etc.)",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "Beans, black walnuts, corn, fennel, dill, brassicas",
+      "fact": "Nightshades are a family of plants which include tomatoes, tobacco, chili peppers (including bell peppers), potatoes, eggplant, and others\n"
     },
-      {
-        "id": 25,
-        "commonName": "Okra",
-        "ScientificName": "Abelmoschus esculentus",
-        "helps": "Sweet potato, tomatoes, peppers",
-        "helpers": "Beans, lettuce, squash, sweet potato, peppers",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "Okra and sweet potato are mutually beneficial when planted simultaneously.\n"
+    {
+      "id": 25,
+      "commonName": "Okra",
+      "ScientificName": "Abelmoschus esculentus",
+      "helps": "Sweet potato, tomatoes, peppers",
+      "helpers": "Beans, lettuce, squash, sweet potato, peppers",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "Okra and sweet potato are mutually beneficial when planted simultaneously.\n"
     },
-      {
-        "id": 26,
-        "commonName": "Onion",
-        "ScientificName": "Allium cepa",
-        "helps": "Beets, beans, brassicas, cabbage, broccoli, carrots, lettuce, cucumbers, peppers, passion fruit, strawberries. Green onions with Chinese cabbage.",
-        "helpers": "Carrots, beets, brassicas, dill, lettuce, strawberries, marigolds,citation needed mints,citation needed tomatoes, summer savory, chamomile, pansy",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "Lentils, peas,",
-        "fact": "See Alliums entry for more info\n"
+    {
+      "id": 26,
+      "commonName": "Onion",
+      "ScientificName": "Allium cepa",
+      "helps": "Beets, beans, brassicas, cabbage, broccoli, carrots, lettuce, cucumbers, peppers, passion fruit, strawberries. Green onions with Chinese cabbage.",
+      "helpers": "Carrots, beets, brassicas, dill, lettuce, strawberries, marigolds,citation needed mints,citation needed tomatoes, summer savory, chamomile, pansy",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "Lentils, peas,",
+      "fact": "See Alliums entry for more info\n"
     },
-      {
-        "id": 27,
-        "commonName": "Parsnip",
-        "ScientificName": "Pastinaca sativa",
-        "helps": "Fruit trees",
-        "helpers": "",
-        "attracts": "A variety of predatory insects",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "The flowers of the parsnip plant left to seed will attract a variety of predatory insects to the garden, they are particularly helpful when left under fruit trees, the predators attacking codling moth and light brown apple moth. The root also contains Myristricin, which is toxic to fruit flies, house flies, red spider mite, pea aphids, a simple blender made extraction of three blended parsnips roots to one litre of water through a food processor (not one for preparing food) and left overnight, strained and use within a few days.\n"
+    {
+      "id": 27,
+      "commonName": "Parsnip",
+      "ScientificName": "Pastinaca sativa",
+      "helps": "Fruit trees",
+      "helpers": "",
+      "attracts": "A variety of predatory insects",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "The flowers of the parsnip plant left to seed will attract a variety of predatory insects to the garden, they are particularly helpful when left under fruit trees, the predators attacking codling moth and light brown apple moth. The root also contains Myristricin, which is toxic to fruit flies, house flies, red spider mite, pea aphids, a simple blender made extraction of three blended parsnips roots to one litre of water through a food processor (not one for preparing food) and left overnight, strained and use within a few days.\n"
     },
-      {
-        "id": 28,
-        "commonName": "Peas",
-        "ScientificName": "Pisum sativum",
-        "helps": "Brassicas, turnip, cauliflower, garlic,",
-        "helpers": "Turnip, cauliflower, garlic, mints",
-        "attracts": "",
-        "-repels": {
-          "+distracts": "Colorado potato beetle"
-        },
-        "avoid": "",
-        "fact": "Peas when intercropped with turnips, cauliflower, or garlic showed mutual suppression of growth however their profit per land area used was increased.\n"
+    {
+      "id": 28,
+      "commonName": "Peas",
+      "ScientificName": "Pisum sativum",
+      "helps": "Brassicas, turnip, cauliflower, garlic,",
+      "helpers": "Turnip, cauliflower, garlic, mints",
+      "attracts": "",
+      "-repels": {
+        "+distracts": "Colorado potato beetle"
+      },
+      "avoid": "",
+      "fact": "Peas when intercropped with turnips, cauliflower, or garlic showed mutual suppression of growth however their profit per land area used was increased.\n"
     },
-      {
-        "id": 29,
-        "commonName": "Peppers",
-        "ScientificName": "Solanaceae, Capsicum",
-        "helps": "Okra",
-        "helpers": "Beans, tomatoes, marjoram,citation needed okra, geraniums, petunias, sunflowers, onions crimson clover, basil, field mustard",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "Beans, kale (cabbage, Brussels sprouts, etc.)",
-        "fact": "Pepper plants like high humidity, which can be helped along by planting with some kind of dense-leaf or ground-cover companion, like marjoram and basil; they also need direct sunlight, but their fruit can be harmed by it...pepper plants grown together, or with tomatoes, can shelter the fruit from sunlight, and raises the humidity level. Sunflowers, when in bloom at the right time, sheltered beneficial insects which lowered thrips populations.\n"
+    {
+      "id": 29,
+      "commonName": "Peppers",
+      "ScientificName": "Solanaceae, Capsicum",
+      "helps": "Okra",
+      "helpers": "Beans, tomatoes, marjoram,citation needed okra, geraniums, petunias, sunflowers, onions crimson clover, basil, field mustard",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "Beans, kale (cabbage, Brussels sprouts, etc.)",
+      "fact": "Pepper plants like high humidity, which can be helped along by planting with some kind of dense-leaf or ground-cover companion, like marjoram and basil; they also need direct sunlight, but their fruit can be harmed by it...pepper plants grown together, or with tomatoes, can shelter the fruit from sunlight, and raises the humidity level. Sunflowers, when in bloom at the right time, sheltered beneficial insects which lowered thrips populations.\n"
     },
-      {
-        "id": 30,
-        "commonName": "Potato",
-        "ScientificName": "Solanum tuberosum",
-        "helps": "Brassicas, beans, corn, peas, passion fruit",
-        "helpers": "Horseradish, beans, dead nettle, marigolds, peas, onion, garlic, thyme, clover",
-        "attracts": "",
-        "-repels": {
-          "+distracts": "Mexican bean beetle"
-        },
-        "avoid": "Atriplex, carrot, cucumber, pumpkin, raspberries, squash, sunflower, tomato",
-        "fact": "Horseradish increases the disease resistance of potatoes. It repels the potato bug. Garlic was shown to be more effective than fungicides on late potato blight.65 Peas were shown to reduce the density of Colorado potato beetles.\n"
+    {
+      "id": 30,
+      "commonName": "Potato",
+      "ScientificName": "Solanum tuberosum",
+      "helps": "Brassicas, beans, corn, peas, passion fruit",
+      "helpers": "Horseradish, beans, dead nettle, marigolds, peas, onion, garlic, thyme, clover",
+      "attracts": "",
+      "-repels": {
+        "+distracts": "Mexican bean beetle"
+      },
+      "avoid": "Atriplex, carrot, cucumber, pumpkin, raspberries, squash, sunflower, tomato",
+      "fact": "Horseradish increases the disease resistance of potatoes. It repels the potato bug. Garlic was shown to be more effective than fungicides on late potato blight.65 Peas were shown to reduce the density of Colorado potato beetles.\n"
     },
-      {
-        "id": 31,
-        "commonName": "Pumpkin",
-        "ScientificName": "Cucurbita pepo",
-        "helps": "Corn, beans",
-        "helpers": "Buckwheat, Jimson weed, catnip, oregano, tansy, radishes, nasturtiums",
-        "attracts": "spiders, ground beetles",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "Potatoes",
-        "fact": "Radishes can be used as a trap crop against flea beetles, cucurbita can be used in the three sisters technique. Nasturtiums repel squash bugs.\n"
+    {
+      "id": 31,
+      "commonName": "Pumpkin",
+      "ScientificName": "Cucurbita pepo",
+      "helps": "Corn, beans",
+      "helpers": "Buckwheat, Jimson weed, catnip, oregano, tansy, radishes, nasturtiums",
+      "attracts": "spiders, ground beetles",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "Potatoes",
+      "fact": "Radishes can be used as a trap crop against flea beetles, cucurbita can be used in the three sisters technique. Nasturtiums repel squash bugs.\n"
     },
-      {
-        "id": 32,
-        "commonName": "Radish",
-        "ScientificName": "Raphanus sativus",
-        "helps": "Squash eggplant, cucumber, lettuce, peas, beans, pole beans,",
-        "helpers": "Chervil, lettuce, nasturtiums",
-        "attracts": "",
-        "-repels": {
-          "+distracts": "flea beetles, cucumber beetles"
-        },
-        "avoid": "Grapes",
-        "fact": "Radishes can be used as a trap crop against flea beetles. Radishes grown with lettuce taste better.\n"
+    {
+      "id": 32,
+      "commonName": "Radish",
+      "ScientificName": "Raphanus sativus",
+      "helps": "Squash eggplant, cucumber, lettuce, peas, beans, pole beans,",
+      "helpers": "Chervil, lettuce, nasturtiums",
+      "attracts": "",
+      "-repels": {
+        "+distracts": "flea beetles, cucumber beetles"
+      },
+      "avoid": "Grapes",
+      "fact": "Radishes can be used as a trap crop against flea beetles. Radishes grown with lettuce taste better.\n"
     },
-      {
-        "id": 33,
-        "commonName": "Soybean",
-        "ScientificName": "Glycine max",
-        "helps": "",
-        "helpers": "Corn, snap beans,citation needed sunflower",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "A mixture of corn, mungbean, and sunflower was found to rid soybeans of aphids. Snap beans act as a trap crop for Mexican bean beetles in soybeans.citation needed\n"
+    {
+      "id": 33,
+      "commonName": "Soybean",
+      "ScientificName": "Glycine max",
+      "helps": "",
+      "helpers": "Corn, snap beans,citation needed sunflower",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "A mixture of corn, mungbean, and sunflower was found to rid soybeans of aphids. Snap beans act as a trap crop for Mexican bean beetles in soybeans.citation needed\n"
     },
-      {
-        "id": 34,
-        "commonName": "Spinach",
-        "ScientificName": "Spinacia oleracea",
-        "helps": "Brassicas, cauliflower, passion fruit",
-        "helpers": "Strawberries, peas, beans, cauliflowercitation needed",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "The peas and beans provide natural shade for the spinach. See cauliflower notes regarding mutualism with spinach.citation needed\n"
+    {
+      "id": 34,
+      "commonName": "Spinach",
+      "ScientificName": "Spinacia oleracea",
+      "helps": "Brassicas, cauliflower, passion fruit",
+      "helpers": "Strawberries, peas, beans, cauliflowercitation needed",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "The peas and beans provide natural shade for the spinach. See cauliflower notes regarding mutualism with spinach.citation needed\n"
     },
-      {
-        "id": 35,
-        "commonName": "Squash",
-        "ScientificName": "Cucurbita spp.",
-        "helps": "corn, beans, okra,",
-        "helpers": "Beans, buckwheat, borage, catnip, tansy, radishes, marigolds, nasturtiums",
-        "attracts": "Spiders, ground beetles",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "Radishes can be used as a trap crop against flea beetles, cucurbita can be used in the three sisters technique. Marigolds and nasturtiums repel squash bugs. Marigolds repel cucumber beetles.\n"
+    {
+      "id": 35,
+      "commonName": "Squash",
+      "ScientificName": "Cucurbita spp.",
+      "helps": "corn, beans, okra,",
+      "helpers": "Beans, buckwheat, borage, catnip, tansy, radishes, marigolds, nasturtiums",
+      "attracts": "Spiders, ground beetles",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "Radishes can be used as a trap crop against flea beetles, cucurbita can be used in the three sisters technique. Marigolds and nasturtiums repel squash bugs. Marigolds repel cucumber beetles.\n"
     },
-      {
-        "id": 36,
-        "commonName": "Sweet potato",
-        "ScientificName": "Ipomoea batatas",
-        "helps": "Okra",
-        "helpers": "Okra",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "",
-        "fact": "Okra and sweet potato are mutually beneficial when planted simultaneously.\n"
+    {
+      "id": 36,
+      "commonName": "Sweet potato",
+      "ScientificName": "Ipomoea batatas",
+      "helps": "Okra",
+      "helpers": "Okra",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "",
+      "fact": "Okra and sweet potato are mutually beneficial when planted simultaneously.\n"
     },
-      {
-        "id": 37,
-        "commonName": "Tomatoes",
-        "ScientificName": "Solanum lycopersicum",
-        "helps": "Brassicas, broccoli, cabbage, celery, roses, peppers, asparagus",
-        "helpers": "Asparagus, basil, beans, bee balm (Monarda),  oregano, parsley, marigold, alliums, garlic, leeks, celery, geraniums, petunias, nasturtium, borage, coriander, chives, corn, dill, mustard, fenugreek, barley, carrots, eggplant, mints, okra, sage, thyme, \"flower strips\"",
-        "attracts": "",
-        "-repels": {
-          "+distracts": "Asparagus beetle"
-        },
-        "avoid": "Black walnut, alfalfa, corn, fennel, chili peppers, peas, dill, potatoes, beetroot, brassicas, rosemary",
-        "fact": "Black walnuts inhibit tomato growth, in fact they are negative allelopathic  to all other nightshade plants (chili pepper, potato, tobacco, petunia) as well, because it produces a chemical called juglone. Dill attracts tomato hornworm.Growing tomatoes with Basil does not appear to enhance tomato flavour but studies have shown that growing them around 10 inches apart can increase the yield of tomatoes by about 20%. One study shows that growing chili peppers near tomatoes in greenhouses increases tomato whitefly on the tomatoes.\n"
+    {
+      "id": 37,
+      "commonName": "Tomatoes",
+      "ScientificName": "Solanum lycopersicum",
+      "helps": "Brassicas, broccoli, cabbage, celery, roses, peppers, asparagus",
+      "helpers": "Asparagus, basil, beans, bee balm (Monarda),  oregano, parsley, marigold, alliums, garlic, leeks, celery, geraniums, petunias, nasturtium, borage, coriander, chives, corn, dill, mustard, fenugreek, barley, carrots, eggplant, mints, okra, sage, thyme, \"flower strips\"",
+      "attracts": "",
+      "-repels": {
+        "+distracts": "Asparagus beetle"
+      },
+      "avoid": "Black walnut, alfalfa, corn, fennel, chili peppers, peas, dill, potatoes, beetroot, brassicas, rosemary",
+      "fact": "Black walnuts inhibit tomato growth, in fact they are negative allelopathic  to all other nightshade plants (chili pepper, potato, tobacco, petunia) as well, because it produces a chemical called juglone. Dill attracts tomato hornworm.Growing tomatoes with Basil does not appear to enhance tomato flavour but studies have shown that growing them around 10 inches apart can increase the yield of tomatoes by about 20%. One study shows that growing chili peppers near tomatoes in greenhouses increases tomato whitefly on the tomatoes.\n"
     },
-      {
-        "id": 38,
-        "commonName": "Turnips and rutabagas",
-        "ScientificName": "Brassica rapa and Brassica napobrassica",
-        "helps": "Peas, broccoli",
-        "helpers": "Hairy vetch, peas",
-        "attracts": "",
-        "-repels": {
-          "+distracts": ""
-        },
-        "avoid": "hedge mustard, knotweed",
-        "fact": "Turnips act as a trap crop for broccoli. See peas regarding their mutualism with turnips.\n"
+    {
+      "id": 38,
+      "commonName": "Turnips and rutabagas",
+      "ScientificName": "Brassica rapa and Brassica napobrassica",
+      "helps": "Peas, broccoli",
+      "helpers": "Hairy vetch, peas",
+      "attracts": "",
+      "-repels": {
+        "+distracts": ""
+      },
+      "avoid": "hedge mustard, knotweed",
+      "fact": "Turnips act as a trap crop for broccoli. See peas regarding their mutualism with turnips.\n"
     }
   ]
 }
