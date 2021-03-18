@@ -2,6 +2,8 @@ import React, { useContext, useEffect } from "react"
 import { useHistory, useParams } from "react-router"
 import { GardenContext } from "./GardenProvider"
 import {Link} from "react-router-dom"
+import { userStorageKey } from "../auth/authSettings";
+
 
 export const MyGardens = () => {
     const {gardens, getGardens} = useContext(GardenContext)
@@ -9,11 +11,13 @@ export const MyGardens = () => {
 
     const history =useHistory()
     const {gardenId} = useParams()
+    const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
 
     useEffect(() => {
         getGardens()
     }, [])
-    console.log(gardens)
+   
+    const usersGarden = gardens.filter(garden => garden.userId === currentUserId)
 
     return (
         <>
@@ -21,8 +25,8 @@ export const MyGardens = () => {
                 <h2>My Gardens</h2>
                 <div><button className="btn--createGarden"onClick={() =>{history.push("/gardens/create")}}>Create New Garden</button></div>
             </section>
-            <section className="myGardenList">
-                {gardens.map(garden =><div><Link to={`/gardens/${garden.id}`}>
+            <section className="myGardenList" >
+                {usersGarden.map(garden =><div key={garden.id}><Link to={`/gardens/${garden.id}`} key={garden.id}>
                     {garden.name}
                 </Link></div>)}
             </section>
