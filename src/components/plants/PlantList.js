@@ -10,9 +10,14 @@ export const PlantList = () => {
 
     const history = useHistory()
 
+    useEffect(() =>{
+        getPlants()
+    }, [])
+
     return (
         <>
             <h3>Hello</h3>
+            {/* <p>{plants.map(plant => plant.Helps)}</p> */}
             <ListDividers />
         </>
     )
