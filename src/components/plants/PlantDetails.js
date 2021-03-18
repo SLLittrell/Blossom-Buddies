@@ -60,12 +60,9 @@ export const PlantDetails = () => {
         setGarden(event.target.value);
     };
    
-      
     return(
         <>
             <h3>{plant.commonName}</h3>
-        
-            
                 <FormControl className={classes.formControl}>
                     <InputLabel id="demo-simple-select-label">Garden</InputLabel>
                     <Select
@@ -78,6 +75,11 @@ export const PlantDetails = () => {
                     </Select>
                 </FormControl>
                 <button>Save Plant</button>
+            <section>
+               <div>Helpers: {plant.helpers}</div>
+               <div>Not so Helpful:{plant.avoid ? plant.avoid : 'No plants to worry about!'}</div>
+               <div>Fun Fact: {plant.fact ? plant.fact : 'Sorry No Fun Facts Yet'}</div>
+            </section>
             
             
         </>
