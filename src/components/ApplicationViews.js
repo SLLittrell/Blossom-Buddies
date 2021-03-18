@@ -9,6 +9,7 @@ import { PlantDetails } from "./plants/PlantDetails"
 import { PlantList } from "./plants/PlantList"
 import { PlantProvider } from "./plants/PlantProvider"
 import { UserProvider } from "./users/UserProvider"
+import {PlantSearch} from "./plants/PlantSearch"
 
 export const ApplicationViews = () => {
     return (
@@ -29,6 +30,7 @@ export const ApplicationViews = () => {
             </GardenProvider>
             <PlantProvider>
                 <Route exact path="/plants">
+                    <PlantSearch />
                     <PlantList />
                 </Route>
                 <Route exact path="/plants/details/:plantId(\d+)">

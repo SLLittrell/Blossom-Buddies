@@ -17,7 +17,7 @@ export const PlantList = () => {
 
     useEffect(() => {
         if(searchTerms !== ""){
-            const subset = plants.filter(plant => plant.commonName.toLowerCase().includes(searchTerms))
+            const subset = plants.filter(plant => plant.commonName.toLowerCase().includes(searchTerms.toLowerCase()))
             setFiltered(subset)
         } else {
             setFiltered(plants)
