@@ -5,9 +5,11 @@ import { GardenForm } from "./gardens/GardenForm"
 import { MyGardens } from "./gardens/GardenHome"
 import { GardenProvider } from "./gardens/GardenProvider"
 import { Home } from "./Home"
+import { PlantDetails } from "./plants/PlantDetails"
 import { PlantList } from "./plants/PlantList"
 import { PlantProvider } from "./plants/PlantProvider"
 import { UserProvider } from "./users/UserProvider"
+import {PlantSearch} from "./plants/PlantSearch"
 
 export const ApplicationViews = () => {
     return (
@@ -27,7 +29,13 @@ export const ApplicationViews = () => {
                 </Route>
             </GardenProvider>
             <PlantProvider>
-                <PlantList />
+                <Route exact path="/plants">
+                    <PlantSearch />
+                    <PlantList />
+                </Route>
+                <Route exact path="/plants/details/:plantId(\d+)">
+                    <PlantDetails />
+                </Route>
             </PlantProvider>
         </UserProvider>
     )
