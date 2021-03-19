@@ -5,8 +5,7 @@ import { PlantContext } from "./PlantProvider"
 import { userStorageKey } from "../auth/authSettings"
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
+import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
@@ -40,8 +39,12 @@ export const PlantDetails = () => {
         if(usersGardens !== []) setUserGarden(usersGardens)
     } ,[plant])
     
-    console.log(userGarden)
-    console.log("plant", plant)
+    useEffect(() =>{
+        const helper = plant.helpers !== undefined ? plant.helper.split(",") : ""
+        console.log(helper)
+    },[plant])
+    // console.log(userGarden)
+    // console.log("plant", plant)
 
     const useStyles = makeStyles((theme) => ({
         formControl: {
@@ -54,7 +57,7 @@ export const PlantDetails = () => {
       }));
 
     const classes = useStyles();
-    const [garden, setGarden] = React.useState('');
+    const [garden, setGarden] = useState('');
 
     const handleChange = (event) => {
         setGarden(event.target.value);
@@ -64,14 +67,14 @@ export const PlantDetails = () => {
         <>
             <h3>{plant.commonName}</h3>
                 <FormControl className={classes.formControl}>
-                    <InputLabel id="demo-simple-select-label">Garden</InputLabel>
+                    <InputLabel id="garden-select-label">Garden</InputLabel>
                     <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
+                    labelId="garden-select-label"
+                    id="garden-select"
                     value={garden}
                     onChange={handleChange}
                     >
-                    {userGarden.map(garden => <MenuItem value={garden.id}>{garden.name}</MenuItem>)}
+                    {userGarden.map(garden => <MenuItem key={garden.id} value={garden.id}>{garden.name}</MenuItem>)}
                     </Select>
                 </FormControl>
                 <button>Save Plant</button>
