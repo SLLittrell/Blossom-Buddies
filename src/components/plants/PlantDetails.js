@@ -9,7 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { HelperListDividers } from "./PlantDetail"
-
+import {AvoidListDividers} from "./PlantDetail"
 
 
 export const PlantDetails = () => {
@@ -63,7 +63,7 @@ export const PlantDetails = () => {
     //Mapping through converted helpers string, then creating a new array only when helpers are rendered
     const helpersArray= plant.helpers?.split(",")
     const filterHelpers = []
-    helpersArray ? helpersArray.map(helper => filterHelpers.push(helper) ) : console.log("no")
+    helpersArray ? helpersArray.map(helper => filterHelpers.push(helper) ) : filterHelpers.push("")
     
    
     return(
@@ -83,8 +83,8 @@ export const PlantDetails = () => {
                 </FormControl>
                 <button>Save Plant</button>
             <section>
-               <div>Helpers:{filterHelpers.map(helper =><HelperListDividers key={filterHelpers.indexOf(helper)} helpers={helper}/>)} </div>
-               <div>Not so Helpful:{plant.avoid ? plant.avoid : 'No plants to worry about!'}</div>
+               <div>Helpers:{filterHelpers.map((helper, i) =><HelperListDividers key={i} helpers={helper}/>)} </div>
+               <div>Not so Helpful:{plant.avoid ? plant.avoid?.split(",").map((avoid, i) =><AvoidListDividers key={i} NonHelpers={avoid}/>) : 'No plants to worry about!'}</div>
                <div>Fun Fact: {plant.fact ? plant.fact : 'Sorry No Fun Facts Yet'}</div>
             </section>
             
