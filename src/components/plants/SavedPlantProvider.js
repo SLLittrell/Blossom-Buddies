@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useState } from "react"
+import React, { createContext, useState } from "react"
 
 
-export const SavedPlantContext = useContext()
+export const SavedPlantContext = createContext()
 
 export const DavedPlantProvider = () => {
     const [savedPlants, setSavedPlants] = useState([])
@@ -9,7 +9,7 @@ export const DavedPlantProvider = () => {
     const getSavedPlants = () => {
         return fetch(`http://localhost:8088/plants`)
         .then(res => res.json())
-        .then(setPlants)
+        .then(setSavedPlants)
     }
     
     

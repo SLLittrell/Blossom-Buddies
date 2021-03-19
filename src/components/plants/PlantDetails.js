@@ -55,11 +55,20 @@ export const PlantDetails = () => {
 
     const classes = useStyles();
     const [garden, setGarden] = useState('');
-
+    
+    const [savePlant, setSavePlant] = useState({
+        plantId:parseInt(plantId),
+        gardenId: 0
+    })
     const handleChange = (event) => {
         setGarden(event.target.value);
+        const newPlant = {...savePlant}
+        newPlant[event.target.id]= event.target.value
+        setSavePlant(newPlant)
     };
+    console.log(savePlant)
 
+    
     //Mapping through converted helpers string, then creating a new array only when helpers are rendered
     const helpersArray= plant.helpers?.split(",")
     const filterHelpers = []
@@ -71,14 +80,14 @@ export const PlantDetails = () => {
             <h3>{plant.commonName}</h3> 
             
                 <FormControl className={classes.formControl}>
-                    <InputLabel id="garden-select-label">Garden</InputLabel>
+                    <InputLabel id="gardenId">Garden</InputLabel>
                     <Select
                     labelId="garden-select-label"
-                    id="garden-select"
+                    id="gardenId"
                     value={garden}
                     onChange={handleChange}
                     >
-                    {userGarden.map(garden => <MenuItem key={garden.id} value={garden.id}>{garden.name}</MenuItem>)}
+                    {userGarden.map(garden => <MenuItem key={garden.id}  value={garden.id}>{garden.name}</MenuItem>)}
                     </Select>
                 </FormControl>
                 <button>Save Plant</button>
