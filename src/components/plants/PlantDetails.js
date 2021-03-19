@@ -40,13 +40,13 @@ export const PlantDetails = () => {
     } ,[plant])
     
     // useEffect(() =>{
-    //     const helper = plant.helpers !== "" ? plant.helper.split(",") : ""
+    //     console.log(plant)
+    //     const helper = plant.helpers !== "" ? plant.helpers.split(",") : ""
     //     console.log(helper)
     // },[plant])
-    // console.log(userGarden)
-    // console.log("plant", plant)
-    // console.log(typeof plant.helpers)
-    // console.log(plant.helpers)
+    // // console.log(userGarden)
+    // // console.log("plant", plant)
+    
 
     const useStyles = makeStyles((theme) => ({
         formControl: {
@@ -64,6 +64,9 @@ export const PlantDetails = () => {
     const handleChange = (event) => {
         setGarden(event.target.value);
     };
+
+    console.log(typeof plant.helpers)
+    console.log(plant.helpers)
     return(
         <>
             <h3>{plant.commonName}</h3>
@@ -80,7 +83,7 @@ export const PlantDetails = () => {
                 </FormControl>
                 <button>Save Plant</button>
             <section>
-               <div>Helpers: {plant.helpers}</div>
+               <div>Helpers: {plant.helpers?.split(",")}</div>
                <div>Not so Helpful:{plant.avoid ? plant.avoid : 'No plants to worry about!'}</div>
                <div>Fun Fact: {plant.fact ? plant.fact : 'Sorry No Fun Facts Yet'}</div>
             </section>
