@@ -8,6 +8,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import { HelperListDividers } from "./PlantDetail"
 
 
 
@@ -59,10 +60,16 @@ export const PlantDetails = () => {
         setGarden(event.target.value);
     };
 
-    //returns JsX to DOM
+    //Mapping through converted helpers string, then creating a new array only when helpers are rendered
+    const helpersArray= plant.helpers?.split(",")
+    const filterHelpers = []
+    helpersArray ? helpersArray.map(helper => filterHelpers.push(helper) ) : console.log("no")
+    
+   
     return(
         <>
-            <h3>{plant.commonName}</h3>
+            <h3>{plant.commonName}</h3> 
+            
                 <FormControl className={classes.formControl}>
                     <InputLabel id="garden-select-label">Garden</InputLabel>
                     <Select
@@ -76,7 +83,7 @@ export const PlantDetails = () => {
                 </FormControl>
                 <button>Save Plant</button>
             <section>
-               <div>Helpers: {plant.helpers?.split(",")}</div>
+               <div>Helpers:{filterHelpers.map(helper =><HelperListDividers key={filterHelpers.indexOf(helper)} helpers={helper}/>)} </div>
                <div>Not so Helpful:{plant.avoid ? plant.avoid : 'No plants to worry about!'}</div>
                <div>Fun Fact: {plant.fact ? plant.fact : 'Sorry No Fun Facts Yet'}</div>
             </section>
