@@ -34,6 +34,13 @@
       "startDate": "2021-05-15",
       "gardenTypeId": "3",
       "id": 5
+    },
+    {
+      "name": "Glenn's Herbs",
+      "userId": 1,
+      "startDate": "2021-03-21",
+      "gardenTypeId": "3",
+      "id": 6
     }
   ],
   "users": [
@@ -88,7 +95,7 @@
         "+distracts": ""
       },
       "avoid": "Onion, garlic, potatoes, gladioluscitation needed",
-      "fact": "\n"
+      "fact": ""
     },
     {
       "id": 3,
