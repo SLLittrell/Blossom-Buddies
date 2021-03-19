@@ -39,12 +39,14 @@ export const PlantDetails = () => {
         if(usersGardens !== []) setUserGarden(usersGardens)
     } ,[plant])
     
-    useEffect(() =>{
-        const helper = plant.helpers !== undefined ? plant.helper.split(",") : ""
-        console.log(helper)
-    },[plant])
+    // useEffect(() =>{
+    //     const helper = plant.helpers !== "" ? plant.helper.split(",") : ""
+    //     console.log(helper)
+    // },[plant])
     // console.log(userGarden)
     // console.log("plant", plant)
+    // console.log(typeof plant.helpers)
+    // console.log(plant.helpers)
 
     const useStyles = makeStyles((theme) => ({
         formControl: {
@@ -62,7 +64,6 @@ export const PlantDetails = () => {
     const handleChange = (event) => {
         setGarden(event.target.value);
     };
-   
     return(
         <>
             <h3>{plant.commonName}</h3>
