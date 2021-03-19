@@ -22,7 +22,7 @@ export const PlantDetails = () => {
     const history = useHistory()
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
 
-    
+    //get plant using id from url paramas 
     useEffect(() => {
         getPlantById(plantId)
         .then((response) => {
@@ -30,24 +30,18 @@ export const PlantDetails = () => {
         })
     },[])
     
+    //get garden data from garden provider
     useEffect(()=> {
         getGardens()
     },[])
     
+    //filtering gardens by current user, current user can only choose gardens they created
     useEffect(() =>{
         const usersGardens = gardens.filter(garden => garden.userId === currentUserId)
         if(usersGardens !== []) setUserGarden(usersGardens)
     } ,[plant])
     
-    // useEffect(() =>{
-    //     console.log(plant)
-    //     const helper = plant.helpers !== "" ? plant.helpers.split(",") : ""
-    //     console.log(helper)
-    // },[plant])
-    // // console.log(userGarden)
-    // // console.log("plant", plant)
-    
-
+    //Material UI styling resource 
     const useStyles = makeStyles((theme) => ({
         formControl: {
           margin: theme.spacing(1),
@@ -65,8 +59,7 @@ export const PlantDetails = () => {
         setGarden(event.target.value);
     };
 
-    console.log(typeof plant.helpers)
-    console.log(plant.helpers)
+    //returns JsX to DOM
     return(
         <>
             <h3>{plant.commonName}</h3>
