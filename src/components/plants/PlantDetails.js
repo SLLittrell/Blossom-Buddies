@@ -63,7 +63,7 @@ export const PlantDetails = () => {
     //Mapping through converted helpers string, then creating a new array only when helpers are rendered
     const helpersArray= plant.helpers?.split(",")
     const filterHelpers = []
-    helpersArray ? helpersArray.map(helper => filterHelpers.push(helper) ) : filterHelpers.push("")
+    helpersArray ? helpersArray.map(helper => filterHelpers.push(helper.toUpperCase()) ) : filterHelpers.push("")
     
    
     return(
@@ -83,9 +83,17 @@ export const PlantDetails = () => {
                 </FormControl>
                 <button>Save Plant</button>
             <section>
-               <div>Helpers:{filterHelpers.map((helper, i) =><HelperListDividers key={i} helpers={helper}/>)} </div>
-               <div>Not so Helpful:{plant.avoid ? plant.avoid?.split(",").map((avoid, i) =><AvoidListDividers key={i} NonHelpers={avoid}/>) : 'No plants to worry about!'}</div>
-               <div>Fun Fact: {plant.fact ? plant.fact : 'Sorry No Fun Facts Yet'}</div>
+               <div><h3>Helpers:</h3>
+               {filterHelpers.map((helper, i) =><HelperListDividers key={i} helpers={helper}/>)} 
+               </div>
+               <div>
+                   <h3>Not so Helpful(avoid):</h3>
+                   {plant.avoid ? plant.avoid?.split(",").map((avoid, i) =><AvoidListDividers key={i} NonHelpers={avoid.toUpperCase()}/>) : 'No plants to worry about!'}
+                </div>
+               <div>
+                   <h3>Fun Fact: </h3>
+                   {plant.fact ? plant.fact : 'Sorry No Fun Facts Yet'}
+                </div>
             </section>
             
             
