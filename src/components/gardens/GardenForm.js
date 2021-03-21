@@ -14,7 +14,7 @@ export const GardenForm = () => {
         name:"",
         userId: currentUserId,
         startDate: "",
-        gardenTypeId: 0
+        gardenTypeId:0
     })
 
     const history = useHistory()
@@ -29,7 +29,12 @@ export const GardenForm = () => {
         if(garden.name=== "" || garden.gardenType === 0 ){
             window.alert("Please fill in all inputs")
         }
-        else{addGarden(garden)}
+        else{addGarden({
+        name: garden.name,
+        userId: garden.userId,
+        startDate: garden.startDate,
+        gardenTypeId:parseInt(garden.gardenTypeId)
+        })}
         
     }
     

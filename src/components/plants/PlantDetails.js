@@ -5,10 +5,11 @@ import { PlantContext } from "./PlantProvider"
 import { userStorageKey } from "../auth/authSettings"
 import { HelperListDividers } from "./PlantDetail"
 import {AvoidListDividers} from "./PlantDetail"
-
+import { SavedPlantContext } from "./SavedPlantProvider"
 
 export const PlantDetails = () => {
     const { getPlantById } = useContext(PlantContext)
+    const {addSavedPlants} =useContext(SavedPlantContext)
     const { gardens, getGardens} = useContext(GardenContext)
     
     const [userGarden, setUserGarden] = useState([])
@@ -47,7 +48,12 @@ export const PlantDetails = () => {
         newPlant[event.target.id]= parseInt(event.target.value)
         setSavePlant(newPlant)
     };
-    console.log(savePlant)
+    // console.log(savePlant)
+
+    const PlantSave = () => {
+        addSavedPlants(savePlant)
+        .then(() => history.push('/plants'))
+    }
 
     
     //Mapping through converted helpers string, then creating a new array only when helpers are rendered
@@ -63,12 +69,12 @@ export const PlantDetails = () => {
             <section>
                 <label id="gardenId">Which garden would you like to add {plant.commonName} to?<br></br></label>
                 <select id="gardenId" onChange={handleChange}>
-                    <option value={0}>Your Gardens</option>
+                    <option value={0} >Your Gardens</option>
                     {userGarden.map(garden =><option key={garden.id} value={garden.id}>{garden.name}</option>)}
                 </select>
             </section>
                 
-            <div><button>Save Plant</button></div>
+            <div><button onClick={PlantSave}>Save Plant</button></div>
                 
             <section>
                <div><h3>Helpers:</h3>
@@ -76,7 +82,7 @@ export const PlantDetails = () => {
                </div>
                <div>
                    <h3>Not so Helpful(avoid):</h3>
-                   {plant.avoid ? plant.avoid?.split(",").map((avoid, i) =><AvoidListDividers key={i} NonHelpers={avoid.toUpperCase()}/>) : 'No plants to worry about!'}
+                   {plant.avoid ? plant.avoid?.split(",").map((avoid, i) =><AvoidListDividers key={i} NonHelpers={avoid.toUpperCase()}/>) : 'No known plants to worry about!'}
                 </div>
                <div>
                    <h3>Fun Fact: </h3>

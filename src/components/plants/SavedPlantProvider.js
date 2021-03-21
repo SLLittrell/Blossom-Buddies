@@ -3,7 +3,7 @@ import React, { createContext, useState } from "react"
 
 export const SavedPlantContext = createContext()
 
-export const DavedPlantProvider = () => {
+export const SavedPlantProvider = (props) => {
     const [savedPlants, setSavedPlants] = useState([])
     
     const getSavedPlants = () => {

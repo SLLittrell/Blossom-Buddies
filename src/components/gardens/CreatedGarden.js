@@ -1,16 +1,16 @@
 import React, { useContext, useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router"
+import { SavedPlantContext } from "../plants/SavedPlantProvider"
 import { GardenContext } from "./GardenProvider"
 
 export const CreatedGarden = () => {
     const { getGardenById, getGardenType, gardenType } = useContext(GardenContext)
+    const {getSavedPlants} =useContext(SavedPlantContext)
 
     const[garden, setGarden] = useState({})
     const[types, setTypes] = useState({
         type:""
     })
-    
-   
 
     const {gardenId} = useParams()
     const history = useHistory()
@@ -31,6 +31,8 @@ export const CreatedGarden = () => {
             setGarden(response)
         })
     }, [])
+
+    
 
     // debugger
    return(
