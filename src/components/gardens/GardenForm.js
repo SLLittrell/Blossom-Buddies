@@ -29,7 +29,7 @@ export const GardenForm = () => {
     }
    
     const onSaveClick =() => {
-        if(garden.name=== "" || garden.gardenType === 0 ){
+        if(garden.name=== "" && garden.gardenType === 0 ){
             window.alert("Please fill in all inputs")
         }
         else{
@@ -40,9 +40,10 @@ export const GardenForm = () => {
                     name: garden.name,
                     userId: garden.userId,
                     startDate: garden.startDate,
-                    gardenTypeId:parseInt(garden.gardenTypeId)
+                    gardenTypeId:parseInt(garden.gardenTypeId),
+                    id: gardenId
                 })
-                .then(() => history.push(`/gardens/${garden.id}`))
+                .then(() => history.push(`/gardens/${gardens.id}`))
             }else {
                 addGarden({
                     name: garden.name,
@@ -53,7 +54,7 @@ export const GardenForm = () => {
                 .then(() => history.push(`/gardens`))
             }
         
-        } 
+        }
         
     }
     
@@ -65,13 +66,12 @@ export const GardenForm = () => {
               .then(garden => {
                   setGardens(garden)
                   setIsLoading(false)
-              })
-            } else {
-              setIsLoading(false)
-            }
-          })
-        }, [])
-    
+                })
+              } else {
+                setIsLoading(false)
+              }
+            })
+          }, [])
 
     return (
         <>
@@ -80,28 +80,29 @@ export const GardenForm = () => {
                 <fieldset>
                     <div className="garden_form">
                         <label htmlFor="gardenName">Name: </label>
-                        <input type="text" id="name" required autoFocus className="gardenInput" placeholder={gardens?.name} 
+                        <input type="text" id="name" placeholder={gardens.name} autoFocus className="gardenInput" 
                         onChange={inputChange}/>
                     </div>
               </fieldset>
               <fieldset>
                   <label htmlFor="gardenStart">Start Date:</label>
-                  <input type="date" id="startDate" className="gardenInput" onChange={inputChange} value ={gardens.startDate}></input>
+                  <input type="date" id="startDate" className="gardenInput" onChange={inputChange}></input>
               </fieldset>
               <fieldset>
                 <label htmlFor="gardenType">Garden Type:</label>
-                <select id="gardenTypeId" value={gardens.gardenTypeId} onChange={inputChange}>
+                <select id="gardenTypeId" onChange={inputChange}>
                     <option value= "0">Select a garden type</option>
                     {gardenType.map(types => (
                     <option key={types.id} value={types.id}>{types.type}</option>
                     ))}         
                 </select>
-              </fieldset>
-              <button className="btn btn-saveGarden"
-                onClick={event => { event.preventDefault() 
-                onSaveClick()}}>
-                {gardenId ? "Update Garden" : "Save Garden"}
-            </button>
+                </fieldset>
+                <button className="btn btn-saveGarden"
+                    disabled={isLoading}
+                    onClick={event => { event.preventDefault() 
+                    onSaveClick()}}>
+                    {gardenId ? "Update Garden" : "Save Garden"}
+                </button>
             </form>
         </>
     )
