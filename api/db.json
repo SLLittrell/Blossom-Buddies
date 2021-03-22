@@ -4,43 +4,64 @@
       "name": "Garden",
       "userId": 1,
       "startDate": "2021-03-21",
-      "gardenTypeId": "2",
+      "gardenTypeId": 2,
       "id": 1
     },
     {
       "name": "Stacey's Spring Garden",
       "userId": 1,
       "startDate": "2021-03-20",
-      "gardenTypeId": "2",
+      "gardenTypeId": 2,
       "id": 2
     },
     {
       "name": "This Scotts Garden",
       "userId": 2,
       "startDate": "2021-03-20",
-      "gardenTypeId": "2",
+      "gardenTypeId": 2,
       "id": 3
     },
     {
       "name": "Scott's Spring Garden",
       "userId": 2,
       "startDate": "2021-03-28",
-      "gardenTypeId": "3",
+      "gardenTypeId": 3,
       "id": 4
     },
     {
       "name": "Hopping Frog Garden",
       "userId": 2,
       "startDate": "2021-05-15",
-      "gardenTypeId": "3",
+      "gardenTypeId": 3,
       "id": 5
     },
     {
       "name": "Glenn's Herbs",
       "userId": 1,
       "startDate": "2021-03-21",
-      "gardenTypeId": "3",
+      "gardenTypeId": 3,
       "id": 6
+    },
+    {
+      "name": "Mid-Summers Garden",
+      "userId": 2,
+      "startDate": "2021-07-03",
+      "gardenTypeId": 2,
+      "id": 7
+    },
+    {
+      "name": "Herb",
+      "userId": 2,
+      "startDate": "2021-04-15",
+      "gardenTypeId": 1,
+      "id": 8
+    },
+    {
+      "name": "Berry",
+      "userId": 2,
+      "startDate": "2021-04-18",
+      "gardenTypeId": 2,
+      "id": 9
     }
   ],
   "users": [
@@ -69,7 +90,48 @@
       "id": 3
     }
   ],
-  "savedPlants": [],
+  "savedPlants": [
+    {
+      "plantId": 2,
+      "gardenId": 5,
+      "id": 1
+    },
+    {
+      "plantId": 6,
+      "gardenId": 5,
+      "id": 2
+    },
+    {
+      "plantId": 9,
+      "gardenId": 5,
+      "id": 3
+    },
+    {
+      "plantId": 13,
+      "gardenId": 7,
+      "id": 4
+    },
+    {
+      "plantId": 2,
+      "gardenId": 2,
+      "id": 5
+    },
+    {
+      "plantId": 13,
+      "gardenId": 2,
+      "id": 6
+    },
+    {
+      "plantId": 10,
+      "gardenId": 2,
+      "id": 7
+    },
+    {
+      "plantId": 8,
+      "gardenId": 2,
+      "id": 8
+    }
+  ],
   "plants": [
     {
       "id": 1,

@@ -10,6 +10,7 @@ import { PlantList } from "./plants/PlantList"
 import { PlantProvider } from "./plants/PlantProvider"
 import { UserProvider } from "./users/UserProvider"
 import {PlantSearch} from "./plants/PlantSearch"
+import {SavedPlantProvider} from "./plants/SavedPlantProvider"
 
 export const ApplicationViews = () => {
     return (
@@ -24,9 +25,13 @@ export const ApplicationViews = () => {
                 <Route exact path="/gardens/create">
                     <GardenForm />
                 </Route>
-                <Route exact path="/gardens/:gardenId(\d+)">
-                    <CreatedGarden />
-                </Route>
+                <PlantProvider>
+                    <SavedPlantProvider>
+                        <Route exact path="/gardens/:gardenId(\d+)">
+                            <CreatedGarden />
+                        </Route>
+                    </SavedPlantProvider>
+                </PlantProvider>
             </GardenProvider>
             <PlantProvider>
                 <Route exact path="/plants">
@@ -34,9 +39,11 @@ export const ApplicationViews = () => {
                     <PlantList />
                 </Route>
                 <GardenProvider>
-                    <Route exact path="/plants/details/:plantId(\d+)">
-                        <PlantDetails />
-                    </Route>
+                    <SavedPlantProvider>
+                        <Route exact path="/plants/details/:plantId(\d+)">
+                            <PlantDetails />
+                        </Route>
+                    </SavedPlantProvider>
                 </GardenProvider>
             </PlantProvider>
         </UserProvider>

@@ -3,17 +3,13 @@ import { useHistory, useParams } from "react-router-dom"
 import { GardenContext } from "../gardens/GardenProvider"
 import { PlantContext } from "./PlantProvider"
 import { userStorageKey } from "../auth/authSettings"
-import { makeStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem'
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
 import { HelperListDividers } from "./PlantDetail"
 import {AvoidListDividers} from "./PlantDetail"
-
+import { SavedPlantContext } from "./SavedPlantProvider"
 
 export const PlantDetails = () => {
     const { getPlantById } = useContext(PlantContext)
+    const {addSavedPlants} =useContext(SavedPlantContext)
     const { gardens, getGardens} = useContext(GardenContext)
     
     const [userGarden, setUserGarden] = useState([])
@@ -42,24 +38,24 @@ export const PlantDetails = () => {
         if(usersGardens !== []) setUserGarden(usersGardens)
     } ,[plant])
     
-    //Material UI styling resource 
-    const useStyles = makeStyles((theme) => ({
-        formControl: {
-          margin: theme.spacing(1),
-          minWidth: 120,
-        },
-        selectEmpty: {
-          marginTop: theme.spacing(2),
-        },
-      }));
-
-    const classes = useStyles();
-    const [garden, setGarden] = useState('');
-
+    
+    const [savePlant, setSavePlant] = useState({
+        plantId:parseInt(plantId),
+        gardenId: 0
+    })
     const handleChange = (event) => {
-        setGarden(event.target.value);
+        const newPlant = {...savePlant}
+        newPlant[event.target.id]= parseInt(event.target.value)
+        setSavePlant(newPlant)
     };
+    // console.log(savePlant)
 
+    const PlantSave = () => {
+        addSavedPlants(savePlant)
+        .then(() => history.push('/plants'))
+    }
+
+    
     //Mapping through converted helpers string, then creating a new array only when helpers are rendered
     const helpersArray= plant.helpers?.split(",")
     const filterHelpers = []
@@ -70,25 +66,23 @@ export const PlantDetails = () => {
         <>
             <h3>{plant.commonName}</h3> 
             
-                <FormControl className={classes.formControl}>
-                    <InputLabel id="garden-select-label">Garden</InputLabel>
-                    <Select
-                    labelId="garden-select-label"
-                    id="garden-select"
-                    value={garden}
-                    onChange={handleChange}
-                    >
-                    {userGarden.map(garden => <MenuItem key={garden.id} value={garden.id}>{garden.name}</MenuItem>)}
-                    </Select>
-                </FormControl>
-                <button>Save Plant</button>
+            <section>
+                <label id="gardenId">Which garden would you like to add {plant.commonName} to?<br></br></label>
+                <select id="gardenId" onChange={handleChange}>
+                    <option value={0} >Your Gardens</option>
+                    {userGarden.map(garden =><option key={garden.id} value={garden.id}>{garden.name}</option>)}
+                </select>
+            </section>
+                
+            <div><button onClick={PlantSave}>Save Plant</button></div>
+                
             <section>
                <div><h3>Helpers:</h3>
                {filterHelpers.map((helper, i) =><HelperListDividers key={i} helpers={helper}/>)} 
                </div>
                <div>
                    <h3>Not so Helpful(avoid):</h3>
-                   {plant.avoid ? plant.avoid?.split(",").map((avoid, i) =><AvoidListDividers key={i} NonHelpers={avoid.toUpperCase()}/>) : 'No plants to worry about!'}
+                   {plant.avoid ? plant.avoid?.split(",").map((avoid, i) =><AvoidListDividers key={i} NonHelpers={avoid.toUpperCase()}/>) : 'No known plants to worry about!'}
                 </div>
                <div>
                    <h3>Fun Fact: </h3>

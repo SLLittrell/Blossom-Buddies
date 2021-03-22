@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 import { GardenContext } from "./GardenProvider"
 import { userStorageKey } from "../auth/authSettings";
-import { useHistory } from "react-router";
+import { useHistory, useParams } from "react-router";
 
 
 
@@ -14,10 +14,11 @@ export const GardenForm = () => {
         name:"",
         userId: currentUserId,
         startDate: "",
-        gardenTypeId: 0
+        gardenTypeId:0
     })
 
     const history = useHistory()
+    const {gardenId} = useParams()
 
     const inputChange = (event) => {
         const newGarden = {...garden}
@@ -29,7 +30,14 @@ export const GardenForm = () => {
         if(garden.name=== "" || garden.gardenType === 0 ){
             window.alert("Please fill in all inputs")
         }
-        else{addGarden(garden)}
+        else{addGarden({
+        name: garden.name,
+        userId: garden.userId,
+        startDate: garden.startDate,
+        gardenTypeId:parseInt(garden.gardenTypeId)
+        }).then(() => history.push(`/gardens`))}
+        
+        
         
     }
     
