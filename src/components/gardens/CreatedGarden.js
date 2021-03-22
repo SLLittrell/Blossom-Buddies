@@ -7,7 +7,7 @@ import { GardenContext } from "./GardenProvider"
 import { SavedPlantDividers } from "./SavedPlants"
 
 export const CreatedGarden = () => {
-    const { getGardenById, getGardenType, gardenType } = useContext(GardenContext)
+    const { getGardenById, getGardenType, gardenType, DeleteGarden } = useContext(GardenContext)
     const {getSavedPlants, savedPlants} = useContext(SavedPlantContext)
     const {getPlants, plants} = useContext(PlantContext)
 
@@ -49,7 +49,12 @@ export const CreatedGarden = () => {
     // console.log(filterPlants)
     const PlantFilter = filterPlants.map(match =>plants.find(plant => parseInt(plant.id) === parseInt(match.plantId))) 
     // console.log(PlantFilter)
-    
+    const handleDelete = () => {
+        DeleteGarden(garden?.id)
+        .then(() => {
+            history.push("/gardens")
+        })
+    }
     // debugger
    return(
         <> 
@@ -59,6 +64,7 @@ export const CreatedGarden = () => {
                 <div className="created_gardenDate">Start Date: {garden.startDate}</div>
                 <div className="created_gardenType">Garden Type: {types.type}</div>
                 <button className="btn-findPlants" onClick={()=> history.push("/plants")}>Add Plants</button>
+                <button onClick={handleDelete}>Delete Garden</button>
                 <button className="btn-findPlants" onClick={()=> history.push("/gardens/create")}>Edit Garden</button>
             </section>
             <section>{PlantFilter.map(plant =><SavedPlantDividers key ={plant?.id} myPlants={plant}/>)}</section>

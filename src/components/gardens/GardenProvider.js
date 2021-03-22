@@ -34,10 +34,17 @@ export const GardenProvider = (props) => {
         .then(setGardenType)
         }
 
+    const DeleteGarden = gardenId => {
+        return fetch(`http://localhost:8088/gardens/${gardenId}`, {
+            method: "DELETE"
+        })
+            .then(getGardens)
+    }
+
    
     return (
         <GardenContext.Provider value={{
-            getGardens, gardens, addGarden, getGardenType, gardenType, getGardenById
+            getGardens, gardens, addGarden, getGardenType, gardenType, getGardenById, DeleteGarden
         }}>
             {props.children}
         </GardenContext.Provider>
