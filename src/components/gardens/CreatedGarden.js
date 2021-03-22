@@ -4,6 +4,7 @@ import { useHistory, useParams } from "react-router"
 import { PlantContext } from "../plants/PlantProvider"
 import { SavedPlantContext } from "../plants/SavedPlantProvider"
 import { GardenContext } from "./GardenProvider"
+import { SavedPlantDividers } from "./SavedPlants"
 
 export const CreatedGarden = () => {
     const { getGardenById, getGardenType, gardenType } = useContext(GardenContext)
@@ -42,11 +43,12 @@ export const CreatedGarden = () => {
         .then(getPlants())
     },[garden])
 
-    
+    // console.log(plants)
 
-       const filterPlants= savedPlants.filter(plant => plant.plantId === plants.id)
-       console.log(filterPlants)
-   
+    const filterPlants= savedPlants.filter(gardens => gardens.gardenId === garden.id)
+    // console.log(filterPlants)
+    const PlantFilter = filterPlants.map(match =>plants.find(plant => parseInt(plant.id) === parseInt(match.plantId))) 
+    // console.log(PlantFilter)
     
     // debugger
    return(
@@ -59,7 +61,7 @@ export const CreatedGarden = () => {
                 <button className="btn-findPlants" onClick={()=> history.push("/plants")}>Add Plants</button>
                 <button className="btn-findPlants" onClick={()=> history.push("/gardens/create")}>Edit Garden</button>
             </section>
-            <section>{}</section>
+            <section>{PlantFilter.map(plant =><SavedPlantDividers key ={plant?.id} myPlants={plant}/>)}</section>
         </>
     )
 }

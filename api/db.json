@@ -110,6 +110,26 @@
       "plantId": 13,
       "gardenId": 7,
       "id": 4
+    },
+    {
+      "plantId": 2,
+      "gardenId": 2,
+      "id": 5
+    },
+    {
+      "plantId": 13,
+      "gardenId": 2,
+      "id": 6
+    },
+    {
+      "plantId": 10,
+      "gardenId": 2,
+      "id": 7
+    },
+    {
+      "plantId": 8,
+      "gardenId": 2,
+      "id": 8
     }
   ],
   "plants": [
