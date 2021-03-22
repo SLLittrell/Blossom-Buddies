@@ -4,7 +4,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
-import {Link} from "react-router-dom"
+import {Link} from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,12 +16,17 @@ const useStyles = makeStyles((theme) => ({
 
 export const HelperListDividers = ({helpers, plantFilter}) => {
   const classes = useStyles();
-  const matchPlant =plantFilter?.find(name => helpers?.includes(name.commonName.toLowerCase()))
+  const matchPlant =plantFilter?.find(name => helpers.includes(name.commonName.toLowerCase()))
+  let matchedPlantId = 0
+  if(matchPlant !== undefined){
+    matchedPlantId = parseInt(matchPlant.id)
+  }
   console.log(matchPlant)
+
  
   return (
     <List component="nav" className={classes.root} aria-label="helpers">
-      <ListItem button to={`/plants/details/${matchPlant?.id}`} component={Link}>
+      <ListItem button to={`/plants/details/${matchedPlantId}`} component={Link}>
         <ListItemText primary={helpers} />  
       </ListItem>
       <Divider light />

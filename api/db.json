@@ -121,7 +121,7 @@
   "plants": [
     {
       "id": 1,
-      "commonName": "Garlic",
+      "commonName": "Garlic (Alliums)",
       "ScientificName": "Allium",
       "helps": "Fruit trees, nightshades (tomatoes, capsicum peppers, potatoes), brassicas, carrots",
       "helpers": "Carrots, tomatoes, carrots and African spider plants (Cleome gynandra) together, marigolds (Tagetes spp.), mints",
@@ -254,7 +254,7 @@
       "commonName": "Carrots",
       "ScientificName": "Daucus carota",
       "helps": "Tomatoes, alliums, beans, leeks, lettuce, onions, passion fruit",
-      "helpers": "Lettuce, alliums (chives, leeks, onions, shallots, etc.), rosemary, wormwood, sage, beans, flax",
+      "helpers": "Lettuce, alliums (chives, leeks, onions, shallots, rosemary, wormwood, sage, beans, flax",
       "attracts": "Assassin bug, lacewing, parasitic wasp, yellow jacket and other predatory wasps",
       "-repels": {
         "+distracts": "Leek moth, onion fly"
