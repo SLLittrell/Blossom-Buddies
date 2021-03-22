@@ -135,7 +135,7 @@
   "plants": [
     {
       "id": 1,
-      "commonName": "Alliums",
+      "commonName": "Garlic",
       "ScientificName": "Allium",
       "helps": "Fruit trees, nightshades (tomatoes, capsicum peppers, potatoes), brassicas, carrots",
       "helpers": "Carrots, tomatoes, carrots and African spider plants (Cleome gynandra) together, marigolds (Tagetes spp.), mints",
@@ -317,7 +317,7 @@
     },
     {
       "id": 15,
-      "commonName": "Corn / Maize",
+      "commonName": "Corn",
       "ScientificName": "Zea mays",
       "helps": "Beans, cucurbits, soybeans, tomatoes",
       "helpers": "Sunflowers, dill, legumes (beans, peas, soybeans etc.), peanuts, cucurbits, clover, amaranth, white geranium, pigweed, lamb's quarters, morning glory, parsley, and potato, field mustard, Sudan grasscitation needed",

@@ -8,12 +8,15 @@ import {AvoidListDividers} from "./PlantDetail"
 import { SavedPlantContext } from "./SavedPlantProvider"
 
 export const PlantDetails = () => {
-    const { getPlantById } = useContext(PlantContext)
+    //get data to render plants, gardens details from plant & garden provider
+    // oseContext to add plants to saved list
+    const { getPlantById, getPlants, plants } = useContext(PlantContext)
     const {addSavedPlants} =useContext(SavedPlantContext)
     const { gardens, getGardens} = useContext(GardenContext)
     
     const [userGarden, setUserGarden] = useState([])
     const [plant, setPlant] = useState({})
+    const [plantFilter, setPlantFilter] = useState([])
 
     const {plantId} = useParams()
     const history = useHistory()
@@ -30,6 +33,7 @@ export const PlantDetails = () => {
     //get garden data from garden provider
     useEffect(()=> {
         getGardens()
+        .then(getPlants())
     },[])
     
     //filtering gardens by current user, current user can only choose gardens they created
@@ -59,9 +63,20 @@ export const PlantDetails = () => {
     //Mapping through converted helpers string, then creating a new array only when helpers are rendered
     const helpersArray= plant.helpers?.split(",")
     const filterHelpers = []
-    helpersArray ? helpersArray.map(helper => filterHelpers.push(helper.toUpperCase()) ) : filterHelpers.push("")
+    helpersArray ? helpersArray.map(helper => filterHelpers.push(helper) ) : filterHelpers.push("")
     
+   // find matching helper plants with current plant list 
+//    console.log(filterHelpers)
+    useEffect(() => {
+     const findPlants = plants?.filter(plant =>filterHelpers?.find(helper => helper?.includes(plant.commonName.toLowerCase())))
+     setPlantFilter(findPlants)
+    }, [plant])
    
+   console.log(plantFilter)
+
+
+
+//    debugger
     return(
         <>
             <h3>{plant.commonName}</h3> 
@@ -78,7 +93,7 @@ export const PlantDetails = () => {
                 
             <section>
                <div><h3>Helpers:</h3>
-               {filterHelpers.map((helper, i) =><HelperListDividers key={i} helpers={helper}/>)} 
+               {filterHelpers.map((helper, i) =><HelperListDividers key={i} helpers={helper} plantFilter={plantFilter}/>)} 
                </div>
                <div>
                    <h3>Not so Helpful(avoid):</h3>

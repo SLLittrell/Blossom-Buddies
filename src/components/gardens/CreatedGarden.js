@@ -21,16 +21,18 @@ export const CreatedGarden = () => {
     const {gardenId} = useParams()
     const history = useHistory()
     
+    //get garden type data
     useEffect(() =>{
         getGardenType()
     }, [])
 
+    //find the associated garden type for a created garden by using id
     useEffect(() => {
         const typeName = gardenType.find(type => parseInt(type.id) === parseInt(garden.gardenTypeId))
         if(typeName) setTypes(typeName)
     }, [garden])
-    // console.log(typeName)
     
+    //get garden data by using url params and garden id
     useEffect(() => {
     getGardenById(gardenId)
         .then((response) => {
@@ -38,19 +40,19 @@ export const CreatedGarden = () => {
         })
     }, [])
 
+    //get saved plant data and plant data
     useEffect(() => {
         getSavedPlants()
         .then(getPlants())
     },[garden])
 
-    // console.log(plants)
-
+  
+    //filter out saved plants by matching the garden id's
     const filterPlants= savedPlants.filter(gardens => gardens.gardenId === garden.id)
-    // console.log(filterPlants)
+    //filter & find plants that match the saved plantId's
     const PlantFilter = filterPlants.map(match =>plants.find(plant => parseInt(plant.id) === parseInt(match.plantId))) 
-    // console.log(PlantFilter)
+   
     
-    // debugger
    return(
         <> 
             <h2>Hello</h2>

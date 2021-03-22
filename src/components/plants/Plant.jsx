@@ -22,6 +22,7 @@ export const ListDividers = ({plantObj}) => {
       <ListItem button to={`/plants/details/${plantObj.id}`} component={Link}>
         <ListItemText primary={plantObj.commonName} />
       </ListItem>
+      <Divider light />
     </List>
   );
 }
