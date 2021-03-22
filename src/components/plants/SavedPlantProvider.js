@@ -7,7 +7,7 @@ export const SavedPlantProvider = (props) => {
     const [savedPlants, setSavedPlants] = useState([])
     
     const getSavedPlants = () => {
-        return fetch(`http://localhost:8088/plants`)
+        return fetch(`http://localhost:8088/savedPlants`)
         .then(res => res.json())
         .then(setSavedPlants)
     }

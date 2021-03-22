@@ -47,7 +47,21 @@
       "userId": 2,
       "startDate": "2021-07-03",
       "gardenTypeId": 2,
-      "id": 11
+      "id": 7
+    },
+    {
+      "name": "Herb",
+      "userId": 2,
+      "startDate": "2021-04-15",
+      "gardenTypeId": 1,
+      "id": 8
+    },
+    {
+      "name": "Berry",
+      "userId": 2,
+      "startDate": "2021-04-18",
+      "gardenTypeId": 2,
+      "id": 9
     }
   ],
   "users": [
@@ -91,6 +105,11 @@
       "plantId": 9,
       "gardenId": 5,
       "id": 3
+    },
+    {
+      "plantId": 13,
+      "gardenId": 7,
+      "id": 4
     }
   ],
   "plants": [

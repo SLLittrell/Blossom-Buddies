@@ -1,12 +1,17 @@
 import React, { useContext, useEffect, useState } from "react"
+import { findAllInRenderedTree } from "react-dom/test-utils"
 import { useHistory, useParams } from "react-router"
+import { PlantContext } from "../plants/PlantProvider"
 import { SavedPlantContext } from "../plants/SavedPlantProvider"
 import { GardenContext } from "./GardenProvider"
 
 export const CreatedGarden = () => {
     const { getGardenById, getGardenType, gardenType } = useContext(GardenContext)
-    const {getSavedPlants} =useContext(SavedPlantContext)
+    const {getSavedPlants, savedPlants} = useContext(SavedPlantContext)
+    const {getPlants, plants} = useContext(PlantContext)
 
+    
+    // const[filteredPlants, setFilteredPlants ] = useState([])
     const[garden, setGarden] = useState({})
     const[types, setTypes] = useState({
         type:""
@@ -32,8 +37,17 @@ export const CreatedGarden = () => {
         })
     }, [])
 
+    useEffect(() => {
+        getSavedPlants()
+        .then(getPlants())
+    },[garden])
+
     
 
+       const filterPlants= savedPlants.filter(plant => plant.plantId === plants.id)
+       console.log(filterPlants)
+   
+    
     // debugger
    return(
         <> 
@@ -45,6 +59,7 @@ export const CreatedGarden = () => {
                 <button className="btn-findPlants" onClick={()=> history.push("/plants")}>Add Plants</button>
                 <button className="btn-findPlants" onClick={()=> history.push("/gardens/create")}>Edit Garden</button>
             </section>
+            <section>{}</section>
         </>
     )
 }

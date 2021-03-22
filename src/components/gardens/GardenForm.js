@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 import { GardenContext } from "./GardenProvider"
 import { userStorageKey } from "../auth/authSettings";
-import { useHistory } from "react-router";
+import { useHistory, useParams } from "react-router";
 
 
 
@@ -18,6 +18,7 @@ export const GardenForm = () => {
     })
 
     const history = useHistory()
+    const {gardenId} = useParams()
 
     const inputChange = (event) => {
         const newGarden = {...garden}
@@ -34,7 +35,9 @@ export const GardenForm = () => {
         userId: garden.userId,
         startDate: garden.startDate,
         gardenTypeId:parseInt(garden.gardenTypeId)
-        })}
+        }).then(() => history.push(`/gardens`))}
+        
+        
         
     }
     
