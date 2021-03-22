@@ -61,16 +61,16 @@ export const PlantDetails = () => {
 
     
     //Mapping through converted helpers string, then creating a new array only when helpers are rendered
-    const helpersArray= plant.helpers?.split(",")
-    const filterHelpers = []
-    helpersArray ? helpersArray.map(helper => filterHelpers.push(helper) ) : filterHelpers.push("")
     
+    const filterHelpers = []
    // find matching helper plants with current plant list 
 //    console.log(filterHelpers)
     useEffect(() => {
+     const helpersArray= plant.helpers?.split(",")
+     helpersArray ? helpersArray.map(helper => filterHelpers.push(helper) ) : filterHelpers.push("")
      const findPlants = plants?.filter(plant =>filterHelpers?.find(helper => helper?.includes(plant.commonName.toLowerCase())))
      setPlantFilter(findPlants)
-    }, [plant])
+    }, [userGarden])
    
    console.log(plantFilter)
 

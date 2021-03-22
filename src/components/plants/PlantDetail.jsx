@@ -37,6 +37,7 @@ export const AvoidListDividers = ({NonHelpers}) => {
         <ListItemText primary={NonHelpers} />  
         {/* {helperObj.map(helper =><ListItemText primary={helper} /> )} */}
       </ListItem>
+      <Divider light />
     </List>
   );
 }
