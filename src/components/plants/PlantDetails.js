@@ -8,13 +8,16 @@ import {AvoidListDividers} from "./PlantDetail"
 import { SavedPlantContext } from "./SavedPlantProvider"
 
 export const PlantDetails = () => {
-    const { getPlantById } = useContext(PlantContext)
+    //get data to render plants, gardens details from plant & garden provider
+    // oseContext to add plants to saved list
+    const { getPlantById, getPlants, plants } = useContext(PlantContext)
     const {addSavedPlants} =useContext(SavedPlantContext)
     const { gardens, getGardens} = useContext(GardenContext)
     
     const [userGarden, setUserGarden] = useState([])
     const [plant, setPlant] = useState({})
 
+   
     const {plantId} = useParams()
     const history = useHistory()
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
@@ -25,24 +28,25 @@ export const PlantDetails = () => {
         .then((response) => {
             setPlant(response)
         })
-    },[])
+    },[plantId])
     
-    //get garden data from garden provider
+    //get garden & plant data from garden & plant provider
     useEffect(()=> {
         getGardens()
+        .then(getPlants())
     },[])
     
     //filtering gardens by current user, current user can only choose gardens they created
     useEffect(() =>{
         const usersGardens = gardens.filter(garden => garden.userId === currentUserId)
         if(usersGardens !== []) setUserGarden(usersGardens)
-    } ,[plant])
-    
+    } ,[gardens])
     
     const [savePlant, setSavePlant] = useState({
         plantId:parseInt(plantId),
         gardenId: 0
     })
+
     const handleChange = (event) => {
         const newPlant = {...savePlant}
         newPlant[event.target.id]= parseInt(event.target.value)
@@ -56,12 +60,16 @@ export const PlantDetails = () => {
     }
 
     
-    //Mapping through converted helpers string, then creating a new array only when helpers are rendered
-    const helpersArray= plant.helpers?.split(",")
-    const filterHelpers = []
-    helpersArray ? helpersArray.map(helper => filterHelpers.push(helper.toUpperCase()) ) : filterHelpers.push("")
+    // find matching helper plants with current plant list 
+     const helpersArray= plant.helpers?.split(",")
     
-   
+     const findPlants = plants?.filter(plant =>helpersArray?.find(helper => helper?.includes(plant.commonName.toLowerCase())))
+     
+    //  console.log(findPlants)
+    
+
+
+//    debugger
     return(
         <>
             <h3>{plant.commonName}</h3> 
@@ -78,11 +86,11 @@ export const PlantDetails = () => {
                 
             <section>
                <div><h3>Helpers:</h3>
-               {filterHelpers.map((helper, i) =><HelperListDividers key={i} helpers={helper}/>)} 
+               {helpersArray?.map((helper, i) =><HelperListDividers key={i} helpers={helper} plantFilter={findPlants}/>)} 
                </div>
                <div>
                    <h3>Not so Helpful(avoid):</h3>
-                   {plant.avoid ? plant.avoid?.split(",").map((avoid, i) =><AvoidListDividers key={i} NonHelpers={avoid.toUpperCase()}/>) : 'No known plants to worry about!'}
+                   {plant.avoid ? plant.avoid?.split(",").map((avoid, i) =><AvoidListDividers key={i} NonHelpers={avoid}/>) : 'No known plants to worry about!'}
                 </div>
                <div>
                    <h3>Fun Fact: </h3>
