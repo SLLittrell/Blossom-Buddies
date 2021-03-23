@@ -37,10 +37,10 @@ export const GardenForm = () => {
 
             if(gardenId){
                 updateGarden({
-                    name: garden.name,
-                    userId: garden.userId,
-                    startDate: garden.startDate,
-                    gardenTypeId:parseInt(garden.gardenTypeId),
+                    name: gardens.name,
+                    userId: gardens.userId,
+                    startDate: gardens.startDate,
+                    gardenTypeId:parseInt(gardens.gardenTypeId),
                     id: gardenId
                 })
                 .then(() => history.push(`/gardens/${gardens.id}`))
@@ -79,18 +79,18 @@ export const GardenForm = () => {
                 <h3>{gardenId ? "Edit your Garden" : "Create a Garden"}</h3>
                 <fieldset>
                     <div className="garden_form">
-                        <label htmlFor="gardenName">Name: </label>
-                        <input type="text" id="name" placeholder={gardens.name} autoFocus className="gardenInput" 
+                        <label htmlFor="name">Name: </label>
+                        <input type="text" id="name" value={gardens.name} autoFocus className="gardenInput" 
                         onChange={inputChange}/>
                     </div>
               </fieldset>
               <fieldset>
-                  <label htmlFor="gardenStart">Start Date:</label>
-                  <input type="date" id="startDate" className="gardenInput" onChange={inputChange}></input>
+                  <label htmlFor="startDate">Start Date:</label>
+                  <input type="date" id="startDate" className="gardenInput" value={gardens.startDate} onChange={inputChange}></input>
               </fieldset>
               <fieldset>
-                <label htmlFor="gardenType">Garden Type:</label>
-                <select id="gardenTypeId" onChange={inputChange}>
+                <label htmlFor="gardenTypeId">Garden Type:</label>
+                <select id="gardenTypeId" value={gardens.gardenTypeId} onChange={inputChange}>
                     <option value= "0">Select a garden type</option>
                     {gardenType.map(types => (
                     <option key={types.id} value={types.id}>{types.type}</option>
