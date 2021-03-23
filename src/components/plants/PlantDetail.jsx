@@ -17,16 +17,13 @@ const useStyles = makeStyles((theme) => ({
 export const HelperListDividers = ({helpers, plantFilter}) => {
   const classes = useStyles();
   const matchPlant =plantFilter?.find(name => helpers?.includes(name.commonName.toLowerCase()))
-  // let matchedPlantId = 0
-  // if(matchPlant !== undefined){
-  //   matchedPlantId = parseInt(matchPlant?.id)
-  // }
+  
   console.log(plantFilter)
 
  
   return (
     <List component="nav" className={classes.root} aria-label="helpers">
-      <ListItem button to={`/plants/details`} component={Link}>
+      <ListItem button to={`/plants/details/${matchPlant?.id}`} component={Link}>
         <ListItemText primary={helpers} />  
       </ListItem>
       <Divider light />

@@ -34,7 +34,7 @@ export const PlantDetails = () => {
     useEffect(()=> {
         getGardens()
         .then(getPlants())
-    },[])
+    },[userGarden])
     
     //filtering gardens by current user, current user can only choose gardens they created
     useEffect(() =>{
