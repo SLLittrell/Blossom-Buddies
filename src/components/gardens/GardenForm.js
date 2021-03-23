@@ -6,9 +6,11 @@ import { useHistory, useParams } from "react-router";
 
 
 export const GardenForm = () => {
-    const { addGarden, getGardenType, gardenType} = useContext(GardenContext)
+    const { addGarden, getGardenType, gardenType, updateGarden, getGardenById} = useContext(GardenContext)
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
     
+    const [isLoading, setIsLoading] = useState(true);
+    // const [gardens, setGardens] =useState({})
     
     const [garden, setGarden] = useState({
         name:"",
@@ -27,53 +29,80 @@ export const GardenForm = () => {
     }
    
     const onSaveClick =() => {
-        if(garden.name=== "" || garden.gardenType === 0 ){
+        if(garden.name=== "" && garden.gardenType === 0 ){
             window.alert("Please fill in all inputs")
         }
-        else{addGarden({
-        name: garden.name,
-        userId: garden.userId,
-        startDate: garden.startDate,
-        gardenTypeId:parseInt(garden.gardenTypeId)
-        }).then(() => history.push(`/gardens`))}
+        else{
+            setIsLoading(true)
+
+            if(gardenId){
+                updateGarden({
+                    name: garden.name,
+                    userId: garden.userId,
+                    startDate: garden.startDate,
+                    gardenTypeId:parseInt(garden.gardenTypeId),
+                    id: garden.id
+                })
+                .then(() => history.push(`/gardens/${garden.id}`))
+            }else {
+                addGarden({
+                    name: garden.name,
+                    userId: garden.userId,
+                    startDate: garden.startDate,
+                    gardenTypeId:parseInt(garden.gardenTypeId)
+                })
+                .then(() => history.push(`/gardens`))
+            }
         
-        
+        }
         
     }
     
     useEffect(() => {
         getGardenType()
-    }, [])
+        .then(() => {
+            if (gardenId) {
+              getGardenById(gardenId)
+              .then(garden => {
+                  setGarden(garden)
+                  setIsLoading(false)
+                })
+              } else {
+                setIsLoading(false)
+              }
+            })
+          }, [])
 
     return (
         <>
             <form>
-                <h3>Create a Garden</h3>
+                <h3>{gardenId ? "Edit your Garden" : "Create a Garden"}</h3>
                 <fieldset>
                     <div className="garden_form">
-                        <label htmlFor="gardenName">Name: </label>
-                        <input type="text" id="name" required autoFocus className="gardenInput" placeholder="Garden Name" 
+                        <label htmlFor="name">Name: </label>
+                        <input type="text" id="name" value={garden.name} autoFocus className="gardenInput" 
                         onChange={inputChange}/>
                     </div>
               </fieldset>
               <fieldset>
-                  <label htmlFor="gardenStart">Start Date:</label>
-                  <input type="date" id="startDate" className="gardenInput" onChange={inputChange}></input>
+                  <label htmlFor="startDate">Start Date:</label>
+                  <input type="date" id="startDate" className="gardenInput" value={garden.startDate} onChange={inputChange}></input>
               </fieldset>
               <fieldset>
-                <label htmlFor="gardenType">Garden Type:</label>
-                <select id="gardenTypeId" onChange={inputChange}>
+                <label htmlFor="gardenTypeId">Garden Type:</label>
+                <select id="gardenTypeId" value={garden.gardenTypeId} onChange={inputChange}>
                     <option value= "0">Select a garden type</option>
                     {gardenType.map(types => (
                     <option key={types.id} value={types.id}>{types.type}</option>
                     ))}         
                 </select>
-              </fieldset>
-              <button className="btn btn-saveGarden"
-                onClick={event => { event.preventDefault() 
-                onSaveClick()}}>
-                Save Garden
-            </button>
+                </fieldset>
+                <button className="btn btn-saveGarden"
+                    disabled={isLoading}
+                    onClick={event => { event.preventDefault() 
+                    onSaveClick()}}>
+                    {gardenId ? "Update Garden" : "Save Garden"}
+                </button>
             </form>
         </>
     )
