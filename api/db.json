@@ -157,7 +157,7 @@
       "commonName": "Beans, pole",
       "scientificName": "Phaseolus vulgaris",
       "helps": "",
-      "helpers": "Radish, Corn",
+      "helpers": "corn, radish",
       "attracts": "",
       "repels": "",
       "avoid": "Sunflowers, beets, brassicas, kohlrabi",
@@ -275,7 +275,7 @@
     },
     {
       "id": 15,
-      "commonName": "Corn / Maize",
+      "commonName": "Corn",
       "scientificName": "Zea mays",
       "helps": "Beans, cucurbits, soybeans, tomatoes",
       "helpers": "Sunflowers, dill, beans, peas, soybeans, peanuts, cucurbits, clover, amaranth, white geranium, pigweed, lamb's quarters, morning glory, parsley, and potato, field mustard",

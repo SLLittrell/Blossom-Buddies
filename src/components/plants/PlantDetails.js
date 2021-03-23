@@ -16,8 +16,8 @@ export const PlantDetails = () => {
     
     const [userGarden, setUserGarden] = useState([])
     const [plant, setPlant] = useState({})
-    // const [plantFilter, setPlantFilter] = useState([])
 
+   
     const {plantId} = useParams()
     const history = useHistory()
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
@@ -30,23 +30,23 @@ export const PlantDetails = () => {
         })
     },[])
     
-    //get garden data from garden provider
+    //get garden & plant data from garden & plant provider
     useEffect(()=> {
         getGardens()
         .then(getPlants())
-    },[userGarden])
+    },[])
     
     //filtering gardens by current user, current user can only choose gardens they created
     useEffect(() =>{
         const usersGardens = gardens.filter(garden => garden.userId === currentUserId)
         if(usersGardens !== []) setUserGarden(usersGardens)
-    } ,[plant])
-    
+    } ,[])
     
     const [savePlant, setSavePlant] = useState({
         plantId:parseInt(plantId),
         gardenId: 0
     })
+
     const handleChange = (event) => {
         const newPlant = {...savePlant}
         newPlant[event.target.id]= parseInt(event.target.value)
@@ -60,19 +60,12 @@ export const PlantDetails = () => {
     }
 
     
-    //Mapping through converted helpers string, then creating a new array only when helpers are rendered
-    
     // find matching helper plants with current plant list 
-    //    console.log(filterHelpers)
-    
-     const filterHelpers = []
      const helpersArray= plant.helpers?.split(",")
-     helpersArray ? helpersArray.map(helper => filterHelpers.push(helper) ) : filterHelpers.push("")
-    //  setPlantFilter(filterHelpers)
-     const findPlants = plants.filter(plant =>filterHelpers.find(helper => helper?.includes(plant.commonName.toLowerCase())))
+    
+     const findPlants = plants?.filter(plant =>helpersArray?.find(helper => helper?.includes(plant.commonName.toLowerCase())))
      
-   
-   console.log(helpersArray)
+    //  console.log(findPlants)
 
 
 
@@ -93,7 +86,7 @@ export const PlantDetails = () => {
                 
             <section>
                <div><h3>Helpers:</h3>
-               {filterHelpers.map((helper, i) =><HelperListDividers key={i} helpers={helper} plantFilter={findPlants}/>)} 
+               {helpersArray?.map((helper, i) =><HelperListDividers key={i} helpers={helper} plantFilter={findPlants}/>)} 
                </div>
                <div>
                    <h3>Not so Helpful(avoid):</h3>

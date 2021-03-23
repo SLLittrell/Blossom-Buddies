@@ -12,6 +12,7 @@ import { UserProvider } from "./users/UserProvider"
 import {PlantSearch} from "./plants/PlantSearch"
 import {SavedPlantProvider} from "./plants/SavedPlantProvider"
 
+
 export const ApplicationViews = () => {
     return (
         <UserProvider>
