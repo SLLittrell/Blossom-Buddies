@@ -34,12 +34,11 @@ export const Home = () => {
                 <div>
                     <p>Welcome to Blossom Buddies!</p>
                     <p>Blossom Buddies is a useful tool that will help guide you through the world of 
-                    companion planting. 
+                    companion planting.</p>
                     <p>Any great garden starts with a good plan, click below to get started!</p>
 
                     <button onClick={() => history.push('/gardens')}>Start Planning</button>
 
-                    </p>
                 </div>
             </section>
             
