@@ -16,7 +16,7 @@ export const PlantDetails = () => {
     
     const [userGarden, setUserGarden] = useState([])
     const [plant, setPlant] = useState({})
-    const [plantFilter, setPlantFilter] = useState([])
+    // const [plantFilter, setPlantFilter] = useState([])
 
     const {plantId} = useParams()
     const history = useHistory()
@@ -68,11 +68,11 @@ export const PlantDetails = () => {
      const filterHelpers = []
      const helpersArray= plant.helpers?.split(",")
      helpersArray ? helpersArray.map(helper => filterHelpers.push(helper) ) : filterHelpers.push("")
-     
-     const findPlants = plants?.filter(plant =>filterHelpers?.find(helper => helper?.includes(plant.commonName.toLowerCase())))
+    //  setPlantFilter(filterHelpers)
+     const findPlants = plants.filter(plant =>filterHelpers.find(helper => helper?.includes(plant.commonName.toLowerCase())))
      
    
-//    console.log(findPlants)
+   console.log(helpersArray)
 
 
 

@@ -16,17 +16,17 @@ const useStyles = makeStyles((theme) => ({
 
 export const HelperListDividers = ({helpers, plantFilter}) => {
   const classes = useStyles();
-  const matchPlant =plantFilter?.find(name => helpers.includes(name.commonName.toLowerCase()))
-  let matchedPlantId = 0
-  if(matchPlant !== undefined){
-    matchedPlantId = parseInt(matchPlant.id)
-  }
-  console.log(matchPlant)
+  const matchPlant =plantFilter?.find(name => helpers?.includes(name.commonName.toLowerCase()))
+  // let matchedPlantId = 0
+  // if(matchPlant !== undefined){
+  //   matchedPlantId = parseInt(matchPlant?.id)
+  // }
+  console.log(plantFilter)
 
  
   return (
     <List component="nav" className={classes.root} aria-label="helpers">
-      <ListItem button to={`/plants/details/${matchedPlantId}`} component={Link}>
+      <ListItem button to={`/plants/details`} component={Link}>
         <ListItemText primary={helpers} />  
       </ListItem>
       <Divider light />
@@ -38,7 +38,7 @@ export const AvoidListDividers = ({NonHelpers}) => {
 
   return (
     <List component="nav" className={classes.root} aria-label="helpers">
-      <ListItem>
+      <ListItem button to={"/plants"} component={Link}>
         <ListItemText primary={NonHelpers} />  
         {/* {helperObj.map(helper =><ListItemText primary={helper} /> )} */}
       </ListItem>
