@@ -1,3 +1,8 @@
+/*Module Purpose:
+This module is responsable for rendering: 
+- An affordance to create a new garden
+-a linked list of user created gardens
+*/
 import React, { useContext, useEffect } from "react"
 import { useHistory, useParams } from "react-router"
 import { GardenContext } from "./GardenProvider"

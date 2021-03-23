@@ -1,3 +1,9 @@
+/*Module Purpose:
+This module is responsable for rendering: 
+- a user welcome with user name
+-Information on purpose of application
+-Affordance to the my garden component to create a garden
+*/
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { userStorageKey } from "./auth/authSettings";

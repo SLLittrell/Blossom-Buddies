@@ -1,3 +1,6 @@
+/*Module Purpose:
+This module is responsable for rendering the JSX and styling for added plants to gardens 
+*/
 import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';

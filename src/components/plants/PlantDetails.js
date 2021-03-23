@@ -1,3 +1,11 @@
+/*Module Purpose:
+This module is responsable for rendering plant details including:
+-Plant name
+-An affordance to choose a garden to save a plant, and a save plant affordance
+-A List of helper plants that include some clickable links to thier plant detail page
+-A List of plants to avoid planting together
+-A fact involving companion planting with chosen plant
+*/
 import React, { useContext, useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router-dom"
 import { GardenContext } from "../gardens/GardenProvider"
@@ -46,13 +54,14 @@ export const PlantDetails = () => {
         plantId:parseInt(plantId),
         gardenId: 0
     })
-
+    //Triggers and updates the plantId state when routing to a new plant details page
     useEffect(() => {
         const newPlant = {...savePlant}
         newPlant.plantId = parseInt(plantId)
         setSavePlant(newPlant)  
     }, [plantId])
 
+    //input change handle that sets the newplant object
     const handleChange = (event) => {
         const newPlant = {...savePlant}
         newPlant[event.target.id]= parseInt(event.target.value)

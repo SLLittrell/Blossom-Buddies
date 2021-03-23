@@ -1,3 +1,7 @@
+/*Module Purpose:
+This module is responsable for rendering a a form for user input, 
+it is also used to edit user input data.
+*/
 import React, { useContext, useEffect, useState } from "react"
 import { GardenContext } from "./GardenProvider"
 import { userStorageKey } from "../auth/authSettings";
@@ -10,7 +14,6 @@ export const GardenForm = () => {
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
     
     const [isLoading, setIsLoading] = useState(true);
-    // const [gardens, setGardens] =useState({})
     
     const [garden, setGarden] = useState({
         name:"",
@@ -27,7 +30,7 @@ export const GardenForm = () => {
         newGarden[event.target.id] = event.target.value
         setGarden(newGarden)
     }
-   
+   // saves and updates user input when user clicks the affordance
     const onSaveClick =() => {
         if(garden.name=== "" && garden.gardenType === 0 ){
             window.alert("Please fill in all inputs")
@@ -57,7 +60,7 @@ export const GardenForm = () => {
         }
         
     }
-    
+    //gets gardenType data, garden data by Id and sets data for garden state
     useEffect(() => {
         getGardenType()
         .then(() => {

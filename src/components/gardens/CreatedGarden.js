@@ -1,3 +1,10 @@
+/*Module Purpose:
+This module is responsable for rendering a user created garden component,which includes 
+- Garden Name, Start Date, and Garden type
+-Affordances to add plants, delete garden, and edit garden
+-A list of linked plants added to garden, and a remove affordance for each plant
+*/
+
 import React, { useContext, useEffect, useState } from "react"
 import { findAllInRenderedTree } from "react-dom/test-utils"
 import { useHistory, useParams } from "react-router"
@@ -51,7 +58,8 @@ export const CreatedGarden = () => {
     const filterPlants= savedPlants.filter(gardens => gardens.gardenId === garden.id)
     //filter & find plants that match the saved plantId's
     const PlantFilter = filterPlants.map(match =>plants.find(plant => parseInt(plant.id) === parseInt(match.plantId))) 
-    // console.log(PlantFilter)
+    
+    //deletes current garden
     const handleDelete = () => {
         DeleteGarden(garden?.id)
         .then(() => {

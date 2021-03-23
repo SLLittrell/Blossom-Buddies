@@ -1,3 +1,6 @@
+/*Module Purpose:
+This module is responsable for rendering the list of plants, and an affordance to search plants
+*/
 import React, { useContext, useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router"
 import { PlantContext } from "./PlantProvider"
