@@ -62,7 +62,7 @@ export const PlantDetails = () => {
 
     const PlantSave = () => {
         addSavedPlants(savePlant)
-        window.alert(`${plant.commonName} was saved to your garden!`)
+        window.alert(`${plant.commonName} saved to your garden!`)
     }
 
     
