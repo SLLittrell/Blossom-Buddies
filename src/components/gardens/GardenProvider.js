@@ -41,10 +41,22 @@ export const GardenProvider = (props) => {
             .then(getGardens)
     }
 
+    const updateGarden = garden => {
+        return fetch(`http://localhost:8088/gardens/${garden.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(garden)
+        })
+          .then(getGardens)
+      }
+
    
     return (
         <GardenContext.Provider value={{
-            getGardens, gardens, addGarden, getGardenType, gardenType, getGardenById, DeleteGarden
+            getGardens, gardens, addGarden, getGardenType, gardenType, getGardenById, 
+            DeleteGarden, updateGarden
         }}>
             {props.children}
         </GardenContext.Provider>

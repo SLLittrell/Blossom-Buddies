@@ -10,7 +10,7 @@
     {
       "name": "Stacey's Spring Garden",
       "userId": 1,
-      "startDate": "2021-03-20",
+      "startDate": "2021-03-21",
       "gardenTypeId": 2,
       "id": 2
     },
@@ -31,15 +31,15 @@
     {
       "name": "Hopping Frog Garden",
       "userId": 2,
-      "startDate": "2021-05-15",
+      "startDate": "2021-05-13",
       "gardenTypeId": 3,
       "id": 5
     },
     {
       "name": "Glenn's Herbs",
       "userId": 1,
-      "startDate": "2021-03-21",
-      "gardenTypeId": 3,
+      "startDate": "2021-03-27",
+      "gardenTypeId": 1,
       "id": 6
     },
     {

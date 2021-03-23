@@ -26,6 +26,9 @@ export const ApplicationViews = () => {
                 <Route exact path="/gardens/create">
                     <GardenForm />
                 </Route>
+                <Route exact path="/gardens/edit/:gardenId(\d+)">
+                    <GardenForm />
+                </Route>
                 <PlantProvider>
                     <SavedPlantProvider>
                         <Route exact path="/gardens/:gardenId(\d+)">
