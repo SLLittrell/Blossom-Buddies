@@ -25,7 +25,7 @@ export const SavedPlantProvider = (props) => {
     }
 
     const removeSavedPlant = savedPlantId => {
-        return fetch(`http://localhost:8088/gardens/${savedPlantId}`, {
+        return fetch(`http://localhost:8088/savedPlants/${savedPlantId}`, {
             method: "DELETE"
         })
             .then(getSavedPlants)

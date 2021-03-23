@@ -25,8 +25,8 @@ export const SavedPlantDividers = ({myPlants}) => {
 
   return (
     <List component="nav" className={classes.root} aria-label="helpers">
-      {/* <ListItem button to={`/plants/details/${myPlants?.id}`} component={Link}> */}
-        <ListItemText primary={myPlants?.commonName} />  
+      <ListItem >
+        <ListItemText button to={`/plants/details/${myPlants?.id}`} component={Link} primary={myPlants?.commonName} />  
         <button onClick={handleRemove}>Remove Plant</button>
       </ListItem>
     </List>
