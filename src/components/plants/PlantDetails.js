@@ -34,7 +34,7 @@ export const PlantDetails = () => {
     useEffect(()=> {
         getGardens()
         .then(getPlants())
-    },[])
+    },[plantId])
     
     //filtering gardens by current user, current user can only choose gardens they created
     useEffect(() =>{
@@ -50,13 +50,14 @@ export const PlantDetails = () => {
     const handleChange = (event) => {
         const newPlant = {...savePlant}
         newPlant[event.target.id]= parseInt(event.target.value)
-        setSavePlant(newPlant)
+        setSavePlant(newPlant)  
     };
     // console.log(savePlant)
 
     const PlantSave = () => {
         addSavedPlants(savePlant)
-        .then(() => history.push('/plants'))
+        window.alert(`${plant.commonName} was saved to your garden!`)
+    
     }
 
     
@@ -65,7 +66,6 @@ export const PlantDetails = () => {
     
      const findPlants = plants?.filter(plant =>helpersArray?.find(helper => helper?.includes(plant.commonName.toLowerCase())))
      
-    //  console.log(findPlants)
     
 
 
@@ -86,7 +86,7 @@ export const PlantDetails = () => {
                 
             <section>
                <div><h3>Helpers:</h3>
-               {helpersArray?.map((helper, i) =><HelperListDividers key={i} helpers={helper} plantFilter={findPlants}/>)} 
+               {helpersArray?.map((helper, i) =><HelperListDividers key={i}helpers={helper} plantFilter={findPlants}/>)} 
                </div>
                <div>
                    <h3>Not so Helpful(avoid):</h3>
