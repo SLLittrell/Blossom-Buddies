@@ -48,6 +48,13 @@
       "startDate": "2021-07-03",
       "gardenTypeId": 2,
       "id": 7
+    },
+    {
+      "name": "test garden",
+      "userId": 2,
+      "startDate": "2021-04-11",
+      "gardenTypeId": 3,
+      "id": 8
     }
   ],
   "users": [
@@ -126,6 +133,16 @@
       "plantId": 4,
       "gardenId": 5,
       "id": 12
+    },
+    {
+      "plantId": 26,
+      "gardenId": 8,
+      "id": 13
+    },
+    {
+      "plantId": 10,
+      "gardenId": 8,
+      "id": 14
     }
   ],
   "plants": [

@@ -28,7 +28,7 @@ export const PlantDetails = () => {
         .then((response) => {
             setPlant(response)
         })
-    },[])
+    },[plantId])
     
     //get garden & plant data from garden & plant provider
     useEffect(()=> {
@@ -40,7 +40,7 @@ export const PlantDetails = () => {
     useEffect(() =>{
         const usersGardens = gardens.filter(garden => garden.userId === currentUserId)
         if(usersGardens !== []) setUserGarden(usersGardens)
-    } ,[])
+    } ,[gardens])
     
     const [savePlant, setSavePlant] = useState({
         plantId:parseInt(plantId),
