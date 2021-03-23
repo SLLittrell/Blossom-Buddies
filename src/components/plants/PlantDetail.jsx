@@ -17,8 +17,7 @@ const useStyles = makeStyles((theme) => ({
 export const HelperListDividers = ({helpers, plantFilter}) => {
   const classes = useStyles();
   const matchPlant =plantFilter?.find(name => helpers?.includes(name.commonName.toLowerCase()))
-  // const helperId = matchPlant ? `/plants/details/${matchPlant?.id}` : "/plants"
-  console.log(matchPlant)
+ 
 
  
   return (

@@ -47,17 +47,22 @@ export const PlantDetails = () => {
         gardenId: 0
     })
 
+    useEffect(() => {
+        const newPlant = {...savePlant}
+        newPlant.plantId = parseInt(plantId)
+        setSavePlant(newPlant)  
+    }, [plantId])
+
     const handleChange = (event) => {
         const newPlant = {...savePlant}
         newPlant[event.target.id]= parseInt(event.target.value)
         setSavePlant(newPlant)  
     };
-    // console.log(savePlant)
+   
 
     const PlantSave = () => {
         addSavedPlants(savePlant)
         window.alert(`${plant.commonName} was saved to your garden!`)
-    
     }
 
     
