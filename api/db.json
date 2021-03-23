@@ -111,6 +111,11 @@
       "plantId": 8,
       "gardenId": 2,
       "id": 8
+    },
+    {
+      "plantId": 11,
+      "gardenId": 2,
+      "id": 9
     }
   ],
   "plants": [
