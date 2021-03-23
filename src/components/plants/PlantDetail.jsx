@@ -23,9 +23,12 @@ export const HelperListDividers = ({helpers, plantFilter}) => {
  
   return (
     <List component="nav" className={classes.root} aria-label="helpers">
-      <Link to={`/plants/details/${matchPlant?.id}`}><ListItem >
+      {matchPlant ? <Link to={`/plants/details/${matchPlant?.id}`}><ListItem >
         <ListItemText primary={helpers} />  
-      </ListItem></Link>
+      </ListItem></Link> :
+      <ListItem >
+        <ListItemText primary={helpers} />  
+      </ListItem>}
       <Divider light />
     </List>
   );
