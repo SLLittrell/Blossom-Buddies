@@ -15,12 +15,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const SavedPlantDividers = ({myPlants}) => {
+export const SavedPlantDividers = ({myPlants, savePlants}) => {
   const {removeSavedPlant}= useContext(SavedPlantContext)
   const classes = useStyles();
-
+  const saveId = savePlants.find(plant => plant.plantId === myPlants?.id)
   const handleRemove =() =>{
-    removeSavedPlant(myPlants?.id)
+    removeSavedPlant(saveId.id)
   }
 
   return (
