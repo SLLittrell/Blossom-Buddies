@@ -37,11 +37,11 @@ export const GardenForm = () => {
 
             if(gardenId){
                 updateGarden({
-                    name: gardens.name,
-                    userId: gardens.userId,
-                    startDate: gardens.startDate,
-                    gardenTypeId:parseInt(gardens.gardenTypeId),
-                    id: gardenId
+                    name: garden.name,
+                    userId: garden.userId,
+                    startDate: garden.startDate,
+                    gardenTypeId:parseInt(garden.gardenTypeId),
+                    id: gardens.id
                 })
                 .then(() => history.push(`/gardens/${gardens.id}`))
             }else {
@@ -86,11 +86,11 @@ export const GardenForm = () => {
               </fieldset>
               <fieldset>
                   <label htmlFor="startDate">Start Date:</label>
-                  <input type="date" id="startDate" className="gardenInput" value={gardens.startDate} onChange={inputChange}></input>
+                  <input type="date" id="startDate" className="gardenInput" defaultValue={gardens.startDate} onChange={inputChange}></input>
               </fieldset>
               <fieldset>
                 <label htmlFor="gardenTypeId">Garden Type:</label>
-                <select id="gardenTypeId" value={gardens.gardenTypeId} onChange={inputChange}>
+                <select id="gardenTypeId" defaultValue={gardens.gardenTypeId} onChange={inputChange}>
                     <option value= "0">Select a garden type</option>
                     {gardenType.map(types => (
                     <option key={types.id} value={types.id}>{types.type}</option>
