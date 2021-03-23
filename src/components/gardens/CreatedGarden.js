@@ -67,7 +67,7 @@ export const CreatedGarden = () => {
                 <button onClick={handleDelete}>Delete Garden</button>
                 <button className="btn-findPlants" onClick={()=> history.push("/gardens/create")}>Edit Garden</button>
             </section>
-            <section>{PlantFilter.map(plant =><SavedPlantDividers key ={plant?.id} myPlants={plant}/>)}</section>
+            <section>{PlantFilter.map(plant =><SavedPlantDividers key={plant?.id} myPlants={plant} savePlants={filterPlants}/>)}</section>
         </>
     )
 }

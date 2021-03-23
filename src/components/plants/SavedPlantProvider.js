@@ -24,9 +24,17 @@ export const SavedPlantProvider = (props) => {
         .then(getSavedPlants)
     }
 
+    const removeSavedPlant = savedPlantId => {
+        return fetch(`http://localhost:8088/savedPlants/${savedPlantId}`, {
+            method: "DELETE"
+        })
+            .then(getSavedPlants)
+    }
+
+
     return (
         <SavedPlantContext.Provider value={{
-            savedPlants, getSavedPlants, addSavedPlants
+            savedPlants, getSavedPlants, addSavedPlants, removeSavedPlant
         }}>
             {props.children}
         </SavedPlantContext.Provider>
