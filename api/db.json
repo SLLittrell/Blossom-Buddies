@@ -116,6 +116,16 @@
       "plantId": 11,
       "gardenId": 2,
       "id": 9
+    },
+    {
+      "plantId": 5,
+      "gardenId": 4,
+      "id": 10
+    },
+    {
+      "plantId": 6,
+      "gardenId": 4,
+      "id": 11
     }
   ],
   "plants": [
@@ -234,7 +244,7 @@
       "commonName": "Carrots",
       "scientificName": "Daucus carota",
       "helps": "Tomatoes, alliums, beans, leeks, lettuce, onions, passion fruit",
-      "helpers": "Lettuce, alliums, rosemary, wormwood, sage, beans, flax",
+      "helpers": "lettuce, alliums, rosemary, wormwood, sage, beans, flax",
       "attracts": "Assassin bug, lacewing, parasitic wasp, yellow jacket and other predatory wasps",
       "repels": "Leek moth, onion fly",
       "avoid": "Dill, parsnip, radish",
@@ -399,7 +409,7 @@
       "commonName": "Onion",
       "scientificName": "Allium cepa",
       "helps": "Beets, beans, brassicas, cabbage, broccoli, carrots, lettuce, cucumbers, peppers, passion fruit, strawberries. Green onions with Chinese cabbage.",
-      "helpers": "Carrot, beet, brassicas, dill, lettuce, strawberries, marigolds,mints,tomatoes, summer savory, chamomile, pansy",
+      "helpers": "carrots, beet, brassicas, dill, lettuce, strawberries, marigolds,mints,tomatoes, summer savory, chamomile, pansy",
       "attracts": "",
       "repels": "",
       "avoid": "Lentils, peas,",

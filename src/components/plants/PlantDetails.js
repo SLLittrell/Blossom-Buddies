@@ -66,7 +66,7 @@ export const PlantDetails = () => {
      const findPlants = plants?.filter(plant =>helpersArray?.find(helper => helper?.includes(plant.commonName.toLowerCase())))
      
     //  console.log(findPlants)
-
+    
 
 
 //    debugger
@@ -90,7 +90,7 @@ export const PlantDetails = () => {
                </div>
                <div>
                    <h3>Not so Helpful(avoid):</h3>
-                   {plant.avoid ? plant.avoid?.split(",").map((avoid, i) =><AvoidListDividers key={i} NonHelpers={avoid.toUpperCase()}/>) : 'No known plants to worry about!'}
+                   {plant.avoid ? plant.avoid?.split(",").map((avoid, i) =><AvoidListDividers key={i} NonHelpers={avoid}/>) : 'No known plants to worry about!'}
                 </div>
                <div>
                    <h3>Fun Fact: </h3>
