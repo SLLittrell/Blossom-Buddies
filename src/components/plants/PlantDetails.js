@@ -1,3 +1,11 @@
+/*Module Purpose:
+This module is responsable for rendering plant details including:
+-Plant name
+-An affordance to choose a garden to save a plant, and a save plant affordance
+-A List of helper plants that include some clickable links to thier plant detail page
+-A List of plants to avoid planting together
+-A fact involving companion planting with chosen plant
+*/
 import React, { useContext, useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router-dom"
 import { GardenContext } from "../gardens/GardenProvider"
@@ -34,7 +42,7 @@ export const PlantDetails = () => {
     useEffect(()=> {
         getGardens()
         .then(getPlants())
-    },[])
+    },[plantId])
     
     //filtering gardens by current user, current user can only choose gardens they created
     useEffect(() =>{
@@ -46,17 +54,24 @@ export const PlantDetails = () => {
         plantId:parseInt(plantId),
         gardenId: 0
     })
+    //Triggers and updates the plantId state when routing to a new plant details page
+    useEffect(() => {
+        const newPlant = {...savePlant}
+        newPlant.plantId = parseInt(plantId)
+        setSavePlant(newPlant)  
+    }, [plantId])
 
+    //input change handle that sets the newplant object
     const handleChange = (event) => {
         const newPlant = {...savePlant}
         newPlant[event.target.id]= parseInt(event.target.value)
-        setSavePlant(newPlant)
+        setSavePlant(newPlant)  
     };
-    // console.log(savePlant)
+   
 
     const PlantSave = () => {
         addSavedPlants(savePlant)
-        .then(() => history.push('/plants'))
+        window.alert(`${plant.commonName} saved to your garden!`)
     }
 
     
@@ -65,7 +80,6 @@ export const PlantDetails = () => {
     
      const findPlants = plants?.filter(plant =>helpersArray?.find(helper => helper?.includes(plant.commonName.toLowerCase())))
      
-    //  console.log(findPlants)
     
 
 
@@ -86,7 +100,7 @@ export const PlantDetails = () => {
                 
             <section>
                <div><h3>Helpers:</h3>
-               {helpersArray?.map((helper, i) =><HelperListDividers key={i} helpers={helper} plantFilter={findPlants}/>)} 
+               {helpersArray?.map((helper, i) =><HelperListDividers key={i}helpers={helper} plantFilter={findPlants}/>)} 
                </div>
                <div>
                    <h3>Not so Helpful(avoid):</h3>

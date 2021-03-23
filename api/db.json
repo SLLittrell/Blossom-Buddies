@@ -55,6 +55,20 @@
       "startDate": "2021-04-11",
       "gardenTypeId": 3,
       "id": 8
+    },
+    {
+      "name": "My First Garden",
+      "userId": 2,
+      "startDate": "2021-04-17",
+      "gardenTypeId": 1,
+      "id": 9
+    },
+    {
+      "name": "My First Garden",
+      "userId": 1,
+      "startDate": "2021-03-27",
+      "gardenTypeId": 1,
+      "id": 10
     }
   ],
   "users": [
@@ -84,11 +98,6 @@
     }
   ],
   "savedPlants": [
-    {
-      "plantId": 2,
-      "gardenId": 5,
-      "id": 1
-    },
     {
       "plantId": 9,
       "gardenId": 5,
@@ -143,6 +152,105 @@
       "plantId": 10,
       "gardenId": 8,
       "id": 14
+    },
+    {
+      "plantId": 16,
+      "gardenId": 4,
+      "id": 15
+    },
+    {
+      "plantId": 16,
+      "gardenId": 8,
+      "id": 17
+    },
+    {
+      "plantId": 1,
+      "gardenId": 9,
+      "id": 19
+    },
+    {
+      "plantId": 37,
+      "gardenId": 9,
+      "id": 21
+    },
+    {
+      "plantId": 4,
+      "gardenId": 9,
+      "id": 22
+    },
+    {
+      "plantId": 18,
+      "gardenId": 9,
+      "id": 23
+    },
+    {
+      "plantId": 2,
+      "gardenId": 9,
+      "id": 25
+    },
+    {
+      "plantId": 4,
+      "gardenId": 9,
+      "id": 26
+    },
+    {
+      "plantId": 4,
+      "gardenId": 7,
+      "id": 27
+    },
+    {
+      "id": 34
+    },
+    {
+      "id": 35
+    },
+    {
+      "plantId": 2,
+      "gardenId": 7,
+      "id": 36
+    },
+    {
+      "id": 37
+    },
+    {
+      "plantId": 19,
+      "gardenId": 5,
+      "id": 38
+    },
+    {
+      "plantId": 16,
+      "gardenId": 5,
+      "id": 39
+    },
+    {
+      "plantId": 15,
+      "gardenId": 5,
+      "id": 40
+    },
+    {
+      "plantId": 17,
+      "gardenId": 8,
+      "id": 42
+    },
+    {
+      "plantId": 2,
+      "gardenId": 5,
+      "id": 45
+    },
+    {
+      "plantId": 2,
+      "gardenId": 10,
+      "id": 48
+    },
+    {
+      "plantId": 6,
+      "gardenId": 10,
+      "id": 49
+    },
+    {
+      "plantId": 6,
+      "gardenId": 10,
+      "id": 50
     }
   ],
   "plants": [
@@ -316,7 +424,7 @@
       "commonName": "Cucumber",
       "scientificName": "Cucumis sativus",
       "helps": "Beans, kohlrabi, lettuce",
-      "helpers": "Kohlrabi, nasturtiums, radishes, marigolds, sunflowers, peas, beans, chamomile, beets, carrots, dill, onions, garlic, celery, spinach",
+      "helpers": "kohlrabi, nasturtiums, radishes, marigolds, sunflowers, peas, beans, chamomile, beets, carrots, dill, onions, garlic, celery, spinach",
       "attracts": "Beneficial for ground beetles",
       "repels": "Raccoons, ants",
       "avoid": "Potato, aromatic herbs",
@@ -327,7 +435,7 @@
       "commonName": "Cucurbits",
       "scientificName": "Cucurbitaceae",
       "helps": "Corn",
-      "helpers": "Corn, grain sorghum, beans",
+      "helpers": "corn, grain sorghum, beans",
       "attracts": "",
       "repels": "",
       "avoid": "",
@@ -337,7 +445,7 @@
       "id": 18,
       "commonName": "Eggplant or Aubergine",
       "scientificName": "Solanum melongena",
-      "helps": "Beans, peppers, tomatoes, passion fruit",
+      "helps": "beans, peppers, tomatoes, passion fruit",
       "helpers": "Marigolds, catnip, dill, green beans, tarragon, mints, thyme",
       "attracts": "",
       "repels": "",
@@ -348,7 +456,7 @@
       "id": 19,
       "commonName": "Kohlrabi",
       "scientificName": "Brassica oleracea v. gongylodes",
-      "helps": "Onion, beets, aromatic plants, cucumbers",
+      "helps": "onion, beets, aromatic plants, cucumbers",
       "helpers": "Beets, cucumbers",
       "attracts": "",
       "repels": "",
@@ -359,7 +467,7 @@
       "id": 20,
       "commonName": "Leek",
       "scientificName": "Allium ampeloprasum v. porrum",
-      "helps": "Carrots, celery, onions, tomato, passion fruit",
+      "helps": "carrots, celery, onions, tomato, passion fruit",
       "helpers": "Carrots, clover",
       "attracts": "",
       "repels": "",
@@ -370,7 +478,7 @@
       "id": 21,
       "commonName": "Legumes",
       "scientificName": "Phaseolus and Vicia",
-      "helps": "Beets, lettuce, okra, potato, spinach, dill, cabbage, carrots, chards, eggplant, peas, tomatoes, brassicas, corn, cucumbers, grapes",
+      "helps": "beets, lettuce, okra, potato, spinach, dill, cabbage, carrots, chards, eggplant, peas, tomatoes, brassicas, corn, cucumbers, grapes",
       "helpers": "Summer savory, beets, cucumbers, borage, cabbage, carrots, cauliflower, corn, marigolds, mustards, radish, potato, peppermint, rosemary, lettuce, onion, squash, lacy phacelia",
       "attracts": "Snails and slugs",
       "repels": "Colorado potato beetle",
@@ -382,7 +490,7 @@
       "commonName": "Lettuce",
       "scientificName": "Lactuca sativa",
       "helps": "Beets, beans, okra, onions, radish, broccoli, Carrots, passion fruit",
-      "helpers": "Radish, beets, dill, kohlrabi, onions, beans, carrots, cucumbers, strawberries, broccoli, thyme, nasturtiums, alyssum, cilantro",
+      "helpers": "radish, beets, dill, kohlrabi, onions, beans, carrots, cucumbers, strawberries, broccoli, thyme, nasturtiums, alyssum, cilantro",
       "attracts": "Slugs and snails.",
       "repels": "",
       "avoid": "Celery, cabbage, cress, parsley",
@@ -392,7 +500,7 @@
       "id": 23,
       "commonName": "Mustard",
       "scientificName": "Sinapis alba",
-      "helps": "Beans, broccoli, cabbage, cauliflower, fruit trees, grapes, radish, brussels sprouts, turnips",
+      "helps": "beans, broccoli, cabbage, cauliflower, fruit trees, grapes, radish, brussels sprouts, turnips",
       "helpers": "corn, peas, dill",
       "attracts": "",
       "repels": "Various pests",
@@ -404,7 +512,7 @@
       "commonName": "Nightshades",
       "scientificName": "Solanaceae",
       "helps": "",
-      "helpers": "Carrots, alliums, mints (basil, oregano, etc.)",
+      "helpers": "carrots, alliums, mints (basil, oregano, etc.)",
       "attracts": "",
       "repels": "",
       "avoid": "Beans, black walnuts, corn, fennel, dill, brassicas",
@@ -414,7 +522,7 @@
       "id": 25,
       "commonName": "Okra",
       "scientificName": "Abelmoschus esculentus",
-      "helps": "Sweet potato, tomatoes, peppers",
+      "helps": "sweet potato, tomatoes, peppers",
       "helpers": "Bean, lettuce, squash, sweet potato, peppers",
       "attracts": "",
       "repels": "",
@@ -425,7 +533,7 @@
       "id": 26,
       "commonName": "Onion",
       "scientificName": "Allium cepa",
-      "helps": "Beets, beans, brassicas, cabbage, broccoli, carrots, lettuce, cucumbers, peppers, passion fruit, strawberries. Green onions with Chinese cabbage.",
+      "helps": "beets, beans, brassicas, cabbage, broccoli, carrots, lettuce, cucumbers, peppers, passion fruit, strawberries. Green onions with Chinese cabbage.",
       "helpers": "carrots, beet, brassicas, dill, lettuce, strawberries, marigolds,mints,tomatoes, summer savory, chamomile, pansy",
       "attracts": "",
       "repels": "",
@@ -447,8 +555,8 @@
       "id": 28,
       "commonName": "Peas",
       "scientificName": "Pisum sativum",
-      "helps": "Brassicas, turnip, cauliflower, garlic,",
-      "helpers": "Turnip, cauliflower, garlic, mints",
+      "helps": "brassicas, turnip, cauliflower, garlic,",
+      "helpers": "turnip, cauliflower, garlic, mints",
       "attracts": "",
       "repels": "Colorado potato beetle",
       "avoid": "",
@@ -459,7 +567,7 @@
       "commonName": "Peppers",
       "scientificName": "Solanaceae, Capsicum",
       "helps": "Okra",
-      "helpers": "Beans, tomatoes, marjoram,okra, geraniums, petunias, sunflowers, onions crimson clover, basil, field mustard",
+      "helpers": "beans, tomatoes, marjoram,okra, geraniums, petunias, sunflowers, onions crimson clover, basil, field mustard",
       "attracts": "",
       "repels": "",
       "avoid": "Beans, kale (cabbage, Brussels sprouts, etc.)",
@@ -470,7 +578,7 @@
       "commonName": "Potato",
       "scientificName": "Solanum tuberosum",
       "helps": "Brassicas, beans, corn, peas, passion fruit",
-      "helpers": "Horseradish, beans, dead nettle, marigolds, peas, onion, garlic, thyme, clover",
+      "helpers": "horseradish, beans, dead nettle, marigolds, peas, onion, garlic, thyme, clover",
       "attracts": "",
       "repels": "Mexican bean beetle",
       "avoid": "Atriplex, carrot, cucumber, pumpkin, raspberries, squash, sunflower, tomato",
@@ -481,7 +589,7 @@
       "commonName": "Pumpkin",
       "scientificName": "Cucurbita pepo",
       "helps": "Corn, beans",
-      "helpers": "Buckwheat, Jimson weed, catnip, oregano, tansy, radishes, nasturtiums",
+      "helpers": "buckwheat, Jimson weed, catnip, oregano, tansy, radishes, nasturtiums",
       "attracts": "spiders, ground beetles",
       "repels": "",
       "avoid": "Potatoes",
@@ -492,7 +600,7 @@
       "commonName": "Radish",
       "scientificName": "Raphanus sativus",
       "helps": "Squash, eggplant, cucumber, lettuce, peas, beans, pole beans,",
-      "helpers": "Chervil, lettuce, nasturtiums",
+      "helpers": "chervil, lettuce, nasturtiums",
       "attracts": "",
       "repels": "flea beetles, cucumber beetles",
       "avoid": "Grapes",
@@ -503,7 +611,7 @@
       "commonName": "Soybean",
       "scientificName": "Glycine max",
       "helps": "",
-      "helpers": "Corn, snap beans, sunflower",
+      "helpers": "corn, snap beans, sunflower",
       "attracts": "",
       "repels": "",
       "avoid": "",
@@ -514,7 +622,7 @@
       "commonName": "Spinach",
       "scientificName": "Spinacia oleracea",
       "helps": "Brassicas, cauliflower, passion fruit",
-      "helpers": "Strawberries, peas, beans, cauliflowercitation needed",
+      "helpers": "strawberries, peas, beans, cauliflowercitation needed",
       "attracts": "",
       "repels": "",
       "avoid": "",
@@ -525,7 +633,7 @@
       "commonName": "Squash",
       "scientificName": "Cucurbita spp.",
       "helps": "corn, beans, okra,",
-      "helpers": "Beans, buckwheat, borage, catnip, tansy, radishes, marigolds, nasturtiums",
+      "helpers": "beans, buckwheat, borage, catnip, tansy, radishes, marigolds, nasturtiums",
       "attracts": "Spiders, ground beetles",
       "repels": "",
       "avoid": "",
@@ -536,7 +644,7 @@
       "commonName": "Sweet potato",
       "scientificName": "Ipomoea batatas",
       "helps": "Okra",
-      "helpers": "Okra",
+      "helpers": "okra",
       "attracts": "",
       "repels": "",
       "avoid": "",
@@ -547,7 +655,7 @@
       "commonName": "Tomatoes",
       "scientificName": "Solanum lycopersicum",
       "helps": "Brassicas, broccoli, cabbage, celery, roses, peppers, asparagus",
-      "helpers": "Asparagus, basil, beans, bee balm, oregano, parsley, marigold, alliums, garlic, leeks, celery, geraniums, petunias, nasturtium, borage, coriander, chives, corn, dill, mustard, fenugreek, barley, carrots, eggplant, mints, okra, sage, thyme",
+      "helpers": "asparagus, basil, beans, bee balm, oregano, parsley, marigold, alliums, garlic, leeks, celery, geraniums, petunias, nasturtium, borage, coriander, chives, corn, dill, mustard, fenugreek, barley, carrots, eggplant, mints, okra, sage, thyme",
       "attracts": "",
       "repels": "Asparagus beetle",
       "avoid": "Black walnut, alfalfa, corn, fennel, chili peppers, peas, dill, potatoes, beetroot, brassicas, rosemary",

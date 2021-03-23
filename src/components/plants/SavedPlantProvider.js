@@ -1,3 +1,6 @@
+/*Module Purpose:
+This module is responsable for getting data for all saved plant related components 
+*/
 import React, { createContext, useState } from "react"
 
 

@@ -1,3 +1,6 @@
+/*Module Purpose:
+This module is responsable for rendering the JSX and styling for plant lists in plant details 
+*/
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
@@ -17,8 +20,7 @@ const useStyles = makeStyles((theme) => ({
 export const HelperListDividers = ({helpers, plantFilter}) => {
   const classes = useStyles();
   const matchPlant =plantFilter?.find(name => helpers?.includes(name.commonName.toLowerCase()))
-  // const helperId = matchPlant ? `/plants/details/${matchPlant?.id}` : "/plants"
-  console.log(matchPlant)
+ 
 
  
   return (

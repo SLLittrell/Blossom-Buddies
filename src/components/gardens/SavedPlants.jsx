@@ -1,3 +1,6 @@
+/*Module Purpose:
+This module is responsable for rendering the JSX and styling for added plants to gardens 
+*/
 import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
@@ -26,9 +29,9 @@ export const SavedPlantDividers = ({myPlants, savePlants}) => {
   return (
     <List component="nav" className={classes.root} aria-label="helpers">
       <ListItem >
-        <ListItemText button="true" to={`/plants/details/${myPlants?.id}`} component={Link} primary={myPlants?.commonName} />  
-        <button onClick={handleRemove}>Remove Plant</button>
+        <Link to={`/plants/details/${myPlants?.id}`}><ListItemText primary={myPlants?.commonName} /></Link> 
       </ListItem>
+      <button onClick={handleRemove}>Remove Plant</button>
       <Divider light />
     </List>
   );

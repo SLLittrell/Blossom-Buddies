@@ -1,4 +1,11 @@
+/*Module Purpose:
+This module is responsable for rendering: 
+- a user welcome with user name
+-Information on purpose of application
+-Affordance to the my garden component to create a garden
+*/
 import React, { useContext, useEffect, useState } from "react";
+import { useHistory } from "react-router";
 import { userStorageKey } from "./auth/authSettings";
 import { UserContext } from "./users/UserProvider";
 
@@ -13,6 +20,7 @@ export const Home = () => {
         getUsers()
     }, [])
     
+    const history = useHistory()
     
     // gets current user id from session storage
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
@@ -30,7 +38,13 @@ export const Home = () => {
             <div className="currentUserName">{user.name}</div>
             <section>
                 <div>
-                    <p>This section will be information on companion planting</p>
+                    <p>Welcome to Blossom Buddies!</p>
+                    <p>Blossom Buddies is a useful tool that will help guide you through the world of 
+                    companion planting.</p>
+                    <p>Any great garden starts with a good plan, click below to get started!</p>
+
+                    <button onClick={() => history.push('/gardens')}>Start Planning</button>
+
                 </div>
             </section>
             
