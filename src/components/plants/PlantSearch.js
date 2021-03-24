@@ -1,5 +1,5 @@
 /*Module Purpose:
-This module is responsable for rendering an affordance to search plant list 
+This module is responsible for rendering an affordance to search plant list 
 */
 import React, {useContext} from "react"
 import { PlantContext } from "./PlantProvider"

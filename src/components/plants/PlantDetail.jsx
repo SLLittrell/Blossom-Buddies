@@ -1,5 +1,5 @@
 /*Module Purpose:
-This module is responsable for rendering the JSX and styling for plant lists in plant details 
+This module is responsible for rendering the JSX and styling for plant lists in plant details 
 */
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';

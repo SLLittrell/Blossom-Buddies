@@ -1,5 +1,5 @@
 /*Module Purpose:
-This module is responsable for rendering: 
+This module is responsible for rendering: 
 - An affordance to create a new garden
 -a linked list of user created gardens
 */

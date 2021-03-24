@@ -1,5 +1,5 @@
 /*Module Purpose:
-This module is responsable for getting data for all plant related components 
+This module is responsible for getting data for all plant related components 
 */
 import React, { createContext, useState } from "react"
 

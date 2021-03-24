@@ -1,8 +1,8 @@
 /*Module Purpose:
-This module is responsable for rendering plant details including:
+This module is responsible for rendering plant details including:
 -Plant name
 -An affordance to choose a garden to save a plant, and a save plant affordance
--A List of helper plants that include some clickable links to thier plant detail page
+-A List of helper plants that include some clickable links to their plant detail page
 -A List of plants to avoid planting together
 -A fact involving companion planting with chosen plant
 */
