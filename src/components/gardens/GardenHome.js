@@ -10,19 +10,21 @@ import {Link} from "react-router-dom"
 import { userStorageKey } from "../auth/authSettings";
 
 
-
+//pulls created garden data with useContext
 export const MyGardens = () => {
     const {gardens, getGardens} = useContext(GardenContext)
     
 
     const history =useHistory()
-    const {gardenId} = useParams()
+    
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
-
+    
+    //invokes getGarden fetch function on initial render
     useEffect(() => {
         getGardens()
     }, [])
    
+    //filters gardens by current user id
     const usersGarden = gardens.filter(garden => garden.userId === currentUserId)
 
     return (
