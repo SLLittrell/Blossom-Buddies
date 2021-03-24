@@ -6,7 +6,6 @@ This module is responsible for rendering a user created garden component,which i
 */
 
 import React, { useContext, useEffect, useState } from "react"
-import { findAllInRenderedTree } from "react-dom/test-utils"
 import { useHistory, useParams } from "react-router"
 import { PlantContext } from "../plants/PlantProvider"
 import { SavedPlantContext } from "../plants/SavedPlantProvider"
@@ -33,7 +32,7 @@ export const CreatedGarden = () => {
         getGardenType()
     }, [])
 
-    //find the associated garden type for a created garden by using id
+    //find the associated garden type for a created garden by using id, useEffect will trigger when garden state is changed
     useEffect(() => {
         const typeName = gardenType.find(type => parseInt(type.id) === parseInt(garden.gardenTypeId))
         if(typeName) setTypes(typeName)
@@ -47,26 +46,26 @@ export const CreatedGarden = () => {
         })
     }, [])
 
-    //get saved plant data and plant data
+    //get saved plant data and plant data, useEffect will trigger when garden state is changed
     useEffect(() => {
         getSavedPlants()
         .then(getPlants)
     },[garden])
 
   
-    //filter out saved plants by matching the garden id's
+    //filter out saved plants by matching savedPlant gardenId to current garden id
     const filterPlants= savedPlants.filter(gardens => gardens.gardenId === garden.id)
     //filter & find plants that match the saved plantId's
     const PlantFilter = filterPlants.map(match =>plants.find(plant => parseInt(plant.id) === parseInt(match.plantId))) 
     
-    //deletes current garden
+    //deletes current garden, re-routes user to garden home whe handleDelete is called onClick
     const handleDelete = () => {
         DeleteGarden(garden?.id)
         .then(() => {
             history.push("/gardens")
         })
     }
-    // debugger
+
    return(
         <> 
             <h2>Hello</h2>
