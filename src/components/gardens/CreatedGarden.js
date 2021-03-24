@@ -1,5 +1,5 @@
 /*Module Purpose:
-This module is responsable for rendering a user created garden component,which includes 
+This module is responsible for rendering a user created garden component,which includes 
 - Garden Name, Start Date, and Garden type
 -Affordances to add plants, delete garden, and edit garden
 -A list of linked plants added to garden, and a remove affordance for each plant
@@ -50,7 +50,7 @@ export const CreatedGarden = () => {
     //get saved plant data and plant data
     useEffect(() => {
         getSavedPlants()
-        .then(getPlants())
+        .then(getPlants)
     },[garden])
 
   
