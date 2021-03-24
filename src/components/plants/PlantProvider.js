@@ -19,6 +19,7 @@ const getPlantById = (id) => {
         .then(res => res.json())
 }
 
+    //sets initial state for search terms
     const [ searchTerms, setSearchTerms ] = useState("")
     
     return (

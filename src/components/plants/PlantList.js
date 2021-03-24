@@ -12,12 +12,16 @@ export const PlantList = () => {
     const {plants, getPlants, searchTerms} = useContext(PlantContext)
 
     const [filteredPlants, setFiltered] = useState([])
-    const history = useHistory()
-
+   
+    //invokes getPlants fetch function
     useEffect(() =>{
         getPlants()
     }, [])
 
+    /*handles search terms filter, filtering plants by commonName, function is triggered when search terms 
+    state changes.
+    also when plant state changes
+    */
     useEffect(() => {
         if(searchTerms !== ""){
             const subset = plants.filter(plant => plant.commonName.toLowerCase().includes(searchTerms.toLowerCase()))

@@ -1,5 +1,5 @@
 /*Module Purpose:
-This module is responsible for rendering an affordance to search plant list 
+This module is responsible for rendering and styling an affordance to search plant list 
 */
 import React, {useContext} from "react"
 import { PlantContext } from "./PlantProvider"
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-
+//sets search terms for plant list component when user inputs character into search field the search state changes
 export const PlantSearch = () => {
     const {setSearchTerms} = useContext(PlantContext)
 
