@@ -31,8 +31,13 @@ npm start
 - Any companion helper plant that matches to an Item in the plant list can also be added to a garden.
 
 ### ERD
-![ERD]()
+![Blossom Buddies ERD (1)](https://user-images.githubusercontent.com/76744351/112340235-5d178800-8c8e-11eb-92a1-3b14b96128b3.png)
+
 ### Wireframe
+![Login](https://user-images.githubusercontent.com/76744351/112341693-a2888500-8c8f-11eb-9a29-bda7501dd3af.PNG)
+![home](https://user-images.githubusercontent.com/76744351/112341706-a5837580-8c8f-11eb-93d6-dc310cc11348.PNG)
+![gardens](https://user-images.githubusercontent.com/76744351/112341731-a916fc80-8c8f-11eb-9666-a743ed55dab4.PNG)
+![plants](https://user-images.githubusercontent.com/76744351/112341736-aae0c000-8c8f-11eb-8a70-17ed8e5fce7b.PNG)
 
 ### Support
 Fill out a support ticket if you discover any major bugs to address. 
@@ -59,3 +64,4 @@ Special thanks to our team mentor [Scott Silver](https://github.com/Scott47) for
 
 The login and registration code we use is fake, completely insecure, and would never be implemented in a professional application. It is a simulation authentication using very simplistic tools, because authentication is not a learning objective of students at NSS.
 
+[Capstone-Blossom Buddies (4).pdf](https://github.com/SLLittrell/NSS-Blossom-Buddies/files/6198622/Capstone-Blossom.Buddies.4.pdf)
