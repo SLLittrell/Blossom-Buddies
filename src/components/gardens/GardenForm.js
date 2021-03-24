@@ -13,6 +13,7 @@ export const GardenForm = () => {
     const { addGarden, getGardenType, gardenType, updateGarden, getGardenById} = useContext(GardenContext)
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
     
+    //sets state with a boolean, if user has not input data state is true
     const [isLoading, setIsLoading] = useState(true);
     
     const [garden, setGarden] = useState({
@@ -25,14 +26,16 @@ export const GardenForm = () => {
     const history = useHistory()
     const {gardenId} = useParams()
 
+    //event change that handles changes on input fields
+    //pulls the target id and adds the value to the new object and changes the state value garden
     const inputChange = (event) => {
         const newGarden = {...garden}
         newGarden[event.target.id] = event.target.value
         setGarden(newGarden)
     }
-   // saves and updates user input when user clicks the affordance
+   // saves a new garden or updates an existing garden object when user clicks the affordance
     const onSaveClick =() => {
-        if(garden.name=== "" && garden.gardenType === 0 ){
+        if(garden.name=== "" || garden.gardenType === 0 ){
             window.alert("Please fill in all inputs")
         }
         else{
@@ -60,7 +63,8 @@ export const GardenForm = () => {
         }
         
     }
-    //gets gardenType data, garden data by Id and sets data for garden state
+    //gets gardenType data, garden data by Id and sets data to garden state
+    //after data by id is set to state isloading=false for user to save data
     useEffect(() => {
         getGardenType()
         .then(() => {
