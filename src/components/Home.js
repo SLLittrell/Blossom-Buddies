@@ -38,9 +38,12 @@ export const Home = () => {
             <div className="currentUserName">{user.name}</div>
             <section>
                 <div>
-                    <p>Welcome to Blossom Buddies!</p>
-                    <p>Blossom Buddies is a useful tool that will help guide you through the world of 
-                    companion planting.</p>
+                    <h4>Welcome to Blossom Buddies!</h4>
+                    <p>Blossom Buddies is a useful tool providing information and convenience to beginner gardeners 
+                        who would like to plan and  produce a successful organic garden. </p>
+                    <h4>What's Companion Planting?</h4>
+                    <p>Companion planting groups plants that benefit from growing in close proximity to each other. 
+                        Benefits include pest control, balanced soil quality, and an increase in pollinators. </p>
                     <p>Any great garden starts with a good plan, click below to get started!</p>
 
                     <button onClick={() => history.push('/gardens')}>Start Planning</button>

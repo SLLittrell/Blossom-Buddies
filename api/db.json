@@ -251,6 +251,16 @@
       "plantId": 6,
       "gardenId": 10,
       "id": 50
+    },
+    {
+      "plantId": 2,
+      "gardenId": 6,
+      "id": 51
+    },
+    {
+      "plantId": 37,
+      "gardenId": 1,
+      "id": 52
     }
   ],
   "plants": [
@@ -494,7 +504,7 @@
       "attracts": "Slugs and snails.",
       "repels": "",
       "avoid": "Celery, cabbage, cress, parsley",
-      "fact": "Mints (including hyssop, sage, and various \"balms\") repel slugs, a bane of lettuce and cabbages.citation needed Broccoli when intercropped with lettuce was shown to be more profitable then either crop alone.\n"
+      "fact": "Mints (including hyssop, sage, and various \"balms\") repel slugs, a pest of lettuce and cabbages. Broccoli when inter-cropped with lettuce was shown to be more profitable then either crop alone.\n"
     },
     {
       "id": 23,
