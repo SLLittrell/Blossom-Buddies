@@ -6,7 +6,6 @@ This module is responsible for rendering a user created garden component,which i
 */
 
 import React, { useContext, useEffect, useState } from "react"
-import { findAllInRenderedTree } from "react-dom/test-utils"
 import { useHistory, useParams } from "react-router"
 import { PlantContext } from "../plants/PlantProvider"
 import { SavedPlantContext } from "../plants/SavedPlantProvider"
