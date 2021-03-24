@@ -1,5 +1,5 @@
 /*Module Purpose:
-This module is responsable for rendering a a form for user input, 
+This module is responsible for rendering a a form for user input, 
 it is also used to edit user input data.
 */
 import React, { useContext, useEffect, useState } from "react"

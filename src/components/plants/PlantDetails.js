@@ -1,8 +1,8 @@
 /*Module Purpose:
-This module is responsable for rendering plant details including:
+This module is responsible for rendering plant details including:
 -Plant name
 -An affordance to choose a garden to save a plant, and a save plant affordance
--A List of helper plants that include some clickable links to thier plant detail page
+-A List of helper plants that include some clickable links to their plant detail page
 -A List of plants to avoid planting together
 -A fact involving companion planting with chosen plant
 */
@@ -27,10 +27,10 @@ export const PlantDetails = () => {
 
    
     const {plantId} = useParams()
-    const history = useHistory()
+    
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
 
-    //get plant using id from url paramas 
+    //get plant using id from url params, useEffect will trigger every time the plantId(params) change
     useEffect(() => {
         getPlantById(plantId)
         .then((response) => {
@@ -38,7 +38,7 @@ export const PlantDetails = () => {
         })
     },[plantId])
     
-    //get garden & plant data from garden & plant provider
+    //get garden & plant data from garden & plant provider, will trigger every time plantId(params) changes
     useEffect(()=> {
         getGardens()
         .then(getPlants())
@@ -50,6 +50,8 @@ export const PlantDetails = () => {
         if(usersGardens !== []) setUserGarden(usersGardens)
     } ,[gardens])
     
+    
+    //initial state of saved plant is set
     const [savePlant, setSavePlant] = useState({
         plantId:parseInt(plantId),
         gardenId: 0
@@ -61,29 +63,27 @@ export const PlantDetails = () => {
         setSavePlant(newPlant)  
     }, [plantId])
 
-    //input change handle that sets the newplant object
+    //input field change handle that sets the new saved plant object
     const handleChange = (event) => {
         const newPlant = {...savePlant}
         newPlant[event.target.id]= parseInt(event.target.value)
         setSavePlant(newPlant)  
     };
    
-
+    //when PlantSave is invoked with onClick addSavedPlant post function is called using savePlant state as a parameter 
     const PlantSave = () => {
         addSavedPlants(savePlant)
         window.alert(`${plant.commonName} saved to your garden!`)
     }
 
+    //Splitting the helpers string into multiple strings by the "," and assigning to an array
+    const helpersArray= plant.helpers?.split(",")
     
-    // find matching helper plants with current plant list 
-     const helpersArray= plant.helpers?.split(",")
-    
+    // filtering and finding matching helper plants with current plant list returning an array of matching plant objects
      const findPlants = plants?.filter(plant =>helpersArray?.find(helper => helper?.includes(plant.commonName.toLowerCase())))
      
     
 
-
-//    debugger
     return(
         <>
             <h3>{plant.commonName}</h3> 

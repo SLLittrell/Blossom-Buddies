@@ -1,5 +1,6 @@
 /*Module Purpose:
-This module is responsable for rendering the JSX and styling for plant lists in plant details 
+This module is responsible for rendering the JSX and styling for plant lists in plant details adn
+filtering matching plant list to find the matching plant common name.  
 */
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
@@ -19,9 +20,9 @@ const useStyles = makeStyles((theme) => ({
 
 export const HelperListDividers = ({helpers, plantFilter}) => {
   const classes = useStyles();
+  
+  //filters though passed plant array to find a matching common name
   const matchPlant =plantFilter?.find(name => helpers?.includes(name.commonName.toLowerCase()))
- 
-
  
   return (
     <List component="nav" className={classes.root} aria-label="helpers">
