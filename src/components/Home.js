@@ -1,5 +1,5 @@
 /*Module Purpose:
-This module is responsable for rendering: 
+This module is responsible for rendering: 
 - a user welcome with user name
 -Information on purpose of application
 -Affordance to the my garden component to create a garden
