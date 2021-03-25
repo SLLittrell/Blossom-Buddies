@@ -1,0 +1,24 @@
+@import url('http://fonts.cdnfonts.com/css/garden');
+@import url('http://fonts.cdnfonts.com/css/lilly');
+
+.header h1 {
+    background-image:url(https://280337.smushcdn.com/1405618/wp-content/uploads/2016/04/Vegetable-Garden-768x512.jpg?lossy=1&strip=1&webp=1);
+    background-size: 100%;
+    background-position-y: 50%;
+    margin: 0;
+    height: 100px;
+}
+
+.title {
+    color: #fdf7ee;
+    text-shadow: rgba(0, 0, 0, 0.685) 5px 2px;
+    text-align: center;
+    font-family: 'Lilly', sans-serif; 
+    padding-top: 30px; 
+    padding-bottom: 5px;
+}
+
+.MuiTab-wrapper {
+    font-weight: bolder;
+    color: #fdf7ee ;
+}

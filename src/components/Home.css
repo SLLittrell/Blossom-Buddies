@@ -1,0 +1,20 @@
+@import url('http://fonts.cdnfonts.com/css/lilly');
+
+.home_welcome {
+    text-align: center;
+    font-family: 'Lilly', sans-serif;
+    color: #8C4E6D;
+}
+.currentUserName {
+    text-align: center;
+    font-size: large;
+    font-family: 'Lilly', sans-serif; 
+}
+
+.welcome_info {
+    text-align: center;
+}
+
+.home_heading {
+    font-family: 'Lilly', sans-serif; 
+}
