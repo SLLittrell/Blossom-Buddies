@@ -11,6 +11,15 @@ import { PlantContext } from "../plants/PlantProvider"
 import { SavedPlantContext } from "../plants/SavedPlantProvider"
 import { GardenContext } from "./GardenProvider"
 import { SavedPlantDividers } from "./SavedPlants"
+import { makeStyles } from '@material-ui/core/styles';
+import { Button } from "@material-ui/core"
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      background: "#EE8051",
+      margin: 10
+    },
+  }));
 
 export const CreatedGarden = () => {
     const { getGardenById, getGardenType, gardenType, DeleteGarden } = useContext(GardenContext)
@@ -66,16 +75,16 @@ export const CreatedGarden = () => {
         })
     }
 
+    const classes =useStyles()
    return(
         <> 
-            <h2>Hello</h2>
             <section>
-                <h3 className="created_gardenName">{garden.name}</h3>
-                <div className="created_gardenDate">Start Date: {garden.startDate}</div>
+                <h2 className="created_gardenName">{garden.name}</h2>
+                <div className="created_gardenDate">Start my garden on: {garden.startDate}</div>
                 <div className="created_gardenType">Garden Type: {types.type}</div>
-                <button className="btn-findPlants" onClick={()=> history.push("/plants")}>Add Plants</button>
-                <button onClick={handleDelete}>Delete Garden</button>
-                <button className="btn-findPlants" onClick={()=> history.push(`/gardens/edit/${garden.id}`)}>Edit Garden</button>
+                <Button className={classes.root} onClick={()=> history.push("/plants")}>Add Plants</Button>
+                <Button className={classes.root} onClick={handleDelete}>Delete Garden</Button>
+                <Button className={classes.root} onClick={()=> history.push(`/gardens/edit/${garden.id}`)}>Edit Garden</Button>
             </section>
             <section>{PlantFilter.map((plant, i) =><SavedPlantDividers key={i} myPlants={plant} savePlants={filterPlants}/>)}</section>
         </>

@@ -49,9 +49,9 @@ export const Home = () => {
             <div className="currentUserName">{user.name}</div>
             <section className="welcome_info">
                 <div>
-                    <h4 className="home_heading">What is Blossom Buddies!</h4>
+                    <h4 className="home_heading">What is Blossom Buddies?</h4>
                     <p>Blossom Buddies is a useful tool providing information and convenience to beginner gardeners 
-                        who would like to plan and  produce a successful organic garden using companion planting. </p>
+                        who would like to plan and  produce a successful organic garden using companion planting practices. </p>
                     <h4 className="home_heading">Companion planting you say?</h4>
                     <p>Companion planting is a method of growing crops that benefit from growing in close proximity to each other. 
                         Benefits include pest control, balanced soil quality, and an increase in pollinators. Even plants have buddies! </p>

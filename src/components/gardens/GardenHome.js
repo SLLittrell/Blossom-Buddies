@@ -22,6 +22,12 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       maxWidth: 360,
       backgroundColor: theme.palette.background.paper,
+      fontWeight: 400
+    },
+  }));
+  const useStyle = makeStyles((theme) => ({
+    root: {
+      background: "#EE8051",
     },
   }));
 
@@ -42,12 +48,13 @@ export const MyGardens = () => {
     //filters gardens by current user id
     const usersGarden = gardens.filter(garden => garden.userId === currentUserId)
     const classes = useStyles();
+    const glasses = useStyle()
 
   return (
       <>
             <section className="gardens_home">
                 <h2>My Gardens</h2>
-                <Button variant="contained" className="btn--createGarden"onClick={() =>{history.push("/gardens/create")}}>Create New Garden</Button>
+                <Button variant="contained" className={glasses.root} onClick={() =>{history.push("/gardens/create")}}>Create New Garden</Button>
             </section>
             
             {usersGarden.map(garden => 

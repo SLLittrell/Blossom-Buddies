@@ -261,6 +261,11 @@
       "plantId": 37,
       "gardenId": 1,
       "id": 52
+    },
+    {
+      "plantId": 1,
+      "gardenId": 6,
+      "id": 53
     }
   ],
   "plants": [
@@ -272,7 +277,7 @@
       "helpers": "Carrots, tomatoes, carrots, marigolds, mints",
       "attracts": "Thrips",
       "repels": "rabbits, slugs (see Garlic), aphids, carrot fly, cabbage loopers, cabbage maggots, cabbage worms, Japanese beetles",
-      "avoid": "Beans peas,",
+      "avoid": "Beans, peas,",
       "fact": "Alliums are a family of plants which include onions, garlic, leeks, shallots, chives, and others.\n"
     },
     {

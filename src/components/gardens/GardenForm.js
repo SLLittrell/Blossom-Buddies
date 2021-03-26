@@ -6,8 +6,15 @@ import React, { useContext, useEffect, useState } from "react"
 import { GardenContext } from "./GardenProvider"
 import { userStorageKey } from "../auth/authSettings";
 import { useHistory, useParams } from "react-router";
+import { Button } from "@material-ui/core";
+import { makeStyles } from '@material-ui/core/styles';
 
-
+const useStyles = makeStyles((theme) => ({
+    root: {
+      background: "#EE8051",
+      margin: 10
+    },
+  }));
 
 export const GardenForm = () => {
     const { addGarden, getGardenType, gardenType, updateGarden, getGardenById} = useContext(GardenContext)
@@ -80,36 +87,37 @@ export const GardenForm = () => {
             })
           }, [])
 
-    return (
+          const classes =useStyles()
+          return (
         <>
-            <form>
-                <h3>{gardenId ? "Edit your Garden" : "Create a Garden"}</h3>
-                <fieldset>
-                    <div className="garden_form">
+            <form className="garden_form">
+                <h3 className="form_header">{gardenId ? "Edit your Garden" : "Create a Garden"}</h3>
+                <fieldset className="garden_fields">
+                    <div>
                         <label htmlFor="name">Name: </label>
                         <input type="text" id="name" value={garden.name} autoFocus className="gardenInput" 
                         onChange={inputChange}/>
                     </div>
               </fieldset>
-              <fieldset>
-                  <label htmlFor="startDate">Start Date:</label>
+              <fieldset className="garden_fields">
+                  <label htmlFor="startDate">Start Date: </label>
                   <input type="date" id="startDate" className="gardenInput" value={garden.startDate} onChange={inputChange}></input>
               </fieldset>
-              <fieldset>
-                <label htmlFor="gardenTypeId">Garden Type:</label>
+              <fieldset className="garden_fields">
+                <label htmlFor="gardenTypeId">Garden Type: </label>
                 <select id="gardenTypeId" value={garden.gardenTypeId} onChange={inputChange}>
                     <option value= "0">Select a garden type</option>
                     {gardenType.map(types => (
                     <option key={types.id} value={types.id}>{types.type}</option>
                     ))}         
                 </select>
-                </fieldset>
-                <button className="btn btn-saveGarden"
+                </fieldset >
+                <Button className={classes.root}
                     disabled={isLoading}
                     onClick={event => { event.preventDefault() 
                     onSaveClick()}}>
                     {gardenId ? "Update Garden" : "Save Garden"}
-                </button>
+                </Button>
             </form>
         </>
     )
