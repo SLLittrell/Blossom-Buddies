@@ -17,7 +17,7 @@ import { SavedPlantContext } from "./SavedPlantProvider"
 import './Plant.css'
 import { Button, MenuItem, Select } from "@material-ui/core"
 import { makeStyles } from '@material-ui/core/styles'
-import InputLabel from '@material-ui/core/InputLabel'
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -101,7 +101,7 @@ export const PlantDetails = () => {
             
             <section className="plant_input">
                 <h5>Which garden would you like to add {plant.commonName} to?<br></br></h5>
-                <select id="gardenId" Change={handleChange}>
+                <select id="gardenId">
                     <option value={0}>Your Gardens</option>
                     {userGarden.map(garden =><option key={garden.id} value={garden.id}>{garden.name}</option>)}
                 </select>

@@ -109,19 +109,9 @@
       "id": 4
     },
     {
-      "plantId": 2,
-      "gardenId": 2,
-      "id": 5
-    },
-    {
       "plantId": 10,
       "gardenId": 2,
       "id": 7
-    },
-    {
-      "plantId": 8,
-      "gardenId": 2,
-      "id": 8
     },
     {
       "plantId": 11,
@@ -266,6 +256,71 @@
       "plantId": 37,
       "gardenId": 11,
       "id": 57
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 58
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 59
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 60
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 61
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 62
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 63
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 64
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 65
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 66
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 67
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 68
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 69
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 70
     }
   ],
   "plants": [

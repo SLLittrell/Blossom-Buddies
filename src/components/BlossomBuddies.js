@@ -6,7 +6,8 @@ import { userStorageKey } from "./auth/authSettings"
 import './BlossomBuddies.css';
 import { ApplicationViews } from "./ApplicationViews";
 import { NavBar } from "./nav/NavBar";
-import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles'
+
 
 export const theme = createMuiTheme({
   primary: {
@@ -22,7 +23,7 @@ export const BlossomBuddies = () => (
             return (
               <>
               <ThemeProvider theme={theme}>
-                <NavBar />
+                  <NavBar />
                 <ApplicationViews />
               </ThemeProvider>
               </>
