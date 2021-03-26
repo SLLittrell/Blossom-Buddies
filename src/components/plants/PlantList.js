@@ -33,7 +33,6 @@ export const PlantList = () => {
 
     return (
         <>
-            <h3>Plants</h3>
             <div className="plants">
                 {filteredPlants.map(plant => { 
                     return <ListDividers key={plant.id} plantObj={plant}/>

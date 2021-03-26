@@ -64,11 +64,11 @@
       "id": 9
     },
     {
-      "name": "My First Garden",
+      "name": "Frog Garden",
       "userId": 1,
-      "startDate": "2021-03-27",
-      "gardenTypeId": 1,
-      "id": 10
+      "startDate": "2021-04-10",
+      "gardenTypeId": 2,
+      "id": 11
     }
   ],
   "users": [
@@ -109,19 +109,9 @@
       "id": 4
     },
     {
-      "plantId": 2,
-      "gardenId": 2,
-      "id": 5
-    },
-    {
       "plantId": 10,
       "gardenId": 2,
       "id": 7
-    },
-    {
-      "plantId": 8,
-      "gardenId": 2,
-      "id": 8
     },
     {
       "plantId": 11,
@@ -239,21 +229,6 @@
     },
     {
       "plantId": 2,
-      "gardenId": 10,
-      "id": 48
-    },
-    {
-      "plantId": 6,
-      "gardenId": 10,
-      "id": 49
-    },
-    {
-      "plantId": 6,
-      "gardenId": 10,
-      "id": 50
-    },
-    {
-      "plantId": 2,
       "gardenId": 6,
       "id": 51
     },
@@ -261,6 +236,91 @@
       "plantId": 37,
       "gardenId": 1,
       "id": 52
+    },
+    {
+      "plantId": 1,
+      "gardenId": 6,
+      "id": 53
+    },
+    {
+      "plantId": 26,
+      "gardenId": 11,
+      "id": 54
+    },
+    {
+      "plantId": 11,
+      "gardenId": 11,
+      "id": 55
+    },
+    {
+      "plantId": 37,
+      "gardenId": 11,
+      "id": 57
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 58
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 59
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 60
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 61
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 62
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 63
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 64
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 65
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 66
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 67
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 68
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 69
+    },
+    {
+      "plantId": 2,
+      "gardenId": 0,
+      "id": 70
     }
   ],
   "plants": [
@@ -269,10 +329,10 @@
       "commonName": "Alliums",
       "scientificName": "Allium",
       "helps": "Fruit trees, nightshades (tomatoes, capsicum peppers, potatoes), brassicas, carrots",
-      "helpers": "Carrots, tomatoes, carrots, marigolds, mints",
+      "helpers": "carrots, tomatoes, carrots, marigolds, mints",
       "attracts": "Thrips",
       "repels": "rabbits, slugs (see Garlic), aphids, carrot fly, cabbage loopers, cabbage maggots, cabbage worms, Japanese beetles",
-      "avoid": "Beans peas,",
+      "avoid": "Beans, peas,",
       "fact": "Alliums are a family of plants which include onions, garlic, leeks, shallots, chives, and others.\n"
     },
     {

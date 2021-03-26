@@ -4,14 +4,32 @@ import './index.css';
 import {BlossomBuddies} from './components/BlossomBuddies';
 import { BrowserRouter as Router } from "react-router-dom"
 import reportWebVitals from './reportWebVitals';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
-
+const theme = createMuiTheme({
+  palette: {
+      primary: {
+        light: '#c9df9b',
+        main: '#BCD783',
+        dark: '#83965b',
+        contrastText: '#fff',
+      },
+      secondary: {
+        light: '#ff7961',
+        main: '#EE8051',
+        dark: '#a65938',
+        contrastText: '#000',
+      },
+    },
+  });
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <BlossomBuddies />
-    </Router>
+        <Router>
+          <ThemeProvider theme={theme}>
+            <BlossomBuddies />
+          </ThemeProvider>
+        </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

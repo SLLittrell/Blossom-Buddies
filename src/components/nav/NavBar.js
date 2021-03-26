@@ -2,25 +2,13 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./NavBar.css"
 import {CenteredTabs} from "./nav"
-//NavBar takes props object as paremeter
+
+//NavBar takes props object as parameter
 //return renders when function is called
 export const NavBar = (props) => {
     return (
         <>
             <CenteredTabs />
-            {/* <header>Blossom Buddies</header>
-            <ul className="navbar">
-                <li className="navbar__item active">
-                    <Link className="navbar__link" to="/">Home</Link>
-                </li>
-                <li className="navbar__item">
-                    <Link className="navbar__link" to="/gardens">My Gardens</Link>
-                </li>
-                <li className="navbar__item">
-                    <Link className="navbar__link" to="/plants">Plant List</Link>
-                </li>
-            </ul> */}
-            
         </>
     )
 }

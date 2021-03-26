@@ -6,6 +6,15 @@ import { userStorageKey } from "./auth/authSettings"
 import './BlossomBuddies.css';
 import { ApplicationViews } from "./ApplicationViews";
 import { NavBar } from "./nav/NavBar";
+import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles'
+
+
+export const theme = createMuiTheme({
+  primary: {
+    main:"#587085",
+  },
+});
+
 
 export const BlossomBuddies = () => (
   <>
@@ -13,8 +22,10 @@ export const BlossomBuddies = () => (
           if (sessionStorage.getItem(userStorageKey)) {
             return (
               <>
-                <NavBar />
+              <ThemeProvider theme={theme}>
+                  <NavBar />
                 <ApplicationViews />
+              </ThemeProvider>
               </>
             )
           } else {

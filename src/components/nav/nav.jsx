@@ -4,13 +4,20 @@ import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { Link } from "react-router-dom"
+import './NavBar.css'
 
 
-const useStyles = makeStyles({
+
+const useStyles = makeStyles((theme)=> ({
   root: {
     flexGrow: 1,
+    background: "#EE8051",
+    textColor: "#0000",
+    indicatorColor:"#FFFFF"
   },
-});
+ 
+}));
+
 
 export const CenteredTabs = () => {
   const classes = useStyles();
@@ -20,15 +27,15 @@ export const CenteredTabs = () => {
     setValue(newValue);
   };
 
+
   return (
     <>  
-        <h3>Blossom Buddies</h3>
-        <Paper className={classes.root}>
+        <header className="header" ><h1 className="title">Blossom Buddies</h1></header>
+        <Paper className={classes.root}> 
         <Tabs
             value={value}
             onChange={handleChange}
-            indicatorColor="primary"
-            textColor="primary"
+            color ="primary"
             centered
         >
             <Tab label="Home" to="/" component={ Link } />

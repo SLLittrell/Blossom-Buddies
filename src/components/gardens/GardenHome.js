@@ -8,7 +8,28 @@ import { useHistory, useParams } from "react-router"
 import { GardenContext } from "./GardenProvider"
 import {Link} from "react-router-dom"
 import { userStorageKey } from "../auth/authSettings";
+import { makeStyles } from '@material-ui/core/styles';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
+import  './Garden.css'
 
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      width: '100%',
+      maxWidth: 360,
+      backgroundColor: theme.palette.background.paper,
+      fontWeight: 400
+    },
+  }));
+  const useStyle = makeStyles((theme) => ({
+    root: {
+      background: "#EE8051",
+    },
+  }));
 
 //pulls created garden data with useContext
 export const MyGardens = () => {
@@ -26,19 +47,30 @@ export const MyGardens = () => {
    
     //filters gardens by current user id
     const usersGarden = gardens.filter(garden => garden.userId === currentUserId)
+    const classes = useStyles();
+    const glasses = useStyle()
 
-    return (
-        <>
+  return (
+      <>
             <section className="gardens_home">
                 <h2>My Gardens</h2>
-                <div><button className="btn--createGarden"onClick={() =>{history.push("/gardens/create")}}>Create New Garden</button></div>
+                <Button variant="contained" className={glasses.root} onClick={() =>{history.push("/gardens/create")}}>Create New Garden</Button>
             </section>
-            <section className="myGardenList" >
-                {usersGarden.map(garden =><div key={garden.id}><Link to={`/gardens/${garden.id}`} key={garden.id}>
-                    {garden.name}
-                </Link></div>)}
-            </section>
-        </>
-    )
+            
+            {usersGarden.map(garden => 
+            <List key={garden.id} component="nav" className={classes.root} aria-label="mailbox folders">
+            <ListItem  button to={`/gardens/${garden.id}`} component={Link}>
+               <ListItemText  primary={garden.name} />
+            </ListItem>
+            <Divider />
+            </List>
+            )}
+            
+     </>
+  )
 
 }
+
+// {usersGarden.map(garden =><div key={garden.id}><Link to={`/gardens/${garden.id}`} >
+//                     {garden.name}
+//                 </Link></div>)}

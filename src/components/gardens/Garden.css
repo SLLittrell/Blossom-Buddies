@@ -1,0 +1,27 @@
+.btn--createGarden {
+    background-color: #EE8051;
+    align-self: center;
+}
+
+.gardens_home {
+    text-align: center;
+    font-family: 'Lilly', sans-serif; 
+}
+
+.garden_form {
+    text-align: center;
+}
+
+.form_header {
+    font-family: 'Lilly', sans-serif; 
+}
+
+.garden_fields {
+    display: flex;
+    justify-content: left;
+}
+
+.created_gardenName, .created_gardenType, .created_gardenDate {
+    text-align: center;
+    font-family: 'Lilly', sans-serif;
+}
