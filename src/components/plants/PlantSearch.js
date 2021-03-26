@@ -22,9 +22,12 @@ export const PlantSearch = () => {
     const classes = useStyles();
 
     return (
-    <form className={classes.root} noValidate autoComplete="off">
-      <TextField id="standard-basic" label="Search Plants" onKeyUp={(event) => setSearchTerms(event.target.value)}/>
-    </form>
+    <>
+      <h2 className="plant_header">Plants</h2>
+      <form className={classes.root} noValidate autoComplete="off">
+        <TextField id="standard-basic" label="Search Plants" onKeyUp={(event) => setSearchTerms(event.target.value)}/>
+      </form>
+    </>
   )
 
 

@@ -14,6 +14,17 @@ import { userStorageKey } from "../auth/authSettings"
 import { HelperListDividers } from "./PlantDetail"
 import {AvoidListDividers} from "./PlantDetail"
 import { SavedPlantContext } from "./SavedPlantProvider"
+import './Plant.css'
+import { Button, MenuItem, Select } from "@material-ui/core"
+import { makeStyles } from '@material-ui/core/styles'
+import InputLabel from '@material-ui/core/InputLabel'
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      background: "#EE8051",
+      margin: 10
+    },
+  }));
 
 export const PlantDetails = () => {
     //get data to render plants, gardens details from plant & garden provider
@@ -82,32 +93,32 @@ export const PlantDetails = () => {
     // filtering and finding matching helper plants with current plant list returning an array of matching plant objects
      const findPlants = plants?.filter(plant =>helpersArray?.find(helper => helper?.includes(plant.commonName.toLowerCase())))
      
-    
+    const classes = useStyles()
 
     return(
         <>
-            <h3>{plant.commonName}</h3> 
+            <h2 className="plant_heading">{plant.commonName}</h2> 
             
-            <section>
-                <label id="gardenId">Which garden would you like to add {plant.commonName} to?<br></br></label>
-                <select id="gardenId" onChange={handleChange}>
-                    <option value={0} >Your Gardens</option>
+            <section className="plant_input">
+                <h5>Which garden would you like to add {plant.commonName} to?<br></br></h5>
+                <select id="gardenId" Change={handleChange}>
+                    <option value={0}>Your Gardens</option>
                     {userGarden.map(garden =><option key={garden.id} value={garden.id}>{garden.name}</option>)}
                 </select>
             </section>
                 
-            <div><button onClick={PlantSave}>Save Plant</button></div>
+            <div className="save-plant"><Button className={classes.root} onClick={PlantSave}>Save Plant</Button></div>
                 
             <section>
-               <div><h3>Helpers:</h3>
+               <div className="helper_heading"><h3>Helpers</h3>
                {helpersArray?.map((helper, i) =><HelperListDividers key={i}helpers={helper} plantFilter={findPlants}/>)} 
                </div>
                <div>
-                   <h3>Not so Helpful(avoid):</h3>
+                   <h3 className="helper_heading">Not so Helpful(avoid):</h3>
                    {plant.avoid ? plant.avoid?.split(",").map((avoid, i) =><AvoidListDividers key={i} NonHelpers={avoid}/>) : 'No known plants to worry about!'}
                 </div>
                <div>
-                   <h3>Fun Fact: </h3>
+                   <h3 className="helper_heading">Fun Fact: </h3>
                    {plant.fact ? plant.fact : 'Sorry No Fun Facts Yet'}
                 </div>
             </section>

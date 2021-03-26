@@ -2,6 +2,7 @@
 This module is responsible for getting data for all saved plant related components 
 */
 import React, { createContext, useState } from "react"
+import './Plant.css'
 
 
 export const SavedPlantContext = createContext()

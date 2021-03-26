@@ -1,0 +1,22 @@
+.plant_header {
+    font-family: 'Lilly', sans-serif;
+    text-align: center;
+}
+
+.plant_heading {
+    font-family: 'Lilly', sans-serif;
+    text-align: center;
+}
+
+.plant_input {
+    text-align: center
+}
+
+.save-plant {
+    display: flex;
+    justify-content: center;
+}
+
+.helper_heading {
+    font-family: 'Lilly', sans-serif;
+}

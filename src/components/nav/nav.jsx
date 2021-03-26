@@ -8,15 +8,15 @@ import './NavBar.css'
 
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme)=> ({
   root: {
     flexGrow: 1,
     background: "#EE8051",
     textColor: "#0000",
-    indicatorColor:"#00000"
+    indicatorColor:"#FFFFF"
   },
  
-});
+}));
 
 
 export const CenteredTabs = () => {
