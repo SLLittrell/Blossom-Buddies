@@ -17,6 +17,7 @@ import { SavedPlantContext } from "./SavedPlantProvider"
 import './Plant.css'
 import { Button, MenuItem, Select } from "@material-ui/core"
 import { makeStyles } from '@material-ui/core/styles'
+import { TreflePlantContext } from "./TreflePlantProvider"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -32,6 +33,7 @@ export const PlantDetails = () => {
     const { getPlantById, getPlants, plants } = useContext(PlantContext)
     const {addSavedPlants} =useContext(SavedPlantContext)
     const { gardens, getGardens} = useContext(GardenContext)
+    const {treflePlants, getTreflePlants} =useContext(TreflePlantContext)
     
     const [userGarden, setUserGarden] = useState([])
     const [plant, setPlant] = useState({})
@@ -40,6 +42,11 @@ export const PlantDetails = () => {
     const {plantId} = useParams()
     
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
+
+    useEffect(() =>{
+        getTreflePlants()
+    },[])
+    console.log(treflePlants)
 
     //get plant using id from url params, useEffect will trigger every time the plantId(params) change
     useEffect(() => {
@@ -98,10 +105,9 @@ export const PlantDetails = () => {
     return(
         <>
             <h2 className="plant_heading">{plant.commonName}</h2> 
-            
             <section className="plant_input">
                 <h5>Which garden would you like to add {plant.commonName} to?<br></br></h5>
-                <select id="gardenId">
+                <select id="gardenId" onChange={handleChange}>
                     <option value={0}>Your Gardens</option>
                     {userGarden.map(garden =><option key={garden.id} value={garden.id}>{garden.name}</option>)}
                 </select>

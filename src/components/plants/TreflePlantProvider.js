@@ -3,28 +3,29 @@ import {settings} from '../Settings'
 
 export const TreflePlantContext = createContext()
 
-export const PlantProvider = (props) => {
-    const [trefPlants, setTrefPlants] = useState([])
+export const TreflePlantProvider = (props) => {
+    const [treflePlants, setTreflePlants] = useState([])
 
     const getTreflePlants = () => {
-    return fetch(`https://trefle.io/api/v1/plants/?token=${settings.TrefleKey}`)
+    return fetch(`https://powerful-plateau-15272.herokuapp.com/https://trefle.io/api/v1/plants/?token=${settings.TrefleKey}`)
     .then(res => res.json())
-    .then(setTrefPlants)
+    .then(setTreflePlants)
 }
 
-const getTreflePlantById = (id) => {
-    return fetch(`https://trefle.io/api/v1/plants?token=${settings.TrefleKey}`)
-        .then(res => res.json())
-}
+// const getTreflePlantById = (id) => {
+//     return fetch(`https://trefle.io/api/v1/plants?token=${settings.TrefleKey}`)
+//         .then(res => res.json())
+// }
 
   
     
     return (
-        <PlantContext.Provider value={{
-            treflePlants, getTreflePlants, getTreflePlantById  
+        <TreflePlantContext.Provider value={{
+            treflePlants, getTreflePlants, 
+            // getTreflePlantById  
         }}>
             {props.children}
-        </PlantContext.Provider>
+        </TreflePlantContext.Provider>
     )
 
 }
