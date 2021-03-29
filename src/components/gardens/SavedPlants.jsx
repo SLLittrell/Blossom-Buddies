@@ -10,6 +10,7 @@ import Divider from '@material-ui/core/Divider';
 import {Link} from "react-router-dom"
 import {SavedPlantContext} from "../plants/SavedPlantProvider"
 import RemoveCircleIcon from '@material-ui/icons/RemoveCircle'
+import NotesIcon from '@material-ui/icons/Notes';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,6 +42,7 @@ export const SavedPlantDividers = ({myPlants, savePlants}) => {
         <Link to={`/plants/details/${myPlants?.id}`}><ListItemText primary={myPlants?.commonName} /></Link> 
       </ListItem>
       <RemoveCircleIcon className={glasses.root} onClick={handleRemove}></RemoveCircleIcon>
+      <NotesIcon className={glasses.root}></NotesIcon>
       <Divider light />
     </List>
   );

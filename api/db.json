@@ -104,17 +104,12 @@
       "id": 3
     }
   ],
-  "gardenNotes":[],
+  "gardenNotes": [],
   "savedPlants": [
     {
       "plantId": 9,
       "gardenId": 5,
       "id": 3
-    },
-    {
-      "plantId": 13,
-      "gardenId": 7,
-      "id": 4
     },
     {
       "plantId": 10,

@@ -46,7 +46,7 @@ export const PlantDetails = () => {
     useEffect(() =>{
         getTreflePlants()
     },[])
-    console.log(treflePlants)
+  
 
     //get plant using id from url params, useEffect will trigger every time the plantId(params) change
     useEffect(() => {
