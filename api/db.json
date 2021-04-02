@@ -1,13 +1,6 @@
 {
   "gardens": [
     {
-      "name": "Garden",
-      "userId": 1,
-      "startDate": "2021-03-21",
-      "gardenTypeId": 2,
-      "id": 1
-    },
-    {
       "name": "Stacey's Spring Garden",
       "userId": 1,
       "startDate": "2021-03-21",
@@ -69,13 +62,6 @@
       "startDate": "2021-04-10",
       "gardenTypeId": 2,
       "id": 11
-    },
-    {
-      "name": "Gabe's Garden",
-      "userId": 1,
-      "startDate": "2021-04-03",
-      "gardenTypeId": 1,
-      "id": 12
     }
   ],
   "users": [
@@ -110,11 +96,6 @@
       "plantId": 9,
       "gardenId": 5,
       "id": 3
-    },
-    {
-      "plantId": 10,
-      "gardenId": 2,
-      "id": 7
     },
     {
       "plantId": 11,
@@ -222,16 +203,6 @@
       "id": 45
     },
     {
-      "plantId": 2,
-      "gardenId": 6,
-      "id": 51
-    },
-    {
-      "plantId": 37,
-      "gardenId": 1,
-      "id": 52
-    },
-    {
       "plantId": 1,
       "gardenId": 6,
       "id": 53
@@ -245,6 +216,16 @@
       "plantId": 37,
       "gardenId": 11,
       "id": 57
+    },
+    {
+      "plantId": 6,
+      "gardenId": 2,
+      "id": 58
+    },
+    {
+      "plantId": 22,
+      "gardenId": 2,
+      "id": 59
     }
   ],
   "plants": [
