@@ -90,7 +90,20 @@
       "id": 3
     }
   ],
-  "gardenNotes": [],
+  "gardenNotes": [
+    {
+      "note": "This garden will go on the northeast side of the house.",
+      "date": 1617393432122,
+      "gardenId": 6,
+      "id": 1
+    },
+    {
+      "note": "Get Plant from Lowes",
+      "date": 1617394798687,
+      "gardenId": 6,
+      "id": 2
+    }
+  ],
   "savedPlants": [
     {
       "plantId": 9,
@@ -226,6 +239,11 @@
       "plantId": 22,
       "gardenId": 2,
       "id": 59
+    },
+    {
+      "plantId": 2,
+      "gardenId": 6,
+      "id": 60
     }
   ],
   "plants": [
@@ -256,7 +274,7 @@
       "commonName": "Beans, bush",
       "scientificName": "Phaseolus vulgaris",
       "helps": "Cucumber, soybeans, strawberries",
-      "helpers": "Celery, strawberries, grains",
+      "helpers": "celery, strawberries, grains",
       "attracts": "",
       "repels": "",
       "avoid": "Fennel, soybeans, dry beans, alfalfa",
@@ -278,7 +296,7 @@
       "commonName": "Beans, fava",
       "scientificName": "Vicia faba",
       "helps": "",
-      "helpers": "Strawberries, Celery",
+      "helpers": "strawberries, Celery",
       "attracts": "",
       "repels": "",
       "avoid": "",
@@ -289,7 +307,7 @@
       "commonName": "Beets",
       "scientificName": "Beta vulgaris",
       "helps": "Broccoli, bush beans, cabbage, lettuce, kohlrabi, onions, brassicas, passion fruit",
-      "helpers": "Bush beans, onions, kohlrabi, catnip, garlic, lettuce, brassicas, mint",
+      "helpers": "bush beans, onions, kohlrabi, catnip, garlic, lettuce, brassicas, mint",
       "attracts": "",
       "repels": "",
       "avoid": "Runner or pole beans",
@@ -432,7 +450,7 @@
       "commonName": "Kohlrabi",
       "scientificName": "Brassica oleracea v. gongylodes",
       "helps": "onion, beets, aromatic plants, cucumbers",
-      "helpers": "Beets, cucumbers",
+      "helpers": "beets, cucumbers",
       "attracts": "",
       "repels": "",
       "avoid": "",

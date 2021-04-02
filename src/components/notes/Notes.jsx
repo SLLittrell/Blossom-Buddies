@@ -6,15 +6,26 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import NotesIcon from '@material-ui/icons/Notes';
+import NoteAddIcon from '@material-ui/icons/NoteAdd';
+import NoteIcon from '@material-ui/icons/Note';
 import { makeStyles } from '@material-ui/core/styles';
 import {NoteContext} from './NoteProvider'
+import { useParams } from 'react-router';
+
+
 
 const removeStyle =makeStyles((theme) => ({
     root: {
       color: "#8C4E6D",
+      margin: 10
+    },
+    save:{
+        background:"#6d8031",
+        color:"#cdc1a9"
     }
   }))
+
+  
 
 export const NoteDialog =()=> {
   const [open, setOpen] = React.useState(false);
@@ -29,10 +40,12 @@ export const NoteDialog =()=> {
   const handleClose = () => {
     setOpen(false);
   };
+  const {gardenId} = useParams()
 
   const [note, setNote] = useState({
     note:"",
-    date: "",
+    date: Date.now(),
+    gardenId: parseInt(gardenId)
 })
 
   const inputChange = (event) => {
@@ -42,14 +55,23 @@ export const NoteDialog =()=> {
 }
   
     const saveNote = () => {
+        if(note.note !== ""){ 
         addNote(note)
+        .then(handleClose())
+    }
+    else{
+        window.alert("Please enter a note or cancel")
+    }
+       
   }
 
+
   return (
-    <div>
-      <NotesIcon className="notes" onClick={handleClickOpen}></NotesIcon>
+    <div className="noteDialog">
+      <NoteAddIcon className={glasses.root} onClick={handleClickOpen} label="Create a note"></NoteAddIcon>
+      <NoteIcon className={glasses.root}></NoteIcon>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Plant Notes</DialogTitle>
+        <DialogTitle id="form-dialog-title">Garden Notes</DialogTitle>
         <DialogContent>
           <DialogContentText>
             Notes
@@ -57,10 +79,10 @@ export const NoteDialog =()=> {
           <TextareaAutosize id="note" onChange={inputChange} aria-label="minimum height" rowsMin={15} placeholder="Take Note"/>  
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClose} className={glasses.save}>
             Cancel
           </Button>
-          <Button onClick={saveNote} color="primary">
+          <Button onClick={saveNote}  className={glasses.save}>
             Save Note
           </Button>
         </DialogActions>

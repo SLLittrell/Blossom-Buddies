@@ -27,6 +27,14 @@ const removeStyle =makeStyles((theme) => ({
   }
 }))
 
+const LinkStyles = makeStyles((theme) => ({
+  root: {
+    color:"#587085",
+    textDecoration: 'none'
+    
+  },
+}));
+
 
 export const SavedPlantDividers = ({myPlants, savePlants}) => {
   const {removeSavedPlant}= useContext(SavedPlantContext)
@@ -36,11 +44,13 @@ export const SavedPlantDividers = ({myPlants, savePlants}) => {
     removeSavedPlant(saveId.id)
   }
   const glasses = removeStyle()
+
+  const links = LinkStyles();
   
   return (
     <List component="nav" className={classes.root} aria-label="helpers">
       <ListItem >
-        <Link to={`/plants/details/${myPlants?.id}`}><ListItemText primary={myPlants?.commonName} /></Link> 
+        <Link className={links.root} to={`/plants/details/${myPlants?.id}`}><ListItemText primary={myPlants?.commonName} /></Link> 
         <div className="noteIcon"><RemoveCircleIcon className={glasses.root} onClick={handleRemove}></RemoveCircleIcon></div>
       </ListItem>
       <Divider light />

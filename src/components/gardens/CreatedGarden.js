@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         margin: 10
     },
     edit:{
-        color:"#8c4e6d",
+        color:"#ee8051",
         margin: 10
     }
   }));
@@ -92,13 +92,13 @@ export const CreatedGarden = () => {
                 <h2 className="created_gardenName">{garden.name}</h2>
                 <div className="created_gardenDate">Start my garden on: {garden.startDate}</div>
                 <div className="created_gardenType">Garden Type: {types.type}</div>
-                <NoteDialog/>
+                
                 <div className="garden-icons">
                 <Tooltip title="Add Plants"><AddCircleIcon className={classes.add} onClick={()=> history.push("/plants")}></AddCircleIcon></Tooltip>
-                
                 <DeleteDialog garden={garden}></DeleteDialog>
                 <EditIcon className={classes.edit} onClick={()=> history.push(`/gardens/edit/${garden.id}`)}>Edit Garden</EditIcon>
-                </div>
+                <div className="note-icon"><NoteDialog/></div></div>
+                
                 
             </section>
             <section>{PlantFilter.map((plant, i) =><SavedPlantDividers key={i} myPlants={plant} savePlants={filterPlants}/>)}</section>

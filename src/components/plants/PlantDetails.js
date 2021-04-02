@@ -125,7 +125,7 @@ export const PlantDetails = () => {
                 </div>
                <div>
                    <h3 className="helper_heading">Fun Fact: </h3>
-                   {plant.fact ? plant.fact : 'Sorry No Fun Facts Yet'}
+                   <p className="funFact">{plant.fact ? plant.fact : 'Sorry No Fun Facts Yet'}</p>
                 </div>
             </section>
             
