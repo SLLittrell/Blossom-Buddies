@@ -1,13 +1,6 @@
 {
   "gardens": [
     {
-      "name": "Garden",
-      "userId": 1,
-      "startDate": "2021-03-21",
-      "gardenTypeId": 2,
-      "id": 1
-    },
-    {
       "name": "Stacey's Spring Garden",
       "userId": 1,
       "startDate": "2021-03-21",
@@ -97,21 +90,25 @@
       "id": 3
     }
   ],
+  "gardenNotes": [
+    {
+      "note": "This is a test note!",
+      "date": 1617468119597,
+      "gardenId": 2,
+      "id": 3
+    },
+    {
+      "note": "Make a task list for this garden!",
+      "date": 1617468634526,
+      "gardenId": 2,
+      "id": 4
+    }
+  ],
   "savedPlants": [
     {
       "plantId": 9,
       "gardenId": 5,
       "id": 3
-    },
-    {
-      "plantId": 13,
-      "gardenId": 7,
-      "id": 4
-    },
-    {
-      "plantId": 10,
-      "gardenId": 2,
-      "id": 7
     },
     {
       "plantId": 11,
@@ -189,18 +186,9 @@
       "id": 27
     },
     {
-      "id": 34
-    },
-    {
-      "id": 35
-    },
-    {
       "plantId": 2,
       "gardenId": 7,
       "id": 36
-    },
-    {
-      "id": 37
     },
     {
       "plantId": 19,
@@ -228,16 +216,6 @@
       "id": 45
     },
     {
-      "plantId": 2,
-      "gardenId": 6,
-      "id": 51
-    },
-    {
-      "plantId": 37,
-      "gardenId": 1,
-      "id": 52
-    },
-    {
       "plantId": 1,
       "gardenId": 6,
       "id": 53
@@ -248,79 +226,24 @@
       "id": 54
     },
     {
-      "plantId": 11,
-      "gardenId": 11,
-      "id": 55
-    },
-    {
       "plantId": 37,
       "gardenId": 11,
       "id": 57
     },
     {
-      "plantId": 2,
-      "gardenId": 0,
+      "plantId": 6,
+      "gardenId": 2,
       "id": 58
     },
     {
-      "plantId": 2,
-      "gardenId": 0,
+      "plantId": 22,
+      "gardenId": 2,
       "id": 59
     },
     {
       "plantId": 2,
-      "gardenId": 0,
+      "gardenId": 6,
       "id": 60
-    },
-    {
-      "plantId": 2,
-      "gardenId": 0,
-      "id": 61
-    },
-    {
-      "plantId": 2,
-      "gardenId": 0,
-      "id": 62
-    },
-    {
-      "plantId": 2,
-      "gardenId": 0,
-      "id": 63
-    },
-    {
-      "plantId": 2,
-      "gardenId": 0,
-      "id": 64
-    },
-    {
-      "plantId": 2,
-      "gardenId": 0,
-      "id": 65
-    },
-    {
-      "plantId": 2,
-      "gardenId": 0,
-      "id": 66
-    },
-    {
-      "plantId": 2,
-      "gardenId": 0,
-      "id": 67
-    },
-    {
-      "plantId": 2,
-      "gardenId": 0,
-      "id": 68
-    },
-    {
-      "plantId": 2,
-      "gardenId": 0,
-      "id": 69
-    },
-    {
-      "plantId": 2,
-      "gardenId": 0,
-      "id": 70
     }
   ],
   "plants": [
@@ -351,7 +274,7 @@
       "commonName": "Beans, bush",
       "scientificName": "Phaseolus vulgaris",
       "helps": "Cucumber, soybeans, strawberries",
-      "helpers": "Celery, strawberries, grains",
+      "helpers": "celery, strawberries, grains",
       "attracts": "",
       "repels": "",
       "avoid": "Fennel, soybeans, dry beans, alfalfa",
@@ -373,7 +296,7 @@
       "commonName": "Beans, fava",
       "scientificName": "Vicia faba",
       "helps": "",
-      "helpers": "Strawberries, Celery",
+      "helpers": "strawberries, Celery",
       "attracts": "",
       "repels": "",
       "avoid": "",
@@ -384,7 +307,7 @@
       "commonName": "Beets",
       "scientificName": "Beta vulgaris",
       "helps": "Broccoli, bush beans, cabbage, lettuce, kohlrabi, onions, brassicas, passion fruit",
-      "helpers": "Bush beans, onions, kohlrabi, catnip, garlic, lettuce, brassicas, mint",
+      "helpers": "bush beans, onions, kohlrabi, catnip, garlic, lettuce, brassicas, mint",
       "attracts": "",
       "repels": "",
       "avoid": "Runner or pole beans",
@@ -527,7 +450,7 @@
       "commonName": "Kohlrabi",
       "scientificName": "Brassica oleracea v. gongylodes",
       "helps": "onion, beets, aromatic plants, cucumbers",
-      "helpers": "Beets, cucumbers",
+      "helpers": "beets, cucumbers",
       "attracts": "",
       "repels": "",
       "avoid": "",

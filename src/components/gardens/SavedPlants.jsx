@@ -10,6 +10,8 @@ import Divider from '@material-ui/core/Divider';
 import {Link} from "react-router-dom"
 import {SavedPlantContext} from "../plants/SavedPlantProvider"
 import RemoveCircleIcon from '@material-ui/icons/RemoveCircle'
+import './Garden.css'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,9 +23,18 @@ const useStyles = makeStyles((theme) => ({
 
 const removeStyle =makeStyles((theme) => ({
   root: {
-    color: "#8C4E6D"
+    color: "#8C4E6D",
   }
 }))
+
+const LinkStyles = makeStyles((theme) => ({
+  root: {
+    color:"#587085",
+    textDecoration: 'none'
+    
+  },
+}));
+
 
 export const SavedPlantDividers = ({myPlants, savePlants}) => {
   const {removeSavedPlant}= useContext(SavedPlantContext)
@@ -32,15 +43,16 @@ export const SavedPlantDividers = ({myPlants, savePlants}) => {
   const handleRemove =() =>{
     removeSavedPlant(saveId.id)
   }
-
   const glasses = removeStyle()
 
+  const links = LinkStyles();
+  
   return (
     <List component="nav" className={classes.root} aria-label="helpers">
       <ListItem >
-        <Link to={`/plants/details/${myPlants?.id}`}><ListItemText primary={myPlants?.commonName} /></Link> 
+        <Link className={links.root} to={`/plants/details/${myPlants?.id}`}><ListItemText primary={myPlants?.commonName} /></Link> 
+        <div className="noteIcon"><RemoveCircleIcon className={glasses.root} onClick={handleRemove}></RemoveCircleIcon></div>
       </ListItem>
-      <RemoveCircleIcon className={glasses.root} onClick={handleRemove}></RemoveCircleIcon>
       <Divider light />
     </List>
   );

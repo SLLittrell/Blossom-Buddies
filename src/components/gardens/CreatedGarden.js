@@ -13,19 +13,34 @@ import { GardenContext } from "./GardenProvider"
 import { SavedPlantDividers } from "./SavedPlants"
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from "@material-ui/core"
-
+import { NoteDialog, SeeNotesDialog } from '../notes/Notes';
+import EditIcon from '@material-ui/icons/Edit';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import './Garden.css'
+import Tooltip from '@material-ui/core/Tooltip'
+import { DeleteDialog } from "./Delete"
+import { NoteContext } from "../notes/NoteProvider"
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      background: "#EE8051",
+      color:"#cb0004",
       margin: 10
     },
+    add: {
+        color:"#6d8031",
+        margin: 10
+    },
+    edit:{
+        color:"#ee8051",
+        margin: 10
+    }
   }));
 
 export const CreatedGarden = () => {
     const { getGardenById, getGardenType, gardenType, DeleteGarden } = useContext(GardenContext)
     const {getSavedPlants, savedPlants} = useContext(SavedPlantContext)
     const {getPlants, plants} = useContext(PlantContext)
+    const {notes, getNotes, deleteNote} = useContext(NoteContext)
 
     
     // const[filteredPlants, setFilteredPlants ] = useState([])
@@ -60,6 +75,7 @@ export const CreatedGarden = () => {
     useEffect(() => {
         getSavedPlants()
         .then(getPlants)
+        .then(getNotes)
     },[garden])
 
   
@@ -68,24 +84,22 @@ export const CreatedGarden = () => {
     //filter & find plants that match the saved plantId's
     const PlantFilter = filterPlants.map(match =>plants.find(plant => parseInt(plant.id) === parseInt(match.plantId))) 
     
-    //deletes current garden, re-routes user to garden home whe handleDelete is called onClick
-    const handleDelete = () => {
-        DeleteGarden(garden?.id)
-        .then(() => {
-            history.push("/gardens")
-        })
-    }
-
+    const gardenNotes = notes?.filter(note => note.gardenId === parseInt(gardenId))
+    
     const classes =useStyles()
-   return(
+    return(
         <> 
             <section>
                 <h2 className="created_gardenName">{garden.name}</h2>
                 <div className="created_gardenDate">Start my garden on: {garden.startDate}</div>
                 <div className="created_gardenType">Garden Type: {types.type}</div>
-                <Button className={classes.root} onClick={()=> history.push("/plants")}>Add Plants</Button>
-                <Button className={classes.root} onClick={handleDelete}>Delete Garden</Button>
-                <Button className={classes.root} onClick={()=> history.push(`/gardens/edit/${garden.id}`)}>Edit Garden</Button>
+                
+                <div className="garden-icons">
+                <Tooltip title="Add Plants"><AddCircleIcon className={classes.add} onClick={()=> history.push("/plants")}></AddCircleIcon></Tooltip>
+                <DeleteDialog garden={garden}></DeleteDialog>
+                <EditIcon className={classes.edit} onClick={()=> history.push(`/gardens/edit/${garden.id}`)}>Edit Garden</EditIcon>
+                <div className="note-icon"><NoteDialog/></div><SeeNotesDialog garden={garden} notes={gardenNotes}/></div>
+                
             </section>
             <section>{PlantFilter.map((plant, i) =><SavedPlantDividers key={i} myPlants={plant} savePlants={filterPlants}/>)}</section>
         </>
