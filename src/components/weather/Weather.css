@@ -3,6 +3,24 @@
     font-size: 10px;
     text-align: center;
 }
-.currentWeather img {
-    width: 20%;
+.weatherCard img {
+    width: 45%;
+    margin-left: 15px;
+
+}
+.weatherToday, .currentWeather {
+    text-align: center;
+}
+.currentWeather {
+    text-align: center;
+}
+.weatherCard {
+    display: flex;
+    justify-content: center;
+
+}
+.cardContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
