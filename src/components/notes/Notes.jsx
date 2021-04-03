@@ -11,6 +11,19 @@ import NoteIcon from '@material-ui/icons/Note';
 import { makeStyles } from '@material-ui/core/styles';
 import {NoteContext} from './NoteProvider'
 import { useParams } from 'react-router';
+//Note list component
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItem from '@material-ui/core/ListItem';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import CloseIcon from '@material-ui/icons/Close';
+import Slide from '@material-ui/core/Slide';
+import RemoveCircleIcon from '@material-ui/icons/RemoveCircle'
+
 
 
 
@@ -69,7 +82,6 @@ export const NoteDialog =()=> {
   return (
     <div className="noteDialog">
       <NoteAddIcon className={glasses.root} onClick={handleClickOpen} label="Create a note"></NoteAddIcon>
-      <NoteIcon className={glasses.root}></NoteIcon>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Garden Notes</DialogTitle>
         <DialogContent>
@@ -86,6 +98,71 @@ export const NoteDialog =()=> {
             Save Note
           </Button>
         </DialogActions>
+      </Dialog>
+    </div>
+  );
+}
+
+
+const useStyles = makeStyles((theme) => ({
+  appBar: {
+    background:"#EE8051",
+    position: 'relative'
+  },
+  title: {
+    marginLeft: theme.spacing(2),
+    flex: 1,
+  },
+  noteIcon: {
+      color: "#8C4E6D",
+      margin: 10
+  },
+  removeNote:{
+    color:"#8C4E6D",
+    margin: 5
+  }
+}));
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
+export const SeeNotesDialog = ({garden, notes}) =>{
+  const {deleteNote} = useContext(NoteContext)
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const removeNote = (id) => {
+    deleteNote(id)
+  }
+
+  return (
+    <div>
+      <NoteIcon className={classes.noteIcon} onClick={handleClickOpen}></NoteIcon>
+      <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
+        <AppBar className={classes.appBar}>
+          <Toolbar>
+            <Typography variant="h6" className={classes.title}>
+              {garden.name}  Notes
+            </Typography>
+            <IconButton edge="end" color="inherit" onClick={handleClose} aria-label="close">
+              <CloseIcon />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+        {notes?.map(note =>
+        <List key={note.id}>
+            <ListItem><RemoveCircleIcon onClick={removeNote.bind(removeNote, note.id)} className={classes.removeNote} /> <ListItemText primary={note.note}/>{new Date(note.date).toLocaleDateString()}</ListItem>
+          <Divider />
+        </List>)} 
       </Dialog>
     </div>
   );

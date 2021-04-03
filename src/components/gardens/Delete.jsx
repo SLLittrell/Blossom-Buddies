@@ -33,7 +33,8 @@ export const DeleteDialog =({garden})=>{
   const handleClose = () => {
     setOpen(false);
   };
-
+    
+  //deletes current garden, re-routes user to garden home whe handleDelete is called onClick
   const handleDelete = () => {
     DeleteGarden(garden?.id)
     .then(() => {

@@ -13,13 +13,13 @@ import { GardenContext } from "./GardenProvider"
 import { SavedPlantDividers } from "./SavedPlants"
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from "@material-ui/core"
-import { NoteDialog } from '../notes/Notes';
+import { NoteDialog, SeeNotesDialog } from '../notes/Notes';
 import EditIcon from '@material-ui/icons/Edit';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import './Garden.css'
 import Tooltip from '@material-ui/core/Tooltip'
 import { DeleteDialog } from "./Delete"
-
+import { NoteContext } from "../notes/NoteProvider"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -40,6 +40,7 @@ export const CreatedGarden = () => {
     const { getGardenById, getGardenType, gardenType, DeleteGarden } = useContext(GardenContext)
     const {getSavedPlants, savedPlants} = useContext(SavedPlantContext)
     const {getPlants, plants} = useContext(PlantContext)
+    const {notes, getNotes, deleteNote} = useContext(NoteContext)
 
     
     // const[filteredPlants, setFilteredPlants ] = useState([])
@@ -74,6 +75,7 @@ export const CreatedGarden = () => {
     useEffect(() => {
         getSavedPlants()
         .then(getPlants)
+        .then(getNotes)
     },[garden])
 
   
@@ -82,11 +84,10 @@ export const CreatedGarden = () => {
     //filter & find plants that match the saved plantId's
     const PlantFilter = filterPlants.map(match =>plants.find(plant => parseInt(plant.id) === parseInt(match.plantId))) 
     
-    //deletes current garden, re-routes user to garden home whe handleDelete is called onClick
+    const gardenNotes = notes?.filter(note => note.gardenId === parseInt(gardenId))
     
-
     const classes =useStyles()
-   return(
+    return(
         <> 
             <section>
                 <h2 className="created_gardenName">{garden.name}</h2>
@@ -97,8 +98,7 @@ export const CreatedGarden = () => {
                 <Tooltip title="Add Plants"><AddCircleIcon className={classes.add} onClick={()=> history.push("/plants")}></AddCircleIcon></Tooltip>
                 <DeleteDialog garden={garden}></DeleteDialog>
                 <EditIcon className={classes.edit} onClick={()=> history.push(`/gardens/edit/${garden.id}`)}>Edit Garden</EditIcon>
-                <div className="note-icon"><NoteDialog/></div></div>
-                
+                <div className="note-icon"><NoteDialog/></div><SeeNotesDialog garden={garden} notes={gardenNotes}/></div>
                 
             </section>
             <section>{PlantFilter.map((plant, i) =><SavedPlantDividers key={i} myPlants={plant} savePlants={filterPlants}/>)}</section>

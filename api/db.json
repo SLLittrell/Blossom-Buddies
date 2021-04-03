@@ -92,16 +92,16 @@
   ],
   "gardenNotes": [
     {
-      "note": "This garden will go on the northeast side of the house.",
-      "date": 1617393432122,
-      "gardenId": 6,
-      "id": 1
+      "note": "This is a test note!",
+      "date": 1617468119597,
+      "gardenId": 2,
+      "id": 3
     },
     {
-      "note": "Get Plant from Lowes",
-      "date": 1617394798687,
-      "gardenId": 6,
-      "id": 2
+      "note": "Make a task list for this garden!",
+      "date": 1617468634526,
+      "gardenId": 2,
+      "id": 4
     }
   ],
   "savedPlants": [
