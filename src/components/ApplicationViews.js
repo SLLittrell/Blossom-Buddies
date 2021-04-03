@@ -11,7 +11,6 @@ import { PlantProvider } from "./plants/PlantProvider"
 import { UserProvider } from "./users/UserProvider"
 import {PlantSearch} from "./plants/PlantSearch"
 import {SavedPlantProvider} from "./plants/SavedPlantProvider"
-import { TreflePlantProvider } from "./plants/TreflePlantProvider"
 import { NoteProvider } from "./notes/NoteProvider"
 
 export const ApplicationViews = () => {
@@ -47,11 +46,9 @@ export const ApplicationViews = () => {
                 </Route>
                 <GardenProvider>
                     <SavedPlantProvider>
-                        <TreflePlantProvider>
                             <Route exact path="/plants/details/:plantId(\d+)">
                                 <PlantDetails />
                             </Route>
-                        </TreflePlantProvider>
                     </SavedPlantProvider>
                 </GardenProvider>
             </PlantProvider>
