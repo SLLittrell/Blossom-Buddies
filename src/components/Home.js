@@ -50,8 +50,9 @@ export const Home = () => {
         <>
 
             <h2 className="home_welcome">Welcome</h2>
-            <WeatherPreview></WeatherPreview>
             <div className="currentUserName">{user.name}</div>
+            <WeatherPreview></WeatherPreview>
+            
             <section className="welcome_info">
                 <div>
                     <h4 className="home_heading">What is Blossom Buddies?</h4>

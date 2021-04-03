@@ -11,6 +11,7 @@ import "./Weather.css"
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
+    background:"rgba(104, 173, 175, 0.411)"
   },
   bullet: {
     display: 'inline-block',
@@ -18,7 +19,8 @@ const useStyles = makeStyles({
     transform: 'scale(0.8)',
   },
   title: {
-    fontSize: 20,
+    fontSize: 15,
+    width: 150,
   },
   pos: {
     marginBottom: 12,
@@ -46,17 +48,12 @@ export const WeatherPreview =() => {
         {new Date(dailyobj.dt * 1000).toDateString("en-US")}
         </Typography>
         <Typography className="currentWeather">
-            <div>Currently: {Math.round(weather.current.temp)}</div>
-            {currentWeather?.weather.map(now =>now.main)}
-            <img src={`http://openweathermap.org/img/wn/${conditions}@2x.png`} size="5%"></img>
-            <div>High: {Math.round(dailyobj.temp.max)}<br></br> 
-            Low: {Math.round(dailyobj.temp.min)}</div>
+             <div className=""><img src={`http://openweathermap.org/img/wn/${conditions}@2x.png`}></img><br></br>
+            {currentWeather?.weather.map(now =>now.main)}<br></br>{Math.round(weather.current.temp)} 
+            <div className="currentWeather">High {Math.round(dailyobj.temp.max)} 
+            Low {Math.round(dailyobj.temp.min)}</div></div>
         </Typography></>)}
-        
       </CardContent>
-      <CardActions>
-        <Button size="small"></Button>
-      </CardActions>
     </Card>
   );
 }

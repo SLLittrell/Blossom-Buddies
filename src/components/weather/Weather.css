@@ -1,0 +1,8 @@
+.currentWeather {
+    display: flex;
+    font-size: 10px;
+    text-align: center;
+}
+.currentWeather img {
+    width: 20%;
+}
