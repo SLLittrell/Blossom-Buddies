@@ -17,7 +17,7 @@ import { SavedPlantContext } from "./SavedPlantProvider"
 import './Plant.css'
 import { Button, MenuItem, Select } from "@material-ui/core"
 import { makeStyles } from '@material-ui/core/styles'
-import { TreflePlantContext } from "./TreflePlantProvider"
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -33,7 +33,6 @@ export const PlantDetails = () => {
     const { getPlantById, getPlants, plants } = useContext(PlantContext)
     const {addSavedPlants} =useContext(SavedPlantContext)
     const { gardens, getGardens} = useContext(GardenContext)
-    const {treflePlants, getTreflePlants} =useContext(TreflePlantContext)
     
     const [userGarden, setUserGarden] = useState([])
     const [plant, setPlant] = useState({})
@@ -43,9 +42,6 @@ export const PlantDetails = () => {
     
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
 
-    useEffect(() =>{
-        getTreflePlants()
-    },[])
   
 
     //get plant using id from url params, useEffect will trigger every time the plantId(params) change

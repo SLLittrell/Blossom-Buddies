@@ -36,27 +36,6 @@
       "id": 6
     },
     {
-      "name": "Mid-Summers Garden",
-      "userId": 2,
-      "startDate": "2021-07-03",
-      "gardenTypeId": 2,
-      "id": 7
-    },
-    {
-      "name": "test garden",
-      "userId": 2,
-      "startDate": "2021-04-11",
-      "gardenTypeId": 3,
-      "id": 8
-    },
-    {
-      "name": "My First Garden",
-      "userId": 2,
-      "startDate": "2021-04-17",
-      "gardenTypeId": 1,
-      "id": 9
-    },
-    {
       "name": "Frog Garden",
       "userId": 1,
       "startDate": "2021-04-10",
@@ -102,6 +81,12 @@
       "date": 1617468634526,
       "gardenId": 2,
       "id": 4
+    },
+    {
+      "note": "Need to add compost!",
+      "date": 1617474958571,
+      "gardenId": 4,
+      "id": 5
     }
   ],
   "savedPlants": [
@@ -131,64 +116,9 @@
       "id": 12
     },
     {
-      "plantId": 26,
-      "gardenId": 8,
-      "id": 13
-    },
-    {
-      "plantId": 10,
-      "gardenId": 8,
-      "id": 14
-    },
-    {
       "plantId": 16,
       "gardenId": 4,
       "id": 15
-    },
-    {
-      "plantId": 16,
-      "gardenId": 8,
-      "id": 17
-    },
-    {
-      "plantId": 1,
-      "gardenId": 9,
-      "id": 19
-    },
-    {
-      "plantId": 37,
-      "gardenId": 9,
-      "id": 21
-    },
-    {
-      "plantId": 4,
-      "gardenId": 9,
-      "id": 22
-    },
-    {
-      "plantId": 18,
-      "gardenId": 9,
-      "id": 23
-    },
-    {
-      "plantId": 2,
-      "gardenId": 9,
-      "id": 25
-    },
-    {
-      "plantId": 4,
-      "gardenId": 9,
-      "id": 26
-    },
-    {
-      "plantId": 4,
-      "gardenId": 7,
-      "id": 27
-    },
-    {
-      "plantId": 2,
-      "gardenId": 7,
-      "id": 36
     },
     {
       "plantId": 19,
@@ -204,11 +134,6 @@
       "plantId": 15,
       "gardenId": 5,
       "id": 40
-    },
-    {
-      "plantId": 17,
-      "gardenId": 8,
-      "id": 42
     },
     {
       "plantId": 2,
@@ -244,6 +169,11 @@
       "plantId": 2,
       "gardenId": 6,
       "id": 60
+    },
+    {
+      "plantId": 8,
+      "gardenId": 4,
+      "id": 61
     }
   ],
   "plants": [

@@ -12,13 +12,16 @@ import { UserProvider } from "./users/UserProvider"
 import {PlantSearch} from "./plants/PlantSearch"
 import {SavedPlantProvider} from "./plants/SavedPlantProvider"
 import { NoteProvider } from "./notes/NoteProvider"
+import { WeatherProvider } from "./weather/WeatherProvider"
 
 export const ApplicationViews = () => {
     return (
         <UserProvider>
-            <Route exact path="/">
-                <Home />
-            </Route>
+            <WeatherProvider>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+            </WeatherProvider>
             <GardenProvider>
                 <Route exact path="/gardens">
                     <MyGardens />
