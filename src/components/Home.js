@@ -11,6 +11,8 @@ import { UserContext } from "./users/UserProvider";
 import './Home.css'
 import Button from '@material-ui/core/Button';
 import {makeStyles} from '@material-ui/core/styles';
+import { WeatherContext } from "./weather/WeatherProvider";
+import {WeatherPreview} from "./weather/Weather"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,6 +34,8 @@ export const Home = () => {
     }, [])
     
     const history = useHistory()
+
+
     
     // gets current user id from session storage
     const currentUserId = parseInt(sessionStorage.getItem(userStorageKey))
@@ -47,6 +51,8 @@ export const Home = () => {
 
             <h2 className="home_welcome">Welcome</h2>
             <div className="currentUserName">{user.name}</div>
+            <WeatherPreview></WeatherPreview>
+            
             <section className="welcome_info">
                 <div>
                     <h4 className="home_heading">What is Blossom Buddies?</h4>

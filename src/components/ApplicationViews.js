@@ -11,15 +11,17 @@ import { PlantProvider } from "./plants/PlantProvider"
 import { UserProvider } from "./users/UserProvider"
 import {PlantSearch} from "./plants/PlantSearch"
 import {SavedPlantProvider} from "./plants/SavedPlantProvider"
-import { TreflePlantProvider } from "./plants/TreflePlantProvider"
 import { NoteProvider } from "./notes/NoteProvider"
+import { WeatherProvider } from "./weather/WeatherProvider"
 
 export const ApplicationViews = () => {
     return (
         <UserProvider>
-            <Route exact path="/">
-                <Home />
-            </Route>
+            <WeatherProvider>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+            </WeatherProvider>
             <GardenProvider>
                 <Route exact path="/gardens">
                     <MyGardens />
@@ -47,11 +49,9 @@ export const ApplicationViews = () => {
                 </Route>
                 <GardenProvider>
                     <SavedPlantProvider>
-                        <TreflePlantProvider>
                             <Route exact path="/plants/details/:plantId(\d+)">
                                 <PlantDetails />
                             </Route>
-                        </TreflePlantProvider>
                     </SavedPlantProvider>
                 </GardenProvider>
             </PlantProvider>
