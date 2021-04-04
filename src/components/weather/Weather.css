@@ -1,26 +1,52 @@
-.currentWeather {
+.weatherPreview {
     display: flex;
-    font-size: 10px;
-    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.weatherCard img {
-    width: 45%;
-    margin-left: 15px;
-
-}
-.weatherToday, .currentWeather {
-    text-align: center;
-}
-.currentWeather {
-    text-align: center;
-}
-.weatherCard {
+.weather {
     display: flex;
-    justify-content: center;
-
-}
-.cardContent {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-self: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin:0 auto;
+    display:block;
+    width: 100%;
+    background-color: rgb(47, 157, 165);
+
+}
+
+.dailyWeather {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.weatherDay {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    margin: 5px;
+    width: 20%;
+    padding: 2px;
+    border-radius: 5px;
+    
+}
+.weatherDay img {
+    width:50%;
+    height: 50%;
+    align-self: center;
+}
+h3 {
+    text-align: center;
+    font-family: 'Lilly', sans-serif;
+    color: white;
+}
+.weatherIcon path {
+    margin-left: 10px;
+    color:rgb(106, 204, 235);
+}
+.weatherPath{
+    text-align: center;
 }

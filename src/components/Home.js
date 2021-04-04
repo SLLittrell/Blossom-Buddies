@@ -51,7 +51,6 @@ export const Home = () => {
 
             <h2 className="home_welcome">Welcome</h2>
             <div className="currentUserName">{user.name}</div>
-            <TransitionsModal></TransitionsModal>
             <WeatherPreview></WeatherPreview>
             
             <section className="welcome_info">
