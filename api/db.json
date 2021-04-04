@@ -3,7 +3,7 @@
     {
       "name": "Stacey's Spring Garden",
       "userId": 1,
-      "startDate": "2021-03-21",
+      "startDate": "2021-04-18",
       "gardenTypeId": 2,
       "id": 2
     },
@@ -36,11 +36,18 @@
       "id": 6
     },
     {
-      "name": "Frog Garden",
+      "name": "Demo Garden",
       "userId": 1,
       "startDate": "2021-04-10",
+      "gardenTypeId": 1,
+      "id": 13
+    },
+    {
+      "name": "Fall Garden",
+      "userId": 1,
+      "startDate": "2021-09-03",
       "gardenTypeId": 2,
-      "id": 11
+      "id": 14
     }
   ],
   "users": [
@@ -71,12 +78,6 @@
   ],
   "gardenNotes": [
     {
-      "note": "This is a test note!",
-      "date": 1617468119597,
-      "gardenId": 2,
-      "id": 3
-    },
-    {
       "note": "Make a task list for this garden!",
       "date": 1617468634526,
       "gardenId": 2,
@@ -87,6 +88,18 @@
       "date": 1617474958571,
       "gardenId": 4,
       "id": 5
+    },
+    {
+      "note": "Add compost ",
+      "date": 1617577010013,
+      "gardenId": 13,
+      "id": 6
+    },
+    {
+      "note": "add compost ",
+      "date": 1617577408380,
+      "gardenId": 14,
+      "id": 7
     }
   ],
   "savedPlants": [
@@ -146,24 +159,9 @@
       "id": 53
     },
     {
-      "plantId": 26,
-      "gardenId": 11,
-      "id": 54
-    },
-    {
-      "plantId": 37,
-      "gardenId": 11,
-      "id": 57
-    },
-    {
       "plantId": 6,
       "gardenId": 2,
       "id": 58
-    },
-    {
-      "plantId": 22,
-      "gardenId": 2,
-      "id": 59
     },
     {
       "plantId": 2,
@@ -174,6 +172,41 @@
       "plantId": 8,
       "gardenId": 4,
       "id": 61
+    },
+    {
+      "plantId": 6,
+      "gardenId": 13,
+      "id": 66
+    },
+    {
+      "plantId": 26,
+      "gardenId": 13,
+      "id": 67
+    },
+    {
+      "plantId": 37,
+      "gardenId": 13,
+      "id": 68
+    },
+    {
+      "plantId": 22,
+      "gardenId": 2,
+      "id": 69
+    },
+    {
+      "plantId": 6,
+      "gardenId": 14,
+      "id": 70
+    },
+    {
+      "plantId": 26,
+      "gardenId": 14,
+      "id": 71
+    },
+    {
+      "plantId": 11,
+      "gardenId": 14,
+      "id": 72
     }
   ],
   "plants": [

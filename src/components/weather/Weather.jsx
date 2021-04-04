@@ -49,7 +49,7 @@ export const WeatherPreview =() => {
   
     return (
       <div>
-        <div className="weatherPath">Weather<br></br>
+        <div className="weatherPath">Local Weather<br></br>
         <CloudIcon className="weatherIcon" type="button" onClick={handleOpen}/></div>
         <Modal
           aria-labelledby="transition-modal-title"
