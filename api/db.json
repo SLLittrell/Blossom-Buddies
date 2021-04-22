@@ -29,18 +29,11 @@
       "id": 5
     },
     {
-      "name": "Glenn's Herbs",
+      "name": "Glenn's Garden",
       "userId": 1,
       "startDate": "2021-03-27",
       "gardenTypeId": 1,
       "id": 6
-    },
-    {
-      "name": "Demo Garden",
-      "userId": 1,
-      "startDate": "2021-04-10",
-      "gardenTypeId": 1,
-      "id": 13
     },
     {
       "name": "Fall Garden",
@@ -48,6 +41,13 @@
       "startDate": "2021-09-03",
       "gardenTypeId": 2,
       "id": 14
+    },
+    {
+      "name": "Milky",
+      "userId": 1,
+      "startDate": "2021-05-08",
+      "gardenTypeId": 1,
+      "id": 16
     }
   ],
   "users": [
@@ -90,16 +90,16 @@
       "id": 5
     },
     {
-      "note": "Add compost ",
-      "date": 1617577010013,
-      "gardenId": 13,
-      "id": 6
-    },
-    {
       "note": "add compost ",
       "date": 1617577408380,
       "gardenId": 14,
       "id": 7
+    },
+    {
+      "note": "Add frog houses",
+      "date": 1617723181075,
+      "gardenId": 16,
+      "id": 8
     }
   ],
   "savedPlants": [
@@ -174,21 +174,6 @@
       "id": 61
     },
     {
-      "plantId": 6,
-      "gardenId": 13,
-      "id": 66
-    },
-    {
-      "plantId": 26,
-      "gardenId": 13,
-      "id": 67
-    },
-    {
-      "plantId": 37,
-      "gardenId": 13,
-      "id": 68
-    },
-    {
       "plantId": 22,
       "gardenId": 2,
       "id": 69
@@ -207,6 +192,36 @@
       "plantId": 11,
       "gardenId": 14,
       "id": 72
+    },
+    {
+      "plantId": 10,
+      "gardenId": 14,
+      "id": 73
+    },
+    {
+      "plantId": 10,
+      "gardenId": 14,
+      "id": 74
+    },
+    {
+      "plantId": 37,
+      "gardenId": 14,
+      "id": 75
+    },
+    {
+      "plantId": 2,
+      "gardenId": 14,
+      "id": 76
+    },
+    {
+      "plantId": 6,
+      "gardenId": 16,
+      "id": 77
+    },
+    {
+      "plantId": 26,
+      "gardenId": 16,
+      "id": 78
     }
   ],
   "plants": [
