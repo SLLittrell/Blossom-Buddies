@@ -61,7 +61,7 @@ export const Home = () => {
                     <h4 className="home_heading">Companion planting you say?</h4>
                     <p>Companion planting is a method of growing crops that benefit from growing in close proximity to each other. 
                         Benefits include pest control, balanced soil quality, and an increase in pollinators. Even plants have buddies! </p>
-                    <p>Any great garden starts with a good plan, click below to get started!</p>
+                    <p>All great gardens start with a good plan, click below to get started!</p>
 
                     <Button variant="contained" className={classes.root} onClick={() => history.push('/gardens')}>
                     Start Planning
